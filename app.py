@@ -57,7 +57,7 @@ def handle_message(event):
         message = History_message()
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        message = '請點選單按鈕唷~'
+        message = TextSendMessage(text='請點選單按鈕唷~')
         line_bot_api.reply_message(event.reply_token, message)
 
 
