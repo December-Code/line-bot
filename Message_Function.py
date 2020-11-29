@@ -11,7 +11,7 @@ def Food_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://drive.google.com/file/d/1Lc7TEnZ3liqrlPTQ_vUC2J3vvtK9N69b/preview',
+                    thumbnail_image_url='https://imgur.com/XTrANW1',
                     title='兄弟蚵仔麵線',
                     text='堅持傳統口味的用心維持了近三十年',
                     actions=[
@@ -178,5 +178,32 @@ def photola_message():
                 )
             ]
         )
+    )
+    return message
+
+# =====================================歷史對照============================================
+
+
+def History_message():
+    message = ImagemapSendMessage(
+        base_url="https://i.imgur.com/BfTFVDN.jpg",
+        alt_text='最新的合作廠商有誰呢？',
+        base_size=BaseSize(height=2000, width=2000),
+        actions=[
+            URIImagemapAction(
+                # 家樂福
+                link_uri="https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F",
+                area=ImagemapArea(
+                    x=0, y=0, width=1000, height=1000
+                )
+            ),
+            URIImagemapAction(
+                # 生活市集
+                link_uri="https://tw.shop.com/search/%E7%94%9F%E6%B4%BB%E5%B8%82%E9%9B%86",
+                area=ImagemapArea(
+                    x=1000, y=0, width=1000, height=1000
+                )
+            ),
+        ]
     )
     return message
