@@ -11,7 +11,7 @@ def Food_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://drive.google.com/file/d/1Lc7TEnZ3liqrlPTQ_vUC2J3vvtK9N69b/view?usp=sharing',
+                    thumbnail_image_url='https://drive.google.com/file/d/1Lc7TEnZ3liqrlPTQ_vUC2J3vvtK9N69b/preview',
                     title='兄弟蚵仔麵線',
                     text='堅持傳統口味的用心維持了近三十年',
                     actions=[
@@ -23,10 +23,10 @@ def Food_message():
                             label='100台北市中正區汀州路三段235號',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是1'
-                        )
+                        # MessageTemplateAction(
+                        #     label='用戶發送訊息',
+                        #     text='我知道這是1'
+                        # )
                     ]
                 ),
                 CarouselColumn(
