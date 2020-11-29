@@ -23,10 +23,10 @@ def Food_message():
                             label='100台北市中正區汀州路三段235號',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
-                        # MessageTemplateAction(
-                        #     label='用戶發送訊息',
-                        #     text='我知道這是1'
-                        # )
+                        MessageTemplateAction(
+                            label='用戶發送訊息',
+                            text='我知道這是1'
+                        )
                     ]
                 ),
                 CarouselColumn(
