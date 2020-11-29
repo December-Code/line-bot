@@ -8,7 +8,10 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+import tempfile
 import os
+import datetime
+import time
 
 # ======這裡是呼叫的檔案內容=====
 from Message_Function import *
@@ -50,13 +53,13 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '拍照' in msg:
         message = Photo_message()
+        line_bot_api.reply_message(event.reply_token, message)
     elif '歷史' in msg:
         message = History_message()
+        line_bot_api.reply_message(event.reply_token, message)
     else:
         message = '請點選單按鈕唷~'
-
-
-line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(event.reply_token, message)
 
 
 if __name__ == "__main__":
