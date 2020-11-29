@@ -47,6 +47,7 @@ def handle_message(event):
     msg = event.message.text
     if '美食' in msg:
         message = Food_message()
+        line_bot_api.reply_message(event.reply_token, message)
     elif '拍照' in msg:
         message = Photo_message()
     elif '歷史' in msg:

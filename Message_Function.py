@@ -16,7 +16,7 @@ def Food_message():
                     text='堅持傳統口味的用心維持了近三十年',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店'+'https://drive.google.com/file/d/1xgKtcvP-T5wRcHiIimc30MNECnH5ChDv/view?usp=sharing',
+                            label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
                         URITemplateAction(
