@@ -72,7 +72,7 @@ def Food_message():
     )
     return message
 
-# ============================================================================================
+# =====================================站著的照片推薦============================================
 
 
 def photoSt_message():
@@ -113,10 +113,37 @@ def photoSt_message():
     )
     return message
 
-# ============================================================================================
+# =====================================坐著的照片推薦============================================
 
 
 def photoSi_message():
+    message = TemplateSendMessage(
+        alt_text='坐姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                    action=URITemplateAction(
+                        label="可愛狗狗",
+                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                    action=URITemplateAction(
+                        label="可愛貓咪",
+                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                    )
+                )
+            ]
+        )
+    )
+    return message
+
+# =====================================躺著的照片推薦============================================
+
+
+def photola_message():
     message = TemplateSendMessage(
         alt_text='坐姿推薦',
         template=ImageCarouselTemplate(
@@ -153,5 +180,3 @@ def photoSi_message():
         )
     )
     return message
-
-# ============================================================================================
