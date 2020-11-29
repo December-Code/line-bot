@@ -8,12 +8,21 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+import os
+
+# ======這裡是呼叫的檔案內容=====
+from Message_Function import *
+from new import *
+
+# ========ChatBot開始==========
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('IVUnxQv7vzwOIC//Dc3/6HRzHvqsNoOEwN13B7mDzkFX1FKyM2+487NSJfk28NYFDDJ7KsgH2ph7GUfGEuYAk+i8yfJX050ip5nm9itmT14awJVJbF4wX5I/eIN0PXZR7kYUyDyHnRtAJ4QHazzjFwdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi(
+    'IVUnxQv7vzwOIC//Dc3/6HRzHvqsNoOEwN13B7mDzkFX1FKyM2+487NSJfk28NYFDDJ7KsgH2ph7GUfGEuYAk+i8yfJX050ip5nm9itmT14awJVJbF4wX5I/eIN0PXZR7kYUyDyHnRtAJ4QHazzjFwdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
 handler = WebhookHandler('7d1a1ea57f47cf33c3ecf42237cad089')
+
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -31,12 +40,24 @@ def callback():
     return 'OK'
 
 # 處理訊息
+
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
-    line_bot_api.reply_message(event.reply_token, message)
+    msg = event.message.text
+    if '美食' in msg:
+        message = Food_message()
+    elif '拍照' in msg:
+        message = Photo_message()
+    elif '歷史' in msg:
+        message = History_message()
+    else:
+        message = '請點選單按鈕唷~'
 
-import os
+
+line_bot_api.reply_message(event.reply_token, message)
+
+
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
