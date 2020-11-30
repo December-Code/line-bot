@@ -19,8 +19,9 @@ def Food_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        LocationAction(
-                            label='大約價錢：50 元',
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
                         URITemplateAction(
                             label='100台北市中正區汀州路三段235號',
@@ -37,8 +38,9 @@ def Food_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        LocationAction(
-                            label='大約價錢：50 元',
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
                         URITemplateAction(
                             label='100台北市中正區羅斯福路四段52巷16弄4號',
@@ -55,9 +57,13 @@ def Food_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        LocationAction(
-                            label='大約價錢：45 元',
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
+                        # LocationAction(
+                        #     label='大約價錢：45 元',
+                        # ),
                         URITemplateAction(
                             label='100台北市中正區羅斯福路四段108巷2-3號',
                             uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
@@ -108,28 +114,28 @@ def photoSt_message():
             columns=[
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/rpIHO7w.jpg",
-                    action=TemplateAction(
+                    action=URITemplateAction(
                         label="自來水廠_破壞水管(原)",
                         uri="https://i.imgur.com/rpIHO7w.jpg"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/lZSR4Bq.jpg",
-                    action=TemplateAction(
+                    action=URITemplateAction(
                         label="自來水廠_破壞水管(站姿)",
                         uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/BirTsfc.jpg",
-                    action=TemplateAction(
+                    action=URITemplateAction(
                         label="寶藏巖_半樓廣場",
                         uri="https://i.imgur.com/BirTsfc.jpg"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/BirTsfc.jpg",
-                    action=TemplateAction(
+                    action=URITemplateAction(
                         label="寶藏巖_半樓廣場(站姿)",
                         uri="https://i.imgur.com/BirTsfc.jpg"
                     )
@@ -176,14 +182,14 @@ def photola_message():
             columns=[
                  ImageCarouselColumn(
                      image_url="https://i.imgur.com/4PZvAlV.jpg",
-                     action=TemplateAction(
+                     action=URITemplateAction(
                          label="自來水廠_管中世界",
                          uri="https://i.imgur.com/4PZvAlV.jpg"
                      )
                  ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/RkrmZjH.jpg",
-                    action=TemplateAction(
+                    action=URITemplateAction(
                         label="自來水廠_管中世界('躺姿')",
                         uri="https://i.imgur.com/RkrmZjH.jpg"
                     )
