@@ -11,7 +11,7 @@ def Food_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/XTrANW1.jpg',
+                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
                     title='兄弟蚵仔麵線',
                     text='堅持傳統口味的用心維持了近三十年',
                     actions=[
@@ -19,54 +19,55 @@ def Food_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
+                        PostbackTemplateAction(
+                            label='大約價錢：50 元',
+                            data=''
+                        ),
                         URITemplateAction(
                             label='100台北市中正區汀州路三段235號',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        )
+
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
+                    title='鴉片粉圓',
+                    text='「鴉片」一吃就上癮',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是1'
+                        PostbackTemplateAction(
+                            label='大約價錢：50 元',
+                            data=''
+                        ),
+                        URITemplateAction(
+                            label='100台北市中正區羅斯福路四段52巷16弄4號',
+                            uri='https://goo.gl/maps/bUDeGy4QDjYFgCar9'
                         )
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/Np7eFyj.jpg',
-                    title='這是第二塊模板',
-                    text='副標題可以自己改',
+                    thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
+                    title='劉記古早味蔥蛋餅',
+                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！',
                     actions=[
                         PostbackTemplateAction(
-                            label='回傳一個訊息',
-                            data='這是ID=2'
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是2'
+                        PostbackTemplateAction(
+                            label='大約價錢：45 元',
+                            data=''
                         ),
                         URITemplateAction(
-                            label='進入2的網頁',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Number_2_in_light_blue_rounded_square.svg/200px-Number_2_in_light_blue_rounded_square.svg.png'
+                            label='100台北市中正區羅斯福路四段108巷2-3號',
+                            uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
                         )
                     ]
                 ),
-                CarouselColumn(
-                    thumbnail_image_url='https://imgur.com/gallery/UMF6RiO.jpg',
-                    title='這是第三個模塊',
-                    text='最多可以放十個',
-                    actions=[
-                        PostbackTemplateAction(
-                            label='回傳一個訊息',
-                            data='這是ID=3'
-                        ),
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是3'
-                        ),
-                        URITemplateAction(
-                            label='uri2',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png'
-                        )
-                    ]
-                )
             ]
         )
     )

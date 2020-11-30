@@ -43,7 +43,9 @@ def callback():
 
 # 處理訊息
 
+
 level1 = 0
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -51,27 +53,21 @@ def handle_message(event):
     global level1
     if '美食' in msg:
         message = Food_message()
-        level1=1
+        level1 = 1
         line_bot_api.reply_message(event.reply_token, message)
     elif '拍照' in msg:
         message = photo_message()
-        level1=2
+        level1 = 2
         line_bot_api.reply_message(event.reply_token, message)
-    elif level1==2 and '站' in msg:
+    elif level1 == 2 and '站' in msg:
         message = photoSt_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif level1==2 and '坐' in msg:
+    elif level1 == 2 and '坐' in msg:
         message = photoSi_message()
         line_bot_api.reply_message(event.reply_token, message)
-        # if '站' in message:
-        #     message = photoSt_message()
-        #     line_bot_api.reply_message(event.reply_token, message)
-        # elif '坐' in message:
-        #     message = photoSi_message()
-        #     line_bot_api.reply_message(event.reply_token, message)
-        # elif '躺' in msg:
-        #     message = photola_message()
-        #     line_bot_api.reply_message(event.reply_token, message)
+    elif level1 == 2 and '躺' in msg:
+        message = photola_message()
+        line_bot_api.reply_message(event.reply_token, message)
     elif '歷史' in msg:
         message = History_message()
         line_bot_api.reply_message(event.reply_token, message)
