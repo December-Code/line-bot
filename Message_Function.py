@@ -110,28 +110,28 @@ def photoSt_message():
                     image_url="https://i.imgur.com/rpIHO7w.jpg",
                     action=TemplateAction(
                         label="自來水廠_破壞水管(原)",
-                        # uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
+                        uri="https://i.imgur.com/rpIHO7w.jpg"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/lZSR4Bq.jpg",
                     action=TemplateAction(
                         label="自來水廠_破壞水管(站姿)",
-                        # uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
+                        uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/4PZvAlV.jpg",
+                    image_url="https://i.imgur.com/BirTsfc.jpg",
                     action=TemplateAction(
-                        label="自來水廠_管中世界",
-                        # uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                        label="寶藏巖_半樓廣場",
+                        uri="https://i.imgur.com/BirTsfc.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/RkrmZjH.jpg",
+                    image_url="https://i.imgur.com/BirTsfc.jpg",
                     action=TemplateAction(
-                        label="自來水廠_管中世界('躺姿')",
-                        # uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        label="寶藏巖_半樓廣場(站姿)",
+                        uri="https://i.imgur.com/BirTsfc.jpg"
                     )
                 )
             ]
@@ -148,17 +148,17 @@ def photoSi_message():
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                    image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
-                        label="可愛狗狗",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                        label="寶藏巖_幸福餅乾",
+                        uri="https://i.imgur.com/xuS9nUe.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                    image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
-                        label="可愛貓咪",
-                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        label="寶藏巖_幸福餅乾(坐姿)",
+                        uri="https://i.imgur.com/xuS9nUe.jpg"
                     )
                 )
             ]
@@ -171,34 +171,34 @@ def photoSi_message():
 
 def photola_message():
     message = TemplateSendMessage(
-        alt_text='坐姿推薦',
+        alt_text='躺姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                  ImageCarouselColumn(
                      image_url="https://i.imgur.com/4PZvAlV.jpg",
                      action=TemplateAction(
                          label="自來水廠_管中世界",
-                         # uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                         uri="https://i.imgur.com/4PZvAlV.jpg"
                      )
                  ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/RkrmZjH.jpg",
                     action=TemplateAction(
                         label="自來水廠_管中世界('躺姿')",
-                        # uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        uri="https://i.imgur.com/RkrmZjH.jpg"
                     )
                  ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                    image_url="https://i.imgur.com/1DHNhgM.jpg",
                     action=URITemplateAction(
-                        label="可愛狗狗",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                        label="自來水廠_長椅下午后",
+                        uri="https://i.imgur.com/1DHNhgM.jpg"
                     )
                  ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/QRIa5Dz.jpg",
                     action=URITemplateAction(
-                        label="可愛貓咪",
+                        label="自來水廠_長椅下午后(躺)",
                         uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
                     )
                  )
