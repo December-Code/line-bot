@@ -120,7 +120,7 @@ def photoSt_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/lZSR4Bq.jpg",
                     action=URITemplateAction(
-                        label="自來水_扭曲水管(站姿)",
+                        label="自來水_扭曲水管(站)",
                         uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
                 ),
@@ -134,7 +134,7 @@ def photoSt_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
-                        label="寶藏巖_幸福餅乾(坐姿)",
+                        label="寶藏巖_幸福餅乾(站)",
                         uri="https://i.imgur.com/xuS9nUe.jpg"
                     )
                 ),
@@ -142,44 +142,6 @@ def photoSt_message():
         )
     )
     return message
-
-# def photoSt_message():
-#     message = TemplateSendMessage(
-#         alt_text='站姿推薦',
-#         template=ImageCarouselTemplate(
-#             columns=[
-#                 ImageCarouselColumn(
-#                     image_url="https://i.imgur.com/rpIHO7w.jpg",
-#                     action=URITemplateAction(
-#                         label="自來水廠_破壞水管(原)",
-#                         uri="https://i.imgur.com/rpIHO7w.jpg"
-#                     )
-#                 ),
-#                 ImageCarouselColumn(
-#                     image_url="https://i.imgur.com/lZSR4Bq.jpg",
-#                     action=URITemplateAction(
-#                         label="自來水廠_破壞水管(站姿)",
-#                         uri="https://i.imgur.com/lZSR4Bq.jpg"
-#                     )
-#                 ),
-#                 ImageCarouselColumn(
-#                     image_url="https://i.imgur.com/BirTsfc.jpg",
-#                     action=URITemplateAction(
-#                         label="寶藏巖_半樓廣場",
-#                         uri="https://i.imgur.com/BirTsfc.jpg"
-#                     )
-#                 ),
-#                 ImageCarouselColumn(
-#                     image_url="https://i.imgur.com/BirTsfc.jpg",
-#                     action=URITemplateAction(
-#                         label="寶藏巖_半樓廣場(站姿)",
-#                         uri="https://i.imgur.com/BirTsfc.jpg"
-#                     )
-#                 )
-#             ]
-#         )
-#     )
-#     return message
 
 # =====================================坐著的照片推薦============================================
 
@@ -199,7 +161,7 @@ def photoSi_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
-                        label="寶藏巖_幸福餅乾(坐姿)",
+                        label="寶藏巖_幸福餅乾(坐)",
                         uri="https://i.imgur.com/xuS9nUe.jpg"
                     )
                 )
@@ -214,6 +176,38 @@ def photoSi_message():
 def photola_message():
     message = TemplateSendMessage(
         alt_text='躺姿推薦',
+        # template=ImageCarouselTemplate(
+        #     columns=[
+        #         ImageCarouselColumn(
+        #             image_url="https://i.imgur.com/rpIHO7w.jpg",
+        #             action=URITemplateAction(
+        #                 label="自來水_扭曲水管",
+        #                 uri="https://i.imgur.com/rpIHO7w.jpg"
+        #             )
+        #         ),
+        #         ImageCarouselColumn(
+        #             image_url="https://i.imgur.com/lZSR4Bq.jpg",
+        #             action=URITemplateAction(
+        #                 label="自來水_扭曲水管(站)",
+        #                 uri="https://i.imgur.com/lZSR4Bq.jpg"
+        #             )
+        #         ),
+        #         ImageCarouselColumn(
+        #             image_url="https://i.imgur.com/xuS9nUe.jpg",
+        #             action=URITemplateAction(
+        #                 label="寶藏巖_幸福餅乾",
+        #                 uri="https://i.imgur.com/xuS9nUe.jpg"
+        #             )
+        #         ),
+        #         ImageCarouselColumn(
+        #             image_url="https://i.imgur.com/xuS9nUe.jpg",
+        #             action=URITemplateAction(
+        #                 label="寶藏巖_幸福餅乾(站)",
+        #                 uri="https://i.imgur.com/xuS9nUe.jpg"
+        #             )
+        #         ),
+        #     ]
+        # )
         template=ImageCarouselTemplate(
             columns=[
                  ImageCarouselColumn(
@@ -226,21 +220,21 @@ def photola_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/RkrmZjH.jpg",
                     action=URITemplateAction(
-                        label="自來水廠_管中世界('躺姿')",
+                        label="自來水廠_管中世界('躺')",
                         uri="https://i.imgur.com/RkrmZjH.jpg"
                     )
                  ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/1DHNhgM.jpg",
                     action=URITemplateAction(
-                        label="自來水廠_長椅下午后",
+                        label="自來水_長椅下午后",
                         uri="https://i.imgur.com/1DHNhgM.jpg"
                     )
                  ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/QRIa5Dz.jpg",
                     action=URITemplateAction(
-                        label="自來水廠_長椅下午后(躺)",
+                        label="自來水_長椅下午后(躺)",
                         uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
                     )
                  )
