@@ -105,7 +105,7 @@ def photo_message():
 
 
 # =====================================站著的照片推薦============================================
-def photoSㄔ_message():
+def photoSt_message():
     message = TemplateSendMessage(
         alt_text='站姿推薦',
         template=ImageCarouselTemplate(
