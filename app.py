@@ -56,7 +56,7 @@ def handle_message(event):
     elif '拍照' in msg:
         message = photo_message()
         level1=2
-        line_bot_api.reply_message(event.reply_token, level1)
+        line_bot_api.reply_message(event.reply_token, message)
     elif level1==2 and '站' in msg:
         message = photoSt_message()
         line_bot_api.reply_message(event.reply_token, message)
