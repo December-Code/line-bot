@@ -43,11 +43,12 @@ def callback():
 
 # 處理訊息
 
+level1 = 0
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    level1=0
+    
     if '美食' in msg:
         message = Food_message()
         line_bot_api.reply_message(event.reply_token, message)
