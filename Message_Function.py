@@ -61,9 +61,9 @@ def Food_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        # LocationAction(
-                        #     label='大約價錢：45 元',
-                        # ),
+                        LocationAction(
+                            label='大約價錢：45 元',
+                        ),
                         URITemplateAction(
                             label='100台北市中正區羅斯福路四段108巷2-3號',
                             uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
@@ -125,21 +125,21 @@ def photoSt_message():
                         label="自來水廠_破壞水管(站姿)",
                         uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/BirTsfc.jpg",
-                    action=URITemplateAction(
-                        label="寶藏巖_半樓廣場",
-                        uri="https://i.imgur.com/BirTsfc.jpg"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/BirTsfc.jpg",
-                    action=URITemplateAction(
-                        label="寶藏巖_半樓廣場(站姿)",
-                        uri="https://i.imgur.com/BirTsfc.jpg"
-                    )
                 )
+                # ImageCarouselColumn(
+                #     image_url="https://i.imgur.com/BirTsfc.jpg",
+                #     action=URITemplateAction(
+                #         label="寶藏巖_半樓廣場",
+                #         uri="https://i.imgur.com/BirTsfc.jpg"
+                #     )
+                # ),
+                # ImageCarouselColumn(
+                #     image_url="https://i.imgur.com/BirTsfc.jpg",
+                #     action=URITemplateAction(
+                #         label="寶藏巖_半樓廣場(站姿)",
+                #         uri="https://i.imgur.com/BirTsfc.jpg"
+                #     )
+                # )
             ]
         )
     )
