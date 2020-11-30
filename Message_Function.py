@@ -217,12 +217,13 @@ def photola_message():
 def History_message():
     message = ImagemapSendMessage(
         base_url="https://i.imgur.com/BfTFVDN.jpg",
-        alt_text='最新的合作廠商有誰呢？',
+        alt_text='這裡有什麼歷史呢?',
         base_size=BaseSize(height=2000, width=2000),
         actions=[
             URIImagemapAction(
                 # 家樂福
                 link_uri="https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F",
+                text='寶藏巖',
                 area=ImagemapArea(
                     x=0, y=0, width=1000, height=1000
                 )
@@ -230,6 +231,7 @@ def History_message():
             URIImagemapAction(
                 # 生活市集
                 link_uri="https://tw.shop.com/search/%E7%94%9F%E6%B4%BB%E5%B8%82%E9%9B%86",
+                text='自來水廠',
                 area=ImagemapArea(
                     x=1000, y=0, width=1000, height=1000
                 )
