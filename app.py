@@ -74,7 +74,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '導覽' in msg:
         message = TextSendMessage(text='從左到右分別代表:')
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.push_message(event.reply_token, message)
         message = TextSendMessage(
             text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
         line_bot_api.reply_message(event.reply_token, message)
