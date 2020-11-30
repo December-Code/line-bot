@@ -84,16 +84,16 @@ def photo_message():
             text="輸入生日後即獲得抽獎機會",
             actions=[
                 MessageTemplateAction(
-                    label="1",
-                    text="有哪些？"
+                    label="我想站姿",
+                    text="站姿"
                 ),
                 MessageTemplateAction(
-                    label="2",
-                    text="抽獎？"
+                    label="我想坐姿",
+                    text="坐姿"
                 ),
                 MessageTemplateAction(
-                    label="3",
-                    text="品項呢？"
+                    label="我想躺姿",
+                    text="躺姿"
                 ),
             ]
         )
