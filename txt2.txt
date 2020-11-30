@@ -85,7 +85,7 @@ def photo_message():
             actions=[
                 MessageTemplateAction(
                     label="我想站姿",
-                    action=photoSt_message()
+                    message=photoSt_message()
                 ),
                 MessageTemplateAction(
                     label="我想坐姿",
