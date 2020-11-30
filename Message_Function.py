@@ -124,20 +124,20 @@ def photoSt_message():
                         uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
                 ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/rpIHO7w.jpg",
-                    action=URITemplateAction(
-                        label="寶藏巖_幸福餅乾",
-                        uri="https://i.imgur.com/rpIHO7w.jpg"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/lZSR4Bq.jpg",
-                    action=URITemplateAction(
-                        label="寶藏巖_幸福餅乾(站姿)",
-                        uri="https://i.imgur.com/lZSR4Bq.jpg"
-                    )
-                )
+                # ImageCarouselColumn(
+                #     image_url="https://i.imgur.com/rpIHO7w.jpg",
+                #     action=URITemplateAction(
+                #         label="寶藏巖_幸福餅乾",
+                #         uri="https://i.imgur.com/rpIHO7w.jpg"
+                #     )
+                # ),
+                # ImageCarouselColumn(
+                #     image_url="https://i.imgur.com/lZSR4Bq.jpg",
+                #     action=URITemplateAction(
+                #         label="寶藏巖_幸福餅乾(站姿)",
+                #         uri="https://i.imgur.com/lZSR4Bq.jpg"
+                #     )
+                # )
             ]
         )
     )
