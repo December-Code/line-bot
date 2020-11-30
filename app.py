@@ -52,11 +52,11 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '拍照' in msg:
         message = photo_message()
+        line_bot_api.reply_message(event.reply_token, message)
         if message.text in '站':
             message = photoSt_message()
         elif message.text in '坐':
             message = photoSi_message()
-        line_bot_api.reply_message(event.reply_token, message)
         # if '站' in message:
         #     message = photoSt_message()
         #     line_bot_api.reply_message(event.reply_token, message)
