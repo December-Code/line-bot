@@ -114,14 +114,14 @@ def photoSt_message():
                     image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
                         label="寶藏巖_幸福餅乾",
-                        uri="https://i.imgur.com/xuS9nUe.jpg"
+                        uri="https://i.imgur.com/rpIHO7w.jpg"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
                         label="寶藏巖_幸福餅乾(坐姿)",
-                        uri="https://i.imgur.com/xuS9nUe.jpg"
+                        uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
                 )
             ]
