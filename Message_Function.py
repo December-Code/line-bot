@@ -110,20 +110,6 @@ def photoSt_message():
         alt_text='站姿推薦',
         template=ImageCarouselTemplate(
             columns=[
-                # ImageCarouselColumn(
-                #     image_url="https://i.imgur.com/rpIHO7w.jpg?1",
-                #     action=URITemplateAction(
-                #         label="自來水廠_破壞水管(原)",
-                #         uri="https://i.imgur.com/rpIHO7w.jpg"
-                #     )
-                # ),
-                # ImageCarouselColumn(
-                #     image_url="https://i.imgur.com/lZSR4Bq.jpg?2",
-                #     action=URITemplateAction(
-                #         label="自來水廠_破壞水管(站姿)",
-                #         uri="https://i.imgur.com/lZSR4Bq.jpg"
-                #     )
-                # ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/rpIHO7w.jpg",
                     action=URITemplateAction(
@@ -134,24 +120,24 @@ def photoSt_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/lZSR4Bq.jpg",
                     action=URITemplateAction(
-                        label="寶藏巖_幸福餅乾(站姿)",
+                        label="寶藏巖_幸福餅乾(坐姿)",
                         uri="https://i.imgur.com/lZSR4Bq.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/rpIHO7w.jpg",
+                    image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
                         label="寶藏巖_幸福餅乾",
-                        uri="https://i.imgur.com/rpIHO7w.jpg"
+                        uri="https://i.imgur.com/xuS9nUe.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/lZSR4Bq.jpg",
+                    image_url="https://i.imgur.com/xuS9nUe.jpg",
                     action=URITemplateAction(
-                        label="寶藏巖_幸福餅乾(站姿)",
-                        uri="https://i.imgur.com/lZSR4Bq.jpg"
+                        label="寶藏巖_幸福餅乾(坐姿)",
+                        uri="https://i.imgur.com/xuS9nUe.jpg"
                     )
-                )
+                ),
             ]
         )
     )
