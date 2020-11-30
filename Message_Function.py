@@ -218,7 +218,7 @@ def History_message():
     message = TemplateSendMessage(
         alt_text='你想要了解那裡的歷史呢?',
         template=ButtonsTemplate(
-            thumbnail_image_url="https://i.imgur.com/raFTzTo.jpg",
+            thumbnail_image_url="https://i.imgur.com/8ze9PtV.png",
             title="想了解那裡的歷史呢?",
             text="選擇想要的地點",
             actions=[
@@ -265,6 +265,7 @@ def HistoryB_message():
     )
     return message
 # =====================================自來水廠對照========================================
+
 
 def HistoryW_message():
     message = TemplateSendMessage(
