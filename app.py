@@ -54,9 +54,10 @@ def handle_message(event):
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
 
+        @handler.add(MessageEvent, message=TextMessage)
         def handle_message(event):
             msg = event.message.text
-            if '站' in  msg.text:
+            if '站' in msg.text:
                 message = photoSt_message()
                 line_bot_api.reply_message(event.reply_token, message)
             elif '坐' in message.text:
