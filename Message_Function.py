@@ -211,31 +211,107 @@ def photola_message():
     )
     return message
 
-# =====================================歷史對照============================================
+# =====================================歷史對照==========================================
 
 
 def History_message():
-    message = ImagemapSendMessage(
-        base_url="https://i.imgur.com/BfTFVDN.jpg",
-        alt_text='這裡有什麼歷史呢?',
-        base_size=BaseSize(height=2000, width=2000),
-        actions=[
-            URIImagemapAction(
-                # 家樂福
-                link_uri="https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F",
-                text='寶藏巖',
-                area=ImagemapArea(
-                    x=0, y=0, width=1000, height=1000
-                )
-            ),
-            URIImagemapAction(
-                # 生活市集
-                link_uri="https://tw.shop.com/search/%E7%94%9F%E6%B4%BB%E5%B8%82%E9%9B%86",
-                text='自來水廠',
-                area=ImagemapArea(
-                    x=1000, y=0, width=1000, height=1000
-                )
-            ),
-        ]
+    message = TemplateSendMessage(
+        alt_text='你想要了解那裡的歷史呢?',
+        template=ButtonsTemplate(
+            thumbnail_image_url="https://i.imgur.com/raFTzTo.jpg",
+            title="想了解那裡的歷史呢?",
+            text="選擇想要的地點",
+            actions=[
+                MessageTemplateAction(
+                    label="我想瞭解寶藏巖",
+                    text='寶藏巖',
+                ),
+                MessageTemplateAction(
+                    label="我想瞭解自來水廠",
+                    text='自來水廠',
+                ),
+                MessageTemplateAction(
+                    label="都沒有耶QQ",
+                    text='都不想',
+                ),
+            ]
+        )
     )
     return message
+# =====================================寶藏巖對照========================================
+
+
+def HistoryB_message():
+    message = TemplateSendMessage(
+        alt_text='先看看寶藏巖的今昔對比',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/dlk5RhE.png",
+                    action=URITemplateAction(
+                        label="寶藏巖_(新))",
+                        uri="https://i.imgur.com/dlk5RhE.png"
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/5TMDvWW.png",
+                    action=URITemplateAction(
+                        label="寶藏巖(舊))",
+                        uri="https://i.imgur.com/5TMDvWW.png"
+                    )
+                )
+            ]
+        )
+    )
+    return message
+# =====================================自來水廠對照========================================
+
+def HistoryW_message():
+    message = TemplateSendMessage(
+        alt_text='先看看自來水廠的今昔對比',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/3K6Kl1s.png",
+                    action=URITemplateAction(
+                        label="自來水廠(新)",
+                        uri="https://i.imgur.com/3K6Kl1s.png"
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/YA3NPS5.png",
+                    action=URITemplateAction(
+                        label="自來水廠(舊)",
+                        uri="https://i.imgur.com/YA3NPS5.png"
+                    )
+                )
+            ]
+        )
+    )
+    return message
+
+# def History_message():
+#     message = ImagemapSendMessage(
+#         base_url="https://i.imgur.com/OKgp8Fa.png",
+#         alt_text='這裡有什麼歷史呢?',
+#         base_size=BaseSize(height=2000, width=2000),
+#         actions=[
+#             URIImagemapAction(
+#                 # 寶藏巖
+#                 link_uri="https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F",
+#                 label='寶藏巖',
+#                 area=ImagemapArea(
+#                     x=0, y=0, width=1000, height=1000
+#                 )
+#             ),
+#             URIImagemapAction(
+#                 # 自來水廠
+#                 link_uri="https://tw.shop.com/search/%E7%94%9F%E6%B4%BB%E5%B8%82%E9%9B%86",
+#                 label='自來水廠',
+#                 area=ImagemapArea(
+#                     x=1000, y=0, width=1000, height=1000
+#                 )
+#             ),
+#         ]
+#     )
+#     return message

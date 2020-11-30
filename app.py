@@ -72,14 +72,14 @@ def handle_message(event):
         message = History_message()
         level = 3
         line_bot_api.reply_message(event.reply_token, message)
-    elif level == 3 and '站' in msg:
+    elif level == 3 and '寶藏巖' in msg:
         message = photoSt_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif level == 3 and '坐' in msg:
+    elif level == 3 and '自來水廠' in msg:
         message = photoSi_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif level == 3 and '躺' in msg:
-        message = photola_message()
+    elif level == 3 and '都不想' in msg:
+        message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
     elif '導覽' in msg:
         message = TextSendMessage(text='從左到右分別代表:')
