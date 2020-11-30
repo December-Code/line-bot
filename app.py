@@ -53,10 +53,10 @@ def handle_message(event):
     elif '拍照' in msg:
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
-        if event.message.text in '站':
+        if '站' in message.text:
             message = photoSt_message()
             line_bot_api.reply_message(event.reply_token, message)
-        elif event.message.text in '坐':
+        elif '坐' in message.text:
             message = photoSi_message()
             line_bot_api.reply_message(event.reply_token, message)
         # if '站' in message:
