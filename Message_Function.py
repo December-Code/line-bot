@@ -11,7 +11,7 @@ def Food_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/Np7eFyj.jpg',
+                    thumbnail_image_url='https://i.imgur.com/XTrANW1.jpg?2',
                     title='兄弟蚵仔麵線',
                     text='堅持傳統口味的用心維持了近三十年',
                     actions=[
