@@ -111,7 +111,7 @@ def photoSt_message():
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/xuS9nUe.jpg",
+                    image_url="https://i.imgur.com/rpIHO7w.jpg",
                     action=URITemplateAction(
                         label="寶藏巖_幸福餅乾",
                         uri="https://i.imgur.com/rpIHO7w.jpg"
