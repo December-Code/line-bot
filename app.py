@@ -74,16 +74,14 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '導覽' in msg:
         message = TextSendMessage(text='從左到右分別代表:')
-        line_bot_api.push_message(event.reply_token, message)
-        message = TextSendMessage(
+        message1 = TextSendMessage(
             text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
-        line_bot_api.reply_message(event.reply_token, message)
-        message = TextSendMessage(
+        message2 = TextSendMessage(
             text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
-        line_bot_api.reply_message(event.reply_token, message)
-        message = TextSendMessage(
+        message3 = TextSendMessage(
             text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(
+            event.reply_token, [message, message1, message2, message3])
     else:
         message = TextSendMessage(
             text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
