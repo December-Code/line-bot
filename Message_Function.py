@@ -11,7 +11,7 @@ def Food_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/XTrANW1.jpg?2',
+                    thumbnail_image_url='https://i.imgur.com/XTrANW1.jpg',
                     title='兄弟蚵仔麵線',
                     text='堅持傳統口味的用心維持了近三十年',
                     actions=[
@@ -71,6 +71,35 @@ def Food_message():
         )
     )
     return message
+
+# =====================================站著的照片推薦============================================
+
+
+def photo_message():
+    message = TemplateSendMessage(
+        alt_text='選擇你要的姿勢',
+        template=ButtonsTemplate(
+            thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
+            title="是否要進行抽獎活動？",
+            text="輸入生日後即獲得抽獎機會",
+            actions=[
+                MessageTemplateAction(
+                    label="1",
+                    text="有哪些？"
+                ),
+                MessageTemplateAction(
+                    label="2",
+                    text="抽獎？"
+                ),
+                MessageTemplateAction(
+                    label="3",
+                    text="品項呢？"
+                ),
+            ]
+        )
+    )
+    return message
+
 
 # =====================================站著的照片推薦============================================
 
