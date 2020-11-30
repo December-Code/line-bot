@@ -220,7 +220,7 @@ def photola_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/RkrmZjH.jpg",
                     action=URITemplateAction(
-                        label="自來水廠_管中世界('躺')",
+                        label="自來水廠_管中世界(躺)",
                         uri="https://i.imgur.com/RkrmZjH.jpg"
                     )
                  ),
