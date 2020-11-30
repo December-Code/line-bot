@@ -200,7 +200,7 @@ def photola_message():
                     )
                  ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                    image_url="https://i.imgur.com/MkPeQQY.jpg",
                     action=URITemplateAction(
                         label="自來水_長椅下午后(躺)",
                         uri="https://i.imgur.com/MkPeQQY.jpg"
