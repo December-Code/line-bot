@@ -27,7 +27,6 @@ def Food_message():
                             label='100台北市中正區汀州路三段235號',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         )
-
                     ]
                 ),
                 CarouselColumn(
@@ -80,9 +79,9 @@ def photo_message():
     message = TemplateSendMessage(
         alt_text='選擇你要的姿勢',
         template=ButtonsTemplate(
-            thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
-            title="是否要進行抽獎活動？",
-            text="輸入生日後即獲得抽獎機會",
+            thumbnail_image_url="https://i.imgur.com/raFTzTo.jpg",
+            title="想要拍照了嗎?",
+            text="選擇想要的姿勢",
             actions=[
                 MessageTemplateAction(
                     label="我想站姿",
@@ -111,31 +110,31 @@ def photoSt_message():
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/uKYgfVs.jpg",
-                    action=URITemplateAction(
-                        label="新鮮水果",
-                        uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
+                    image_url="https://i.imgur.com/rpIHO7w.jpg",
+                    action=TemplateAction(
+                        label="自來水廠_破壞水管(原)",
+                        # uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QOcAvjt.jpg",
-                    action=URITemplateAction(
-                        label="新鮮蔬菜",
-                        uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
+                    image_url="https://i.imgur.com/lZSR4Bq.jpg",
+                    action=TemplateAction(
+                        label="自來水廠_破壞水管(站姿)",
+                        # uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
-                    action=URITemplateAction(
-                        label="可愛狗狗",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                    image_url="https://i.imgur.com/4PZvAlV.jpg",
+                    action=TemplateAction(
+                        label="自來水廠_管中世界",
+                        # uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
-                    action=URITemplateAction(
-                        label="可愛貓咪",
-                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                    image_url="https://i.imgur.com/RkrmZjH.jpg",
+                    action=TemplateAction(
+                        label="自來水廠_管中世界('躺姿')",
+                        # uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
                     )
                 )
             ]
