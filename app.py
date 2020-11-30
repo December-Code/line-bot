@@ -53,15 +53,15 @@ def handle_message(event):
     elif '拍照' in msg:
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
-        if '站' in message:
-            message = photoSt_message()
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '坐' in message:
-            message = photoSi_message()
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '躺' in message:
-            message = photola_message()
-            line_bot_api.reply_message(event.reply_token, message)
+        # if '站' in message:
+        #     message = photoSt_message()
+        #     line_bot_api.reply_message(event.reply_token, message)
+        # elif '坐' in message:
+        #     message = photoSi_message()
+        #     line_bot_api.reply_message(event.reply_token, message)
+        # elif '躺' in msg:
+        #     message = photola_message()
+        #     line_bot_api.reply_message(event.reply_token, message)
 
     elif '歷史' in msg:
         message = History_message()
