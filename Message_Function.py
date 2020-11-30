@@ -49,7 +49,7 @@ def Food_message():
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://imgur.com/gallery/UMF6RiO',
+                    thumbnail_image_url='https://imgur.com/gallery/UMF6RiO.jpg',
                     title='這是第三個模塊',
                     text='最多可以放十個',
                     actions=[
