@@ -20,11 +20,12 @@ def Food_message():
                             data='使用者喜歡'
                         ),
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
+                            label='大約價錢：50 元',
                             data='使用者喜歡'
                         ),
                         URITemplateAction(
-                            label='100台北市中正區汀州路三段235號',
+                            # label='100台北市中正區汀州路三段235號',
+                            label='它在哪呢?',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         )
                     ]
@@ -39,11 +40,12 @@ def Food_message():
                             data='使用者喜歡'
                         ),
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
+                            label='大約價錢：50 元',
                             data='使用者喜歡'
                         ),
                         URITemplateAction(
-                            label='100台北市中正區羅斯福路四段52巷16弄4號',
+                            # label='100台北市中正區羅斯福路四段52巷16弄4號',
+                            label='它在哪呢?',
                             uri='https://goo.gl/maps/bUDeGy4QDjYFgCar9'
                         )
                     ]
@@ -58,14 +60,12 @@ def Food_message():
                             data='使用者喜歡'
                         ),
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
+                            label='大約價錢：45 元',
                             data='使用者喜歡'
                         ),
-                        LocationAction(
-                            label='大約價錢：45 元',
-                        ),
                         URITemplateAction(
-                            label='100台北市中正區羅斯福路四段108巷2-3號',
+                            # label='100台北市中正區羅斯福路四段108巷2-3號',
+                            label='它在哪呢?',
                             uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
                         )
                     ]
@@ -176,38 +176,6 @@ def photoSi_message():
 def photola_message():
     message = TemplateSendMessage(
         alt_text='躺姿推薦',
-        # template=ImageCarouselTemplate(
-        #     columns=[
-        #         ImageCarouselColumn(
-        #             image_url="https://i.imgur.com/rpIHO7w.jpg",
-        #             action=URITemplateAction(
-        #                 label="自來水_扭曲水管",
-        #                 uri="https://i.imgur.com/rpIHO7w.jpg"
-        #             )
-        #         ),
-        #         ImageCarouselColumn(
-        #             image_url="https://i.imgur.com/lZSR4Bq.jpg",
-        #             action=URITemplateAction(
-        #                 label="自來水_扭曲水管(站)",
-        #                 uri="https://i.imgur.com/lZSR4Bq.jpg"
-        #             )
-        #         ),
-        #         ImageCarouselColumn(
-        #             image_url="https://i.imgur.com/xuS9nUe.jpg",
-        #             action=URITemplateAction(
-        #                 label="寶藏巖_幸福餅乾",
-        #                 uri="https://i.imgur.com/xuS9nUe.jpg"
-        #             )
-        #         ),
-        #         ImageCarouselColumn(
-        #             image_url="https://i.imgur.com/xuS9nUe.jpg",
-        #             action=URITemplateAction(
-        #                 label="寶藏巖_幸福餅乾(站)",
-        #                 uri="https://i.imgur.com/xuS9nUe.jpg"
-        #             )
-        #         ),
-        #     ]
-        # )
         template=ImageCarouselTemplate(
             columns=[
                  ImageCarouselColumn(
@@ -235,7 +203,7 @@ def photola_message():
                     image_url="https://i.imgur.com/QRIa5Dz.jpg",
                     action=URITemplateAction(
                         label="自來水_長椅下午后(躺)",
-                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        uri="https://i.imgur.com/MkPeQQY.jpg"
                     )
                  )
             ]
