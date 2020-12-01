@@ -125,6 +125,8 @@ def FoodK_message():
     return message
 
 # ===================================水源市場美食推薦=========================================
+
+
 def FoodW_message():
     message = TemplateSendMessage(
         alt_text='最近美食資訊',
@@ -139,9 +141,9 @@ def FoodW_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        PostbackTemplateAction(
-                            label='大約價錢：50 元',
-                            data='使用者喜歡'
+                        URITemplateAction(
+                            label='大約價錢：50元',
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         # URITemplateAction(
                         #     # label='100台北市中正區汀州路三段235號',
@@ -450,7 +452,7 @@ def Introduction_message():
             text='需要功能導覽嗎?',
             actions=[
                 PostbackTemplateAction(
-                    label='Yes',
+                    label='好呀~',
                     text='導覽',
                     data='action=Introduction'
                 ),
@@ -459,8 +461,8 @@ def Introduction_message():
                 #     text='導覽'
                 # ),
                 MessageTemplateAction(
-                    label='No',
-                    text='有需要直接打導覽也可以唷!'
+                    label='我自己摸索沒關係',
+                    text='好唷!，如果還有需要直接打導覽也可以唷!'
                 )
             ]
         )
