@@ -44,12 +44,12 @@ def FoodK_message():
                     text='堅持傳統口味的用心維持了近三十年 \n地點:100台北市中正區汀州路三段235號',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            text='使用者喜歡'
+                            label='我喜歡這家店1',
+                            text='使用者喜歡1'
                         ),
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                            label='123',
+                            data='321'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -71,12 +71,12 @@ def FoodK_message():
                     text='「鴉片」一吃就上癮 \n地點:100台北市中正區羅斯福路四段52巷16弄4號',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                            label='我喜歡這家店2',
+                            data='使用者喜歡2'
                         ),
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                            label='22',
+                            data='22'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -98,12 +98,12 @@ def FoodK_message():
                     text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地點:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                            label='我喜歡這家店3',
+                            data='使用者喜歡3'
                         ),
-                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                        PostbackTemplateAction(
+                            label='33',
+                            data='33'
                         ),
                         URITemplateAction(
                             label='大約價錢：45元',
