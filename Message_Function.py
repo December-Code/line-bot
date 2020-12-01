@@ -360,14 +360,14 @@ def HistoryB_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/dlk5RhE.png",
                     action=URITemplateAction(
-                        label="寶藏巖_(新))",
+                        label="寶藏巖_(今))",
                         uri="https://i.imgur.com/dlk5RhE.png"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/5TMDvWW.png",
                     action=URITemplateAction(
-                        label="寶藏巖(舊))",
+                        label="寶藏巖(今))",
                         uri="https://i.imgur.com/5TMDvWW.png"
                     )
                 )
@@ -386,14 +386,14 @@ def HistoryW_message():
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/3K6Kl1s.png",
                     action=URITemplateAction(
-                        label="自來水廠(新)",
+                        label="自來水廠(今)",
                         uri="https://i.imgur.com/3K6Kl1s.png"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://i.imgur.com/YA3NPS5.png",
                     action=URITemplateAction(
-                        label="自來水廠(舊)",
+                        label="自來水廠(今)",
                         uri="https://i.imgur.com/YA3NPS5.png"
                     )
                 )
@@ -434,16 +434,15 @@ def Introduction_message():
     message = TemplateSendMessage(
         alt_text='想要功能導覽嗎?',
         template=ConfirmTemplate(
-            text='不明白你在說什麼耶~ \n 有需要幫助嗎?',
+            text='有需要功能嗎?',
             actions=[
-                PostbackTemplateAction(
-                    label='postback',
-                    text='postback text',
-                    data='1'
+                MessageTemplateAction(
+                    label='Yes',
+                    text='導覽'
                 ),
                 MessageTemplateAction(
-                    label='message',
-                    text='message text'
+                    label='No',
+                    text=''
                 )
             ]
         )
