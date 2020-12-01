@@ -127,8 +127,12 @@ def handle_message(event):
     elif levelH == '1' and '都不想' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
+# =============================愛心==================================
+    elif msg == '喜歡這家店!':
+        message = Send_Heart()
+        line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
-    elif '導覽' in msg:
+    elif msg == '導覽':
         message = TextSendMessage(text='從左到右分別代表:')
         message1 = TextSendMessage(
             text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')

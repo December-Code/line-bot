@@ -545,9 +545,19 @@ def HistoryW_message():
 #         ]
 #     )
 #     return message
+# =====================================發送愛心========================================
 
+
+def Send_Heart():
+    message = StickerSendMessage(
+        package_id='1',
+        sticker_id='1'
+    )
+    return message
 
 # =====================================導覽確認========================================
+
+
 def Introduction_message():
     message = TemplateSendMessage(
         alt_text='想要功能導覽嗎?',
