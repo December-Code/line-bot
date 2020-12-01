@@ -55,13 +55,13 @@ def handle_message(event):
         level = 1
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-     elif level == 3 and '公館' in msg:
+    elif level == 1 and '公館' in msg:
         message = FoodK_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif level == 3 and '市場' in msg:
+    elif level == 1 and '市場' in msg:
         message = FoodW_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif level == 3 and '都不想' in msg:
+    elif level == 1 and '都不想' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
     elif '拍照' in msg:
