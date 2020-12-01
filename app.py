@@ -44,9 +44,9 @@ def callback():
 # 處理訊息
 
 
-levelF = 0
-levelP = 0
-levelH = 0
+levelF = '0'
+levelP = '0'
+levelH = '0'
 
 
 @handler.add(MessageEvent, message=TextMessage)
@@ -55,30 +55,42 @@ def handle_message(event):
     global levelF
     global levelP
     global levelH
+# =============================美食==================================
     if '美食' in msg:
-        levelF = 1
+        levelF = '1'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == 1 and '公館' in msg:
+    elif (levelF == '1' or levelF == '2') and '公館' in msg:
         message = FoodK_message()
+        levelF == '2'
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == 1 and '市場' in msg:
+    elif (levelF == '1' or levelF == '2') and '市場' in msg:
         message = FoodW_message()
+        levelF == '2'
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == 1 and '都不想' in msg:
+    elif levelF == '1' and '都不想' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-
+    elif levelF == '2' and '兄弟麵線' in msg:
+        message = TextSendMessage(text='下次再來唷~')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif levelF == '2' and '鴉片粉圓' in msg:
+        message = TextSendMessage(text='下次再來唷~')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif levelF == '2' and '劉記蔥蛋餅' in msg:
+        message = TextSendMessage(text='下次再來唷~')
+        line_bot_api.reply_message(event.reply_token, message)
+# =============================拍照==================================
     elif '拍照' in msg:
-        levelP = 1
+        levelP = '1'
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
-    elif levelP == 1 and '寶藏巖' in msg:
+    elif levelP == '1' and '寶藏巖' in msg:
         levelP = '2B'
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 1 and '自來水廠' in msg:
+    elif levelP == '1' and '自來水廠' in msg:
         levelP = '2w'
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
@@ -100,20 +112,21 @@ def handle_message(event):
     elif levelP == '2W' and '躺' in msg:
         message = photolaW_message()
         line_bot_api.reply_message(event.reply_token, message)
-
+# =============================歷史==================================
     elif '歷史' in msg:
-        levelH = 1
+        levelH = '1'
         message = HistoryLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelH == 1 and '寶藏巖' in msg:
+    elif levelH == '1' and '寶藏巖' in msg:
         message = HistoryB_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelH == 1 and '自來水廠' in msg:
+    elif levelH == '1' and '自來水廠' in msg:
         message = HistoryW_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelH == 1 and '都不想' in msg:
+    elif levelH == '1' and '都不想' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
+# =============================導覽==================================
     elif '導覽' in msg:
         message = TextSendMessage(text='從左到右分別代表:')
         message1 = TextSendMessage(

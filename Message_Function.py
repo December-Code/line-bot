@@ -93,7 +93,7 @@ def FoodK_message():
                         ),
                         MessageTemplateAction(
                             label='我想了解更多~',
-                            text='我想了解更多:蔥蛋餅'
+                            text='我想了解更多:劉記蔥蛋餅'
                         )
                     ]
                 ),
@@ -176,8 +176,8 @@ def FoodK_message():
 def photoLo_message():
     message = ImagemapSendMessage(
         base_url='https://i.imgur.com/OKgp8Fa.png',
-        alt_text='這裡有什麼歷史呢?',
-        base_size=BaseSize(height=2000, width=2000),
+        alt_text='想要拍照了嗎 ?',
+        base_size=BaseSize(height=1000, width=1000),
         actions=[
             MessageImagemapAction(
                 text='自來水廠',
@@ -200,7 +200,7 @@ def photoLo_message():
 
 def photo_message():
     message = TemplateSendMessage(
-        alt_text='選擇你要的姿勢',
+        alt_text='選擇你想要的姿勢',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/raFTzTo.jpg',
             title='想要拍照了嗎?',
@@ -227,34 +227,34 @@ def photo_message():
 
 def photoStB_message():
     message = TemplateSendMessage(
-        alt_text='站姿推薦',
+        alt_text='寶藏巖站姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/rpIHO7w.jpg',
                     action=URITemplateAction(
-                        label='自來水_扭曲水管',
+                        label='扭曲水管',
                         uri='https://i.imgur.com/rpIHO7w.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/lZSR4Bq.jpg',
                     action=URITemplateAction(
-                        label='自來水_扭曲水管(站)',
+                        label='扭曲水管(站)',
                         uri='https://i.imgur.com/lZSR4Bq.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾',
+                        label='幸福餅乾',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾(站)',
+                        label='幸福餅乾(站)',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
@@ -268,20 +268,20 @@ def photoStB_message():
 
 def photoSiB_message():
     message = TemplateSendMessage(
-        alt_text='坐姿推薦',
+        alt_text='寶藏巖坐姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾',
+                        label='幸福餅乾',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾(坐)',
+                        label='幸福餅乾(坐)',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 )
@@ -295,34 +295,34 @@ def photoSiB_message():
 
 def photolaB_message():
     message = TemplateSendMessage(
-        alt_text='躺姿推薦',
+        alt_text='寶藏巖躺姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                  ImageCarouselColumn(
                      image_url='https://i.imgur.com/4PZvAlV.jpg',
                      action=URITemplateAction(
-                         label='自來水廠_管中世界',
+                         label='管中世界',
                          uri='https://i.imgur.com/4PZvAlV.jpg'
                      )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/RkrmZjH.jpg',
                     action=URITemplateAction(
-                        label='自來水廠_管中世界(躺)',
+                        label='管中世界(躺)',
                         uri='https://i.imgur.com/RkrmZjH.jpg'
                     )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/1DHNhgM.jpg',
                     action=URITemplateAction(
-                        label='自來水_長椅下午后',
+                        label='長椅下午后',
                         uri='https://i.imgur.com/1DHNhgM.jpg'
                     )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/MkPeQQY.jpg',
                     action=URITemplateAction(
-                        label='自來水_長椅下午后(躺)',
+                        label='長椅下午后(躺)',
                         uri='https://i.imgur.com/MkPeQQY.jpg'
                     )
                  )
@@ -336,34 +336,34 @@ def photolaB_message():
 
 def photoStW_message():
     message = TemplateSendMessage(
-        alt_text='站姿推薦',
+        alt_text='自來水站姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/rpIHO7w.jpg',
                     action=URITemplateAction(
-                        label='自來水_扭曲水管',
+                        label='扭曲水管',
                         uri='https://i.imgur.com/rpIHO7w.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/lZSR4Bq.jpg',
                     action=URITemplateAction(
-                        label='自來水_扭曲水管(站)',
+                        label='扭曲水管(站)',
                         uri='https://i.imgur.com/lZSR4Bq.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾',
+                        label='幸福餅乾',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾(站)',
+                        label='幸福餅乾(站)',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
@@ -377,20 +377,20 @@ def photoStW_message():
 
 def photoSiW_message():
     message = TemplateSendMessage(
-        alt_text='坐姿推薦',
+        alt_text='自來水坐姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾',
+                        label='幸福餅乾',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/xuS9nUe.jpg',
                     action=URITemplateAction(
-                        label='寶藏巖_幸福餅乾(坐)',
+                        label='幸福餅乾(坐)',
                         uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 )
@@ -404,34 +404,34 @@ def photoSiW_message():
 
 def photolaW_message():
     message = TemplateSendMessage(
-        alt_text='躺姿推薦',
+        alt_text='自來水躺姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                  ImageCarouselColumn(
                      image_url='https://i.imgur.com/4PZvAlV.jpg',
                      action=URITemplateAction(
-                         label='自來水廠_管中世界',
+                         label='管中世界',
                          uri='https://i.imgur.com/4PZvAlV.jpg'
                      )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/RkrmZjH.jpg',
                     action=URITemplateAction(
-                        label='自來水廠_管中世界(躺)',
+                        label='管中世界(躺)',
                         uri='https://i.imgur.com/RkrmZjH.jpg'
                     )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/1DHNhgM.jpg',
                     action=URITemplateAction(
-                        label='自來水_長椅下午后',
+                        label='長椅下午后',
                         uri='https://i.imgur.com/1DHNhgM.jpg'
                     )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/MkPeQQY.jpg',
                     action=URITemplateAction(
-                        label='自來水_長椅下午后(躺)',
+                        label='長椅下午后(躺)',
                         uri='https://i.imgur.com/MkPeQQY.jpg'
                     )
                  )
