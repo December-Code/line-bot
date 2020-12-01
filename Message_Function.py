@@ -143,10 +143,14 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             data='使用者喜歡'
                         ),
-                        URITemplateAction(
-                            # label='100台北市中正區汀州路三段235號',
-                            label='它在哪呢?',
-                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        # URITemplateAction(
+                        #     # label='100台北市中正區汀州路三段235號',
+                        #     label='它在哪呢?',
+                        #     uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        # )
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
                         )
                     ]
                 ),
