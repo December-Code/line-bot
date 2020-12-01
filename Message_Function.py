@@ -51,10 +51,10 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        message(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線'
-                        )
+                        # message(
+                        #     label='我想了解更多~',
+                        #     text='我想了解更多:兄弟麵線'
+                        # )
                     ]
                 ),
                 CarouselColumn(
