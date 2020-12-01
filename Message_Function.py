@@ -75,6 +75,11 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             data='使用者喜歡'
                         ),
+                        URITemplateAction(
+                            # label='100台北市中正區汀州路三段235號',
+                            label='它在哪呢?',
+                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        )
                         # message(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:鴉片粉圓'
@@ -94,6 +99,11 @@ def FoodK_message():
                             label='大約價錢：45 元',
                             data='使用者喜歡'
                         ),
+                        URITemplateAction(
+                            # label='100台北市中正區汀州路三段235號',
+                            label='它在哪呢?',
+                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        )
                         # message(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:蔥蛋餅'
