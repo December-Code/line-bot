@@ -41,7 +41,7 @@ def FoodK_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
                     title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年 \n位置:100台北市中正區汀州路三段235號',
+                    text='堅持傳統口味的用心維持了近三十年 \n\n 地點:100台北市中正區汀州路三段235號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -51,17 +51,16 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        URITemplateAction(
-                            # label='100台北市中正區汀州路三段235號',
-                            label='它在哪呢?',
-                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        message(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線'
                         )
                     ]
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
                     title='鴉片粉圓',
-                    text='「鴉片」一吃就上癮 \n位置:100台北市中正區羅斯福路四段52巷16弄4號',
+                    text='「鴉片」一吃就上癮 \n\n 地點:100台北市中正區羅斯福路四段52巷16弄4號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -71,17 +70,16 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             data='使用者喜歡'
                         ),
-                        URITemplateAction(
-                            # label='100台北市中正區羅斯福路四段52巷16弄4號',
-                            label='它在哪呢?',
-                            uri='https://goo.gl/maps/bUDeGy4QDjYFgCar9'
+                        message(
+                            label='我想了解更多~',
+                            text='我想了解更多:鴉片粉圓'
                         )
                     ]
                 ),
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
                     title='劉記古早味蔥蛋餅',
-                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n位置:100台北市中正區羅斯福路四段108巷2-3號',
+                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n\n 地點:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -91,10 +89,9 @@ def FoodK_message():
                             label='大約價錢：45 元',
                             data='使用者喜歡'
                         ),
-                        URITemplateAction(
-                            # label='100台北市中正區羅斯福路四段108巷2-3號',
-                            label='它在哪呢?',
-                            uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
+                        message(
+                            label='我想了解更多~',
+                            text='我想了解更多:蔥蛋餅'
                         )
                     ]
                 ),
@@ -415,3 +412,24 @@ def HistoryW_message():
 #         ]
 #     )
 #     return message
+
+
+# =====================================導覽確認========================================
+def Introduction_message():
+    message = TemplateSendMessage(
+        alt_text='想要功能導覽嗎?',
+        template=ConfirmTemplate(
+            text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~',
+            actions=[
+                PostbackTemplateAction(
+                    label='postback',
+                    text='postback text',
+                    data='action=buy&itemid=1'
+                ),
+                MessageTemplateAction(
+                    label='message',
+                    text='message text'
+                )
+            ]
+        )
+    )
