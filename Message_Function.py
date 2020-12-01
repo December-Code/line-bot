@@ -45,7 +45,8 @@ def FoodK_message():
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
-                            data='使用者喜歡'
+                            data='使用者選擇喜歡',
+                            text='喜歡這家店!'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -101,9 +102,7 @@ def FoodK_message():
     return message
 
 # ===================================水源市場美食推薦=========================================
-
-
-# def FoodW_message():
+# def FoodK_message():
 #     message = TemplateSendMessage(
 #         alt_text='最近美食資訊',
 #         template=CarouselTemplate(
@@ -130,7 +129,7 @@ def FoodK_message():
 #                 CarouselColumn(
 #                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
 #                     title='鴉片粉圓',
-#                     text='「鴉片」一吃就上癮',
+#                     text='「鴉片」一吃就上癮\n地點:100台北市中正區羅斯福路四段52巷16弄4號',
 #                     actions=[
 #                         PostbackTemplateAction(
 #                             label='我喜歡這家店',
@@ -142,40 +141,26 @@ def FoodK_message():
 #                         ),
 #                         MessageTemplateAction(
 #                             label='我想了解更多~',
-#                             text='我想了解更多:鴉片粉圓',
-#                         ),
-#                         # PostbackTemplateAction(
-#                         #     label='我喜歡這家店',
-#                         #     data='使用者喜歡'
-#                         # ),
-#                         # PostbackTemplateAction(
-#                         #     label='大約價錢：50 元',
-#                         #     data='使用者喜歡'
-#                         # ),
-#                         # URITemplateAction(
-#                         #     # label='100台北市中正區羅斯福路四段52巷16弄4號',
-#                         #     label='它在哪呢?',
-#                         #     uri='https://goo.gl/maps/bUDeGy4QDjYFgCar9'
-#                         # )
+#                             text='我想了解更多:鴉片粉圓'
+#                         )
 #                     ]
 #                 ),
 #                 CarouselColumn(
 #                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
 #                     title='劉記古早味蔥蛋餅',
-#                     text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！',
+#                     text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地點:100台北市中正區羅斯福路四段108巷2-3號',
 #                     actions=[
 #                         PostbackTemplateAction(
 #                             label='我喜歡這家店',
 #                             data='使用者喜歡'
 #                         ),
-#                         PostbackTemplateAction(
-#                             label='大約價錢：45 元',
-#                             data='使用者喜歡'
-#                         ),
 #                         URITemplateAction(
-#                             # label='100台北市中正區羅斯福路四段108巷2-3號',
-#                             label='它在哪呢?',
-#                             uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
+#                             label='大約價錢：45元',
+#                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+#                         ),
+#                         MessageTemplateAction(
+#                             label='我想了解更多~',
+#                             text='我想了解更多:蔥蛋餅'
 #                         )
 #                     ]
 #                 ),
@@ -439,10 +424,6 @@ def Introduction_message():
                     text='導覽',
                     data='action=Introduction'
                 ),
-                # MessageTemplateAction(
-                #     label='Yes',
-                #     text='導覽'
-                # ),
                 MessageTemplateAction(
                     label='我自己摸索沒關係',
                     text='好唷!，如果還有需要直接打導覽也可以唷!'
