@@ -44,25 +44,17 @@ def FoodK_message():
                     text='堅持傳統口味的用心維持了近三十年\n地點:100台北市中正區汀州路三段235號',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店1',
-                            text='使用者喜歡1'
-                        ),
-                        PostbackTemplateAction(
-                            label='123',
-                            data='321'
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
+                        ),
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
                         )
-                        # URITemplateAction(
-                        #     label='大約價錢：50元',
-                        #     uri='https://i.imgur.com/5jNgx1V.jpg'
-                        # ),
-                        # MessageTemplateAction(
-                        #     label='我想了解更多~',
-                        #     text='我想了解更多:兄弟麵線',
-                        # ),
                     ]
                 ),
                 CarouselColumn(
@@ -135,7 +127,7 @@ def FoodW_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
                     title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年',
+                    text='堅持傳統口味的用心維持了近三十年\n地點:100台北市中正區汀州路三段235號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -145,11 +137,6 @@ def FoodW_message():
                             label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        # URITemplateAction(
-                        #     # label='100台北市中正區汀州路三段235號',
-                        #     label='它在哪呢?',
-                        #     uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
-                        # )
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:兄弟麵線',
