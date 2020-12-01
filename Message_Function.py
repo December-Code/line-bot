@@ -434,12 +434,12 @@ def Introduction_message():
     message = TemplateSendMessage(
         alt_text='想要功能導覽嗎?',
         template=ConfirmTemplate(
-            text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~',
+            text='不明白你在說什麼耶~ \n 有需要幫助嗎?',
             actions=[
                 PostbackTemplateAction(
                     label='postback',
                     text='postback text',
-                    data='action=buy&itemid=1'
+                    data='1'
                 ),
                 MessageTemplateAction(
                     label='message',
