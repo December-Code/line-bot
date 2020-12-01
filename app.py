@@ -61,23 +61,24 @@ def handle_message(event):
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif (levelF == '1' or levelF == '2') and '公館' in msg:
-        levelF == '2'
+        levelF = '2'
         message = FoodK_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif (levelF == '1' or levelF == '2') and '市場' in msg:
-        levelF == '2'
+        levelF = '2'
         message = FoodW_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif levelF == '1' and '都不想' in msg:
+        levelF = '0'
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '兄弟' in msg:
+    elif levelF == '2' and '兄弟麵線' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '鴉片' in msg:
+    elif levelF == '2' and '鴉片粉圓圓' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '劉記' in msg:
+    elif levelF == '2' and '劉記蔥蛋餅' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================拍照==================================
