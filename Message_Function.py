@@ -48,11 +48,11 @@ def FoodK_message():
                             text='使用者喜歡'
                         ),
                         URITemplateAction(
-                            label='大約價錢：50 元',
+                            label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         URITemplateAction(
-                            label='大約價錢：50 元',
+                            label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         # MessageTemplateAction(
@@ -71,11 +71,11 @@ def FoodK_message():
                             data='使用者喜歡'
                         ),
                         URITemplateAction(
-                            label='大約價錢：50 元',
+                            label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         URITemplateAction(
-                            label='大約價錢：50 元',
+                            label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         # MessageTemplateAction(
@@ -94,11 +94,11 @@ def FoodK_message():
                             data='使用者喜歡'
                         ),
                         URITemplateAction(
-                            label='大約價錢：45 元',
+                            label='大約價錢：45元',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
                         URITemplateAction(
-                            label='大約價錢：45 元',
+                            label='大約價錢：45元',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
                         # MessageTemplateAction(
