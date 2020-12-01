@@ -448,3 +448,4 @@ def Introduction_message():
             ]
         )
     )
+    return message
