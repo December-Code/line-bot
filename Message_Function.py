@@ -51,14 +51,14 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        MessageTemplateAction(
-                            label='我想站姿',
-                            text='站',
+                        URITemplateAction(
+                            label='大約價錢：50 元',
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         # MessageTemplateAction(
                         #     label='我想了解更多~',
-                        #     text='我想了解更多:兄弟麵線'
-                        # )
+                        #     text='我想了解更多:兄弟麵線',
+                        # ),
                     ]
                 ),
                 CarouselColumn(
@@ -74,14 +74,14 @@ def FoodK_message():
                             label='大約價錢：50 元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        MessageTemplateAction(
-                            label='message1',
-                            text='message text1'
+                        URITemplateAction(
+                            label='大約價錢：50 元',
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        # message(
+                        # MessageTemplateAction(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:鴉片粉圓'
-                        # )
+                        # ),
                     ]
                 ),
                 CarouselColumn(
@@ -97,14 +97,14 @@ def FoodK_message():
                             label='大約價錢：45 元',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
-                        MessageTemplateAction(
-                            label='message1',
-                            text='message text1'
+                        URITemplateAction(
+                            label='大約價錢：45 元',
+                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
-                        # message(
+                        # MessageTemplateAction(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:蔥蛋餅'
-                        # )
+                        # ),
                     ]
                 ),
             ]
