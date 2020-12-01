@@ -15,11 +15,11 @@ def FoodLo_message():
             actions=[
                 MessageTemplateAction(
                     label="公館美食",
-                    text='美食:公館',
+                    text='公館',
                 ),
                 MessageTemplateAction(
                     label="水源市場美食",
-                    text='美食:水源市場',
+                    text='水源市場',
                 ),
                 MessageTemplateAction(
                     label="都沒有耶QQ",
