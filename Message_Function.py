@@ -179,17 +179,14 @@ def photoLo_message():
         alt_text='這裡有什麼歷史呢?',
         base_size=BaseSize(height=2000, width=2000),
         actions=[
-            URIImagemapAction(
-                # 寶藏巖
-                link_uri='https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F',
-                label='寶藏巖',
+            MessageImagemapAction(
+                text='自來水廠',
                 area=ImagemapArea(
-                    x=500, y=500, width=1000, height=1000
+                    x=0, y=0, width=500, height=500
                 )
             ),
             MessageImagemapAction(
                 text='寶藏巖',
-                label='寶藏巖',
                 area=ImagemapArea(
                     x=0, y=0, width=500, height=500
                 )
@@ -198,7 +195,7 @@ def photoLo_message():
     )
     return message
 
-# ===================================寶藏巖的照片推薦==========================================
+# ===================================照片的姿勢推薦=========================================
 
 
 def photo_message():
@@ -225,7 +222,7 @@ def photo_message():
         )
     )
     return message
-# =====================================站姿的照片推薦=======================================
+# =====================================寶藏巖站姿的照片推薦=======================================
 
 
 def photoStB_message():
@@ -266,7 +263,7 @@ def photoStB_message():
     )
     return message
 
-# ==================================坐著的照片推薦=========================================
+# ==================================寶藏巖坐著的照片推薦=========================================
 
 
 def photoSiB_message():
@@ -293,10 +290,119 @@ def photoSiB_message():
     )
     return message
 
-# =====================================躺著的照片推薦==========================================
+# =====================================寶藏巖躺著的照片推薦==========================================
 
 
 def photolaB_message():
+    message = TemplateSendMessage(
+        alt_text='躺姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                 ImageCarouselColumn(
+                     image_url='https://i.imgur.com/4PZvAlV.jpg',
+                     action=URITemplateAction(
+                         label='自來水廠_管中世界',
+                         uri='https://i.imgur.com/4PZvAlV.jpg'
+                     )
+                 ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/RkrmZjH.jpg',
+                    action=URITemplateAction(
+                        label='自來水廠_管中世界(躺)',
+                        uri='https://i.imgur.com/RkrmZjH.jpg'
+                    )
+                 ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/1DHNhgM.jpg',
+                    action=URITemplateAction(
+                        label='自來水_長椅下午后',
+                        uri='https://i.imgur.com/1DHNhgM.jpg'
+                    )
+                 ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/MkPeQQY.jpg',
+                    action=URITemplateAction(
+                        label='自來水_長椅下午后(躺)',
+                        uri='https://i.imgur.com/MkPeQQY.jpg'
+                    )
+                 )
+            ]
+        )
+    )
+    return message
+
+# =====================================自來水廠站姿的照片推薦=======================================
+
+
+def photoStW_message():
+    message = TemplateSendMessage(
+        alt_text='站姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/rpIHO7w.jpg',
+                    action=URITemplateAction(
+                        label='自來水_扭曲水管',
+                        uri='https://i.imgur.com/rpIHO7w.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/lZSR4Bq.jpg',
+                    action=URITemplateAction(
+                        label='自來水_扭曲水管(站)',
+                        uri='https://i.imgur.com/lZSR4Bq.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='寶藏巖_幸福餅乾',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='寶藏巖_幸福餅乾(站)',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                ),
+            ]
+        )
+    )
+    return message
+
+# ==================================自來水廠坐著的照片推薦=========================================
+
+
+def photoSiW_message():
+    message = TemplateSendMessage(
+        alt_text='坐姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='寶藏巖_幸福餅乾',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='寶藏巖_幸福餅乾(坐)',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                )
+            ]
+        )
+    )
+    return message
+
+# =====================================自來水廠躺著的照片推薦==========================================
+
+
+def photolaW_message():
     message = TemplateSendMessage(
         alt_text='躺姿推薦',
         template=ImageCarouselTemplate(

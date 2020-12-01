@@ -71,25 +71,38 @@ def handle_message(event):
 
     elif '拍照' in msg:
         levelP = 1
+        message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(event.reply_token, [message0, message])
     elif levelP == 1 and '寶藏巖' in msg:
+        levelP = '2B'
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif levelP == 1 and '自來水廠' in msg:
+        levelP = '2w'
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 2 and '站' in msg:
-        message = photoSt_message()
+    elif levelP == '2B' and '站' in msg:
+        message = photoStB_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 2 and '坐' in msg:
-        message = photoSi_message()
+    elif levelP == '2B' and '坐' in msg:
+        message = photoSiB_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 2 and '躺' in msg:
-        message = photola_message()
+    elif levelP == '2B' and '躺' in msg:
+        message = photolaB_message()
         line_bot_api.reply_message(event.reply_token, message)
+    elif levelP == '2W' and '站' in msg:
+        message = photoStW_message()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif levelP == '2W' and '坐' in msg:
+        message = photoSiW_message()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif levelP == '2W' and '躺' in msg:
+        message = photolaW_message()
+        line_bot_api.reply_message(event.reply_token, message)
+
     elif '歷史' in msg:
-        level = 1
+        levelH = 1
         message = HistoryLo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif levelH == 1 and '寶藏巖' in msg:
