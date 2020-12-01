@@ -51,10 +51,14 @@ def FoodK_message():
                             label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：50元',
-                            uri='https://i.imgur.com/5jNgx1V.jpg'
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
+                        # URITemplateAction(
+                        #     label='大約價錢：50元',
+                        #     uri='https://i.imgur.com/5jNgx1V.jpg'
+                        # ),
                         # MessageTemplateAction(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:兄弟麵線',
@@ -74,10 +78,14 @@ def FoodK_message():
                             label='大約價錢：50元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：50元',
-                            uri='https://i.imgur.com/5jNgx1V.jpg'
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
+                        # URITemplateAction(
+                        #     label='大約價錢：50元',
+                        #     uri='https://i.imgur.com/5jNgx1V.jpg'
+                        # ),
                         # MessageTemplateAction(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:鴉片粉圓'
@@ -97,10 +105,14 @@ def FoodK_message():
                             label='大約價錢：45元',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：45元',
-                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡'
                         ),
+                        # URITemplateAction(
+                        #     label='大約價錢：45元',
+                        #     uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        # ),
                         # MessageTemplateAction(
                         #     label='我想了解更多~',
                         #     text='我想了解更多:蔥蛋餅'
@@ -436,7 +448,7 @@ def Introduction_message():
                 PostbackTemplateAction(
                     label='Yes',
                     text='導覽',
-                    data='123'
+                    data='action=Introduction'
                 ),
                 # MessageTemplateAction(
                 #     label='Yes',
@@ -444,7 +456,7 @@ def Introduction_message():
                 # ),
                 MessageTemplateAction(
                     label='No',
-                    text='123'
+                    text='有需要直接打導覽也可以唷!'
                 )
             ]
         )
