@@ -5,7 +5,35 @@ from linebot.models import *
 # ===========================LINEAPI==============================
 
 
-def Food_message():
+def FoodLo_message():
+    message = TemplateSendMessage(
+        alt_text='你想要找哪裡的美食呢?',
+        template=ButtonsTemplate(
+            thumbnail_image_url="https://i.imgur.com/cMyF8lN.png",
+            title="找哪裡的美食呢?",
+            text="選擇你的地點",
+            actions=[
+                MessageTemplateAction(
+                    label="公館美食",
+                    text='美食:公館',
+                ),
+                MessageTemplateAction(
+                    label="水源市場美食",
+                    text='美食:水源市場',
+                ),
+                MessageTemplateAction(
+                    label="都沒有耶QQ",
+                    text='都不想',
+                ),
+            ]
+        )
+    )
+    return message
+
+# ===================================公館美食推薦==========================================
+
+
+def FoodK_message():
     message = TemplateSendMessage(
         alt_text='最近美食資訊',
         template=CarouselTemplate(
@@ -13,15 +41,15 @@ def Food_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
                     title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年',
+                    text='堅持傳統口味的用心維持了近三十年 \n位置:100台北市中正區汀州路三段235號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        PostbackTemplateAction(
+                        URITemplateAction(
                             label='大約價錢：50 元',
-                            data='使用者喜歡'
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         URITemplateAction(
                             # label='100台北市中正區汀州路三段235號',
@@ -33,7 +61,7 @@ def Food_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
                     title='鴉片粉圓',
-                    text='「鴉片」一吃就上癮',
+                    text='「鴉片」一吃就上癮 \n位置:100台北市中正區羅斯福路四段52巷16弄4號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -53,7 +81,7 @@ def Food_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
                     title='劉記古早味蔥蛋餅',
-                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！',
+                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n位置:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -74,6 +102,77 @@ def Food_message():
         )
     )
     return message
+
+# ===================================水源市場美食推薦=========================================
+# def FoodW_message():
+#     message = TemplateSendMessage(
+#         alt_text='最近美食資訊',
+#         template=CarouselTemplate(
+#             columns=[
+#                 CarouselColumn(
+#                     thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
+#                     title='兄弟蚵仔麵線',
+#                     text='堅持傳統口味的用心維持了近三十年',
+#                     actions=[
+#                         PostbackTemplateAction(
+#                             label='我喜歡這家店',
+#                             data='使用者喜歡'
+#                         ),
+#                         PostbackTemplateAction(
+#                             label='大約價錢：50 元',
+#                             data='使用者喜歡'
+#                         ),
+#                         URITemplateAction(
+#                             # label='100台北市中正區汀州路三段235號',
+#                             label='它在哪呢?',
+#                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+#                         )
+#                     ]
+#                 ),
+#                 CarouselColumn(
+#                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
+#                     title='鴉片粉圓',
+#                     text='「鴉片」一吃就上癮',
+#                     actions=[
+#                         PostbackTemplateAction(
+#                             label='我喜歡這家店',
+#                             data='使用者喜歡'
+#                         ),
+#                         PostbackTemplateAction(
+#                             label='大約價錢：50 元',
+#                             data='使用者喜歡'
+#                         ),
+#                         URITemplateAction(
+#                             # label='100台北市中正區羅斯福路四段52巷16弄4號',
+#                             label='它在哪呢?',
+#                             uri='https://goo.gl/maps/bUDeGy4QDjYFgCar9'
+#                         )
+#                     ]
+#                 ),
+#                 CarouselColumn(
+#                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
+#                     title='劉記古早味蔥蛋餅',
+#                     text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！',
+#                     actions=[
+#                         PostbackTemplateAction(
+#                             label='我喜歡這家店',
+#                             data='使用者喜歡'
+#                         ),
+#                         PostbackTemplateAction(
+#                             label='大約價錢：45 元',
+#                             data='使用者喜歡'
+#                         ),
+#                         URITemplateAction(
+#                             # label='100台北市中正區羅斯福路四段108巷2-3號',
+#                             label='它在哪呢?',
+#                             uri='https://goo.gl/maps/7H6dCPVUcVr3PuAv8'
+#                         )
+#                     ]
+#                 ),
+#             ]
+#         )
+#     )
+#     return message
 
 # =====================================站著的照片推薦============================================
 
@@ -214,7 +313,7 @@ def photola_message():
 # =====================================歷史對照==========================================
 
 
-def History_message():
+def HistoryLo_message():
     message = TemplateSendMessage(
         alt_text='你想要了解那裡的歷史呢?',
         template=ButtonsTemplate(

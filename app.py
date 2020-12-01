@@ -52,12 +52,21 @@ def handle_message(event):
     msg = event.message.text
     global level
     if '美食' in msg:
-        message = Food_message()
         level = 1
+        message = FoodLo_message()
+        line_bot_api.reply_message(event.reply_token, message)
+     elif level == 3 and '公館' in msg:
+        message = FoodK_message()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif level == 3 and '市場' in msg:
+        message = FoodW_message()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif level == 3 and '都不想' in msg:
+        message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
     elif '拍照' in msg:
-        message = photo_message()
         level = 2
+        message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif level == 2 and '站' in msg:
         message = photoSt_message()
@@ -69,8 +78,8 @@ def handle_message(event):
         message = photola_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '歷史' in msg:
-        message = History_message()
         level = 3
+        message = HistoryLo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif level == 3 and '寶藏巖' in msg:
         message = HistoryB_message()
