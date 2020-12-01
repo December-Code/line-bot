@@ -47,14 +47,14 @@ def FoodK_message():
                             label='我喜歡這家店',
                             text='使用者喜歡'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：50元',
-                            uri='https://i.imgur.com/5jNgx1V.jpg'
-                        ),
                         PostbackTemplateAction(
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
+                        URITemplateAction(
+                            label='大約價錢：50元',
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
+                        )
                         # URITemplateAction(
                         #     label='大約價錢：50元',
                         #     uri='https://i.imgur.com/5jNgx1V.jpg'
@@ -74,14 +74,14 @@ def FoodK_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：50元',
-                            uri='https://i.imgur.com/5jNgx1V.jpg'
-                        ),
                         PostbackTemplateAction(
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
+                        URITemplateAction(
+                            label='大約價錢：50元',
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
+                        )
                         # URITemplateAction(
                         #     label='大約價錢：50元',
                         #     uri='https://i.imgur.com/5jNgx1V.jpg'
@@ -101,14 +101,14 @@ def FoodK_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：45元',
-                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
-                        ),
-                        PostbackTemplateAction(
+                         PostbackTemplateAction(
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
+                        URITemplateAction(
+                            label='大約價錢：45元',
+                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        )
                         # URITemplateAction(
                         #     label='大約價錢：45元',
                         #     uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
