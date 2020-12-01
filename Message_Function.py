@@ -5,6 +5,7 @@ from linebot.models import *
 # ===========================LINEAPI==============================
 
 
+# ===================================美食推薦地點=======================================
 def FoodLo_message():
     message = TemplateSendMessage(
         alt_text='你想要找哪裡的美食呢?',
@@ -30,7 +31,7 @@ def FoodLo_message():
     )
     return message
 
-# ===================================公館美食推薦==========================================
+# ===================================公館美食推薦=======================================
 
 
 def FoodK_message():
@@ -101,7 +102,7 @@ def FoodK_message():
     )
     return message
 
-# ===================================水源市場美食推薦=========================================
+# ===================================水源市場美食推薦========================================
 # def FoodK_message():
 #     message = TemplateSendMessage(
 #         alt_text='最近美食資訊',
@@ -169,7 +170,35 @@ def FoodK_message():
 #     )
 #     return message
 
-# =====================================站著的照片推薦============================================
+# ====================================拍照推薦地點=============================================
+
+
+def photoLo_message():
+    message = ImagemapSendMessage(
+        base_url='https://i.imgur.com/OKgp8Fa.png',
+        alt_text='這裡有什麼歷史呢?',
+        base_size=BaseSize(height=2000, width=2000),
+        actions=[
+            URIImagemapAction(
+                # 寶藏巖
+                link_uri='https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F',
+                label='寶藏巖',
+                area=ImagemapArea(
+                    x=500, y=500, width=1000, height=1000
+                )
+            ),
+            MessageImagemapAction(
+                text='寶藏巖',
+                label='寶藏巖',
+                area=ImagemapArea(
+                    x=0, y=0, width=500, height=500
+                )
+            )
+        ]
+    )
+    return message
+
+# ===================================寶藏巖的照片推薦==========================================
 
 
 def photo_message():
@@ -196,10 +225,10 @@ def photo_message():
         )
     )
     return message
+# =====================================站姿的照片推薦=======================================
 
 
-# =====================================站著的照片推薦============================================
-def photoSt_message():
+def photoStB_message():
     message = TemplateSendMessage(
         alt_text='站姿推薦',
         template=ImageCarouselTemplate(
@@ -237,10 +266,10 @@ def photoSt_message():
     )
     return message
 
-# =====================================坐著的照片推薦============================================
+# ==================================坐著的照片推薦=========================================
 
 
-def photoSi_message():
+def photoSiB_message():
     message = TemplateSendMessage(
         alt_text='坐姿推薦',
         template=ImageCarouselTemplate(
@@ -264,10 +293,10 @@ def photoSi_message():
     )
     return message
 
-# =====================================躺著的照片推薦============================================
+# =====================================躺著的照片推薦==========================================
 
 
-def photola_message():
+def photolaB_message():
     message = TemplateSendMessage(
         alt_text='躺姿推薦',
         template=ImageCarouselTemplate(
@@ -332,7 +361,7 @@ def HistoryLo_message():
         )
     )
     return message
-# =====================================寶藏巖對照========================================
+# ====================================寶藏巖對照=========================================
 
 
 def HistoryB_message():
@@ -358,7 +387,7 @@ def HistoryB_message():
         )
     )
     return message
-# =====================================自來水廠對照========================================
+# ====================================自來水廠對照========================================
 
 
 def HistoryW_message():

@@ -71,15 +71,21 @@ def handle_message(event):
 
     elif '拍照' in msg:
         levelP = 1
+        message = photoLo_message()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif levelP == 1 and '寶藏巖' in msg:
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 1 and '站' in msg:
+    elif levelP == 1 and '自來水廠' in msg:
+        message = photo_message()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif levelP == 2 and '站' in msg:
         message = photoSt_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 1 and '坐' in msg:
+    elif levelP == 2 and '坐' in msg:
         message = photoSi_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelP == 1 and '躺' in msg:
+    elif levelP == 2 and '躺' in msg:
         message = photola_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '歷史' in msg:
