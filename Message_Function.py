@@ -52,9 +52,13 @@ def FoodK_message():
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線'
-                        )
+                            label="我想站姿",
+                            text='站',
+                        ),
+                        # MessageTemplateAction(
+                        #     label='我想了解更多~',
+                        #     text='我想了解更多:兄弟麵線'
+                        # )
                     ]
                 ),
                 CarouselColumn(
@@ -66,9 +70,9 @@ def FoodK_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        PostbackTemplateAction(
+                        URITemplateAction(
                             label='大約價錢：50 元',
-                            data='使用者喜歡'
+                            uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
                         URITemplateAction(
                             # label='100台北市中正區汀州路三段235號',
@@ -90,9 +94,9 @@ def FoodK_message():
                             label='我喜歡這家店',
                             data='使用者喜歡'
                         ),
-                        PostbackTemplateAction(
+                        URITemplateAction(
                             label='大約價錢：45 元',
-                            data='使用者喜歡'
+                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         ),
                         URITemplateAction(
                             # label='100台北市中正區汀州路三段235號',
