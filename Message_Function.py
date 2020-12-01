@@ -45,21 +45,16 @@ def FoodK_message():
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
-                            data='使用者喜歡'
+                            text='使用者喜歡'
                         ),
                         URITemplateAction(
                             label='大約價錢：50 元',
                             uri='https://i.imgur.com/5jNgx1V.jpg'
                         ),
-                        URITemplateAction(
-                            # label='100台北市中正區汀州路三段235號',
-                            label='它在哪呢?',
-                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線'
                         )
-                        # message(
-                        #     label='我想了解更多~',
-                        #     text='我想了解更多:兄弟麵線'
-                        # )
                     ]
                 ),
                 CarouselColumn(
@@ -77,7 +72,7 @@ def FoodK_message():
                         ),
                         URITemplateAction(
                             # label='100台北市中正區汀州路三段235號',
-                            label='它在哪呢?',
+                            label='我想了解更多~',
                             uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
                         )
                         # message(
@@ -89,7 +84,7 @@ def FoodK_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
                     title='劉記古早味蔥蛋餅',
-                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地點:100台北市中正區羅斯福路四段108巷2-3號',
+                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n\n地點:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
