@@ -431,12 +431,12 @@ def Introduction_message():
     message = TemplateSendMessage(
         alt_text='想要功能導覽嗎?',
         template=ConfirmTemplate(
-            text='有需要功能導覽嗎?',
+            text='需要功能導覽嗎?',
             actions=[
                 PostbackTemplateAction(
                     label='Yes',
                     text='導覽',
-                    data=''
+                    data='123'
                 ),
                 # MessageTemplateAction(
                 #     label='Yes',
@@ -444,7 +444,7 @@ def Introduction_message():
                 # ),
                 MessageTemplateAction(
                     label='No',
-                    text=''
+                    text='123'
                 )
             ]
         )
