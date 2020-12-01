@@ -61,17 +61,17 @@ def handle_message(event):
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif (levelF == '1' or levelF == '2') and '公館' in msg:
-        message = FoodK_message()
         levelF == '2'
+        message = FoodK_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif (levelF == '1' or levelF == '2') and '市場' in msg:
-        message = FoodW_message()
         levelF == '2'
+        message = FoodW_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif levelF == '1' and '都不想' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '兄弟麵線' in msg:
+    elif levelF == '2' and '我想了解更多:兄弟麵線' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
     elif levelF == '2' and '鴉片粉圓' in msg:
