@@ -182,7 +182,7 @@ def photoLo_message():
             MessageImagemapAction(
                 text='自來水廠',
                 area=ImagemapArea(
-                    x=0, y=0, width=500, height=500
+                    x=500, y=0, width=500, height=500
                 )
             ),
             MessageImagemapAction(
