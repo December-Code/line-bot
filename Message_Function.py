@@ -556,7 +556,7 @@ def HistoryW_message():
 def Send_Heart():
     message = TextSendMessage(
         text='$',
-        emojis=TextMessage(
+        emojis=MessageAction(
             index='0',
             productId='5ac1bfd5040ab15980c9b435',
             emojiId='215')
