@@ -532,7 +532,7 @@ def Send_Heart():
     message = TextMessage(
         text='$$$$$$$$$$$', emojis=[
             {
-                "index": 14,
+                "index": 1,
                 "productId": "5ac1bfd5040ab15980c9b435",
                 "emojiId": "001"
             }
