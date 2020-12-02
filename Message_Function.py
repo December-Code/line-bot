@@ -77,8 +77,8 @@ def FoodK_message():
                         ),
                         MessageTemplateAction(
                             label='大約價錢：50元',
-                            text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n' +
-                            '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個'
+                            text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n'
+                            + '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個'
                         ),
                         # URITemplateAction(
                         #     label='大約價錢：50元',
@@ -122,30 +122,11 @@ def FoodK_message():
 # ======================================店家介紹===========================================
 
 
-def FoodKM_message():
-    message = TemplateSendMessage(
-        alt_text='你想要找哪裡的美食呢?',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/cMyF8lN.png',
-            title='找哪裡的美食呢?',
-            text='選擇你的地點',
-            actions=[
-                MessageTemplateAction(
-                    label='公館美食',
-                    text='公館',
-                ),
-                MessageTemplateAction(
-                    label='水源市場美食',
-                    text='水源市場',
-                ),
-                MessageTemplateAction(
-                    label='都沒有耶QQ',
-                    text='都不想',
-                ),
-            ]
-        )
-    )
-    return message
+def GetIntroductionM():
+    message0 = TextSendMessage(text='「兄弟麵線介紹」\n堅持傳統口味的用心維持了近三十年\n以前店面在東南亞劇院那邊的唱片行租房子賣麵線\n'
+                               + '某一次房東提議店名要不要一起用“兄弟”這個名子\n之後就決定叫做「“兄弟”蚵仔麵線」直到現在')
+    message1 = TextSendMessage(text='123')
+    return message0, message1
 
 # ===================================水源市場美食推薦========================================
 # def FoodK_message():

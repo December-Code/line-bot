@@ -62,37 +62,43 @@ def handle_message(event):
         levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif (levelF == '1' or levelF == '2') and '公館' in msg:
-        levelF = '2'
-        message = FoodK_message()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif (levelF == '1' or levelF == '2') and '市場' in msg:
-        levelF = '2'
-        message = FoodW_message()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '1' and '都不想' in msg:
-        levelF = '0'
-        message = TextSendMessage(text='下次再來唷~')
-        line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '我想了解更多:兄弟麵線' in msg:
-        message = TextSendMessage(text='下次再來唷~')
-        line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '我想了解更多:鴉片粉圓' in msg:
-        message = TextSendMessage(text='下次再來唷~')
-        line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '我想了解更多:劉記蔥蛋餅' in msg:
-        message = TextSendMessage(text='下次再來唷~')
-        line_bot_api.reply_message(event.reply_token, message)
+    if (levelF == '1' or levelF == '2'):
+        if '公館' in msg:
+            levelF = '2'
+            message = FoodK_message()
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '市場' in msg:
+            levelF = '2'
+            message = FoodW_message()
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '都不想' in msg:
+            message = TextSendMessage(text='下次再來唷~')
+            line_bot_api.reply_message(event.reply_token, message)
+        if levelF == 2:
+            if '我想了解更多:兄弟麵線' in msg:
+                [message0, message1] = GetIntroductionM()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
+            elif '我想了解更多:鴉片粉圓' in msg:
+                message0 = TextSendMessage(text='下次再來唷~')
+                message1 = TextSendMessage(text='')
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
+            elif '我想了解更多:劉記蔥蛋餅' in msg:
+                message0 = TextSendMessage(text='下次再來唷~')
+                message1 = TextSendMessage(text='')
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
 # =============================愛心==================================
-    elif msg == '喜歡這家店:兄弟麵線':
-        message = Send_Heart()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif msg == '喜歡這家店:鴉片粉圓':
-        message = Send_Heart()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif msg == '喜歡這家店:劉記蔥蛋餅':
-        message = Send_Heart()
-        line_bot_api.reply_message(event.reply_token, message)
+            elif msg == '喜歡這家店:兄弟麵線':
+                message = Send_Heart()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif msg == '喜歡這家店:鴉片粉圓':
+                message = Send_Heart()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif msg == '喜歡這家店:劉記蔥蛋餅':
+                message = Send_Heart()
+                line_bot_api.reply_message(event.reply_token, message)
 # =============================拍照==================================
     elif '拍照' in msg:
         levelF = '0'
