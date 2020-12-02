@@ -142,7 +142,7 @@ def handle_message(event):
             text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
         line_bot_api.reply_message(
             event.reply_token, [message, message1, message2, message3])
-    else:
+    elif msg != '好唷!，如果還有需要直接打導覽也可以唷!':
         message0 = TextSendMessage(
             text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
         message = Introduction_message()
