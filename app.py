@@ -92,7 +92,7 @@ def handle_message(event):
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif levelP == '1' and '自來水廠' in msg:
-        levelP = '2w'
+        levelP = '2W'
         message = photo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif levelP == '2B' and '站' in msg:
