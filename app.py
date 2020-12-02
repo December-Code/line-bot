@@ -72,13 +72,13 @@ def handle_message(event):
         levelF = '0'
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '兄弟麵線' in msg:
+    elif levelF == '2' and '我想了解更多:兄弟麵線' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '鴉片粉圓圓' in msg:
+    elif levelF == '2' and '我想了解更多:鴉片粉圓' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
-    elif levelF == '2' and '劉記蔥蛋餅' in msg:
+    elif levelF == '2' and '我想了解更多:劉記蔥蛋餅' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================拍照==================================

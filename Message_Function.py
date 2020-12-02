@@ -47,7 +47,8 @@ def FoodK_message():
                         PostbackTemplateAction(
                             label='我喜歡這家店',
                             data='使用者喜歡:兄弟麵線',
-                            text='喜歡這家店:兄弟麵線'
+                            # text='喜歡這家店:兄弟麵線'
+                            text='喜歡這家店'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -67,7 +68,8 @@ def FoodK_message():
                         PostbackTemplateAction(
                             label='喜歡這家店',
                             data='使用者喜歡:鴉片粉圓',
-                            text='喜歡這家店:兄弟麵線'
+                            # text='喜歡這家店:兄弟麵線'
+                            text='喜歡這家店'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -87,7 +89,8 @@ def FoodK_message():
                         PostbackTemplateAction(
                             label='喜歡這家店',
                             data='使用者喜歡:劉記蔥蛋餅',
-                            text='喜歡這家店:劉記蔥蛋餅'
+                            # text='喜歡這家店:劉記蔥蛋餅'
+                            text='喜歡這家店'
                         ),
                         URITemplateAction(
                             label='大約價錢：45元',
