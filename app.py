@@ -88,6 +88,9 @@ def handle_message(event):
             message = FoodW_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif '都不想' in msg:
+            levelF = '0'
+            levelP = '0'
+            levelH = '0'
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
         elif levelF == '2K':
@@ -146,12 +149,15 @@ def handle_message(event):
         if '寶藏巖' in msg:
             message0 = HistoryB_message()
             message1 = HistoryBIntro()
-            line_bot_api.reply_message(event.reply_token, [message0,message1])
+            line_bot_api.reply_message(event.reply_token, [message0, message1])
         elif '自來水廠' in msg:
             message0 = HistoryW_message()
             message1 = HistoryWIntro()
-            line_bot_api.reply_message(event.reply_token, [message0,message1])
+            line_bot_api.reply_message(event.reply_token, [message0, message1])
         elif '都不想' in msg:
+            levelF = '0'
+            levelP = '0'
+            levelH = '0'
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
@@ -166,7 +172,10 @@ def handle_message(event):
             text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2, message3])
-    elif msg != '好唷!，如果還有需要直接打導覽也可以唷!':
+    elif msg == '我自己摸索就好~':
+        message = TextSendMessage(text='好唷!，如果還有需要直接打導覽也可以唷!')
+        line_bot_api.reply_message(event.reply_token, message)
+    else:
         message0 = TextSendMessage(
             text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
         message1 = Introduction_message()

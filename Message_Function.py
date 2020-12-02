@@ -593,7 +593,7 @@ def Introduction_message():
                 ),
                 MessageTemplateAction(
                     label='我自己摸索沒關係',
-                    text='好唷!，如果還有需要直接打導覽也可以唷!'
+                    text='我自己摸索就好~'
                 )
             ]
         )
