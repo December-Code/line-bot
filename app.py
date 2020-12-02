@@ -116,26 +116,26 @@ def handle_message(event):
             levelP = '2W'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)
-            if levelP == '2B':
-                if '站' in msg:
-                    message = photoStB_message()
-                    line_bot_api.reply_message(event.reply_token, message)
-                elif '坐' in msg:
-                    message = photoSiB_message()
-                    line_bot_api.reply_message(event.reply_token, message)
-                elif '躺' in msg:
-                    message = photolaB_message()
-                    line_bot_api.reply_message(event.reply_token, message)
-            if levelP == '2W':
-                if '站' in msg:
-                    message = photoStW_message()
-                    line_bot_api.reply_message(event.reply_token, message)
-                elif '坐' in msg:
-                    message = photoSiW_message()
-                    line_bot_api.reply_message(event.reply_token, message)
-                elif '躺' in msg:
-                    message = photolaW_message()
-                    line_bot_api.reply_message(event.reply_token, message)
+        elif levelP == '2B':
+            if '站' in msg:
+                message = photoStB_message()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif '坐' in msg:
+                message = photoSiB_message()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif '躺' in msg:
+                message = photolaB_message()
+                line_bot_api.reply_message(event.reply_token, message)
+        elif levelP == '2W':
+            if '站' in msg:
+                message = photoStW_message()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif '坐' in msg:
+                message = photoSiW_message()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif '躺' in msg:
+                message = photolaW_message()
+                line_bot_api.reply_message(event.reply_token, message)
 # =============================歷史==================================
     elif '歷史' in msg:
         levelF = '0'
