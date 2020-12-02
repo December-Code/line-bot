@@ -47,7 +47,7 @@ def callback():
 levelF = '0'
 levelP = '0'
 levelH = '0'
-Location='0'
+# Location='0'
 
 
 @handler.add(MessageEvent, message=TextMessage)
@@ -56,7 +56,7 @@ def handle_message(event):
     global levelF
     global levelP
     global levelH
-    global Location
+    # global Location
 # ============================選單列表=================================
     if '美食' in msg:
         levelF = '1'
@@ -144,11 +144,13 @@ def handle_message(event):
 # =============================歷史==================================
     elif levelH == '1':
         if '寶藏巖' in msg:
-            message = HistoryB_message()
-            line_bot_api.reply_message(event.reply_token, message)
+            message0 = HistoryB_message()
+            message1 = HistoryBIntro()
+            line_bot_api.reply_message(event.reply_token, [message0,message1])
         elif '自來水廠' in msg:
-            message = HistoryW_message()
-            line_bot_api.reply_message(event.reply_token, message)
+            message0 = HistoryW_message()
+            message1 = HistoryWIntro()
+            line_bot_api.reply_message(event.reply_token, [message0,message1])
         elif '都不想' in msg:
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)

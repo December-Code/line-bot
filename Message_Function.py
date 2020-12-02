@@ -54,10 +54,6 @@ def FoodK_message():
                             label='大約價錢：50元',
                             text='蚵仔麵線(小碗) NT$50/碗\n蚵仔麵線(大碗) NT$60/碗',
                         ),
-                        # URITemplateAction(
-                        #     label='大約價錢：50元',
-                        #     uri='https://i.imgur.com/5jNgx1V.jpg'
-                        # ),
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:兄弟麵線',
@@ -73,17 +69,13 @@ def FoodK_message():
                             label='喜歡這家店',
                             data='使用者喜歡:鴉片粉圓',
                             text='喜歡這家店:鴉片粉圓'
-                            # text='喜歡這家店'
+
                         ),
                         MessageTemplateAction(
                             label='大約價錢：50元',
                             text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n'
                             + '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個'
                         ),
-                        # URITemplateAction(
-                        #     label='大約價錢：50元',
-                        #     uri='https://i.imgur.com/u2gZk4J.jpg'
-                        # ),
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:鴉片粉圓'
@@ -531,6 +523,12 @@ def HistoryB_message():
         )
     )
     return message
+# ====================================寶藏巖介紹=========================================
+
+
+def HistoryBIntro():
+    message = TextSendMessage(text='「寶藏巖介紹」')
+    return message
 # ====================================自來水廠對照========================================
 
 
@@ -557,7 +555,12 @@ def HistoryW_message():
         )
     )
     return message
+# ====================================自來水廠介紹=========================================
 
+
+def HistoryWIntro():
+    message = TextSendMessage(text='「自來水廠介紹」')
+    return message
 # =====================================發送愛心========================================
 
 
