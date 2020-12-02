@@ -153,21 +153,21 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
     elif msg == '導覽':
-        message = TextSendMessage(text='從左到右分別代表:')
+        [message0,message1,message2,message3,]=MenuIntroduction()
+        message0 = TextSendMessage(text='從左到右分別代表:')
         message1 = TextSendMessage(
             text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
         message2 = TextSendMessage(
             text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
         message3 = TextSendMessage(
             text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
-        # message4 = TextSendMessage(text='測試表情。',emojis={index=14,length=6,productId='5ac1bfd5040ab15980c9b435',emojiId='222'})
         line_bot_api.reply_message(
-            event.reply_token, [message, message1, message2, message3])
+            event.reply_token, [message0, message1, message2, message3])
     elif msg != '好唷!，如果還有需要直接打導覽也可以唷!':
         message0 = TextSendMessage(
             text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
-        message = Introduction_message()
-        line_bot_api.reply_message(event.reply_token, [message0, message])
+        message1 = Introduction_message()
+        line_bot_api.reply_message(event.reply_token, [message0, message1])
 
 
 if __name__ == "__main__":
