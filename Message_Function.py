@@ -50,10 +50,14 @@ def FoodK_message():
                             text='喜歡這家店:兄弟麵線'
                             # text='喜歡這家店'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：50元',
-                            uri='https://i.imgur.com/5jNgx1V.jpg'
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
                         ),
+                        # URITemplateAction(
+                        #     label='大約價錢：50元',
+                        #     uri='https://i.imgur.com/5jNgx1V.jpg'
+                        # ),
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:兄弟麵線',
@@ -71,10 +75,14 @@ def FoodK_message():
                             text='喜歡這家店:鴉片粉圓'
                             # text='喜歡這家店'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：50元',
-                            uri='https://i.imgur.com/u2gZk4J.jpg'
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
                         ),
+                        # URITemplateAction(
+                        #     label='大約價錢：50元',
+                        #     uri='https://i.imgur.com/u2gZk4J.jpg'
+                        # ),
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:鴉片粉圓'
@@ -92,15 +100,46 @@ def FoodK_message():
                             text='喜歡這家店:劉記蔥蛋餅'
                             # text='喜歡這家店'
                         ),
-                        URITemplateAction(
-                            label='大約價錢：30元',
-                            uri='https://i.imgur.com/1eWyjG2.png'
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
                         ),
+                        # URITemplateAction(
+                        #     label='大約價錢：30元',
+                        #     uri='https://i.imgur.com/1eWyjG2.png'
+                        # ),
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:劉記蔥蛋餅'
                         )
                     ]
+                ),
+            ]
+        )
+    )
+    return message
+# ======================================店家介紹===========================================
+
+
+def FoodKM_message():
+    message = TemplateSendMessage(
+        alt_text='你想要找哪裡的美食呢?',
+        template=ButtonsTemplate(
+            thumbnail_image_url='https://i.imgur.com/cMyF8lN.png',
+            title='找哪裡的美食呢?',
+            text='選擇你的地點',
+            actions=[
+                MessageTemplateAction(
+                    label='公館美食',
+                    text='公館',
+                ),
+                MessageTemplateAction(
+                    label='水源市場美食',
+                    text='水源市場',
+                ),
+                MessageTemplateAction(
+                    label='都沒有耶QQ',
+                    text='都不想',
                 ),
             ]
         )
