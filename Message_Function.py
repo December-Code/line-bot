@@ -530,14 +530,14 @@ def HistoryW_message():
 
 def Send_Heart():
     message = TextMessage(
-        text='$$$$$$$$$$$', emojis=[
+        text='$',
+        emojis=[
             {
-                "index": 1,
+                "index": 0,
                 "productId": "5ac1bfd5040ab15980c9b435",
-                "emojiId": "001"
+                "emojiId": "215"
             }
         ]
-        # [0, '5ac1bfd5040ab15980c9b435', '215']
     )
     return message
     # index = '0',
