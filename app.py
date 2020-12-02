@@ -104,6 +104,15 @@ def handle_message(event):
             elif msg == '喜歡這家店:劉記蔥蛋餅':
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
+            elif msg == '想知道價目表:兄弟麵線':
+                message = Price_M()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif msg == '想知道價目表:鴉片粉圓':
+                message = Price_Y()
+                line_bot_api.reply_message(event.reply_token, message)
+            elif msg == '想知道價目表:劉記蔥蛋餅':
+                message = Price_D()
+                line_bot_api.reply_message(event.reply_token, message)
             elif '我想了解更多:兄弟麵線' in msg:
                 message0 = GetIntroductionM()
                 line_bot_api.reply_message(event.reply_token, message0,)
@@ -163,13 +172,6 @@ def handle_message(event):
 # =============================導覽==================================
     elif msg == '導覽':
         [message0, message1, message2, message3, ] = MenuIntroduction()
-        message0 = TextSendMessage(text='從左到右分別代表:')
-        message1 = TextSendMessage(
-            text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
-        message2 = TextSendMessage(
-            text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
-        message3 = TextSendMessage(
-            text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2, message3])
     elif msg == '我自己摸索就好~':

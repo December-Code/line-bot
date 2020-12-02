@@ -52,7 +52,7 @@ def FoodK_message():
                         ),
                         MessageTemplateAction(
                             label='大約價錢：50元',
-                            text='蚵仔麵線(小碗) NT$50/碗\n蚵仔麵線(大碗) NT$60/碗',
+                            text='想知道價目表:兄弟麵線',
                         ),
                         MessageTemplateAction(
                             label='我想了解更多~',
@@ -73,8 +73,7 @@ def FoodK_message():
                         ),
                         MessageTemplateAction(
                             label='大約價錢：50元',
-                            text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n'
-                            + '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個'
+                            text='想知道價目表:鴉片粉圓'
                         ),
                         MessageTemplateAction(
                             label='我想了解更多~',
@@ -95,7 +94,7 @@ def FoodK_message():
                         ),
                         MessageTemplateAction(
                             label='大約價錢：30元',
-                            text='蔥餅加蛋 NT$30/個\n蜜地瓜糖 NT$35/個',
+                            text='想知道價目表:劉記蔥蛋餅',
                         ),
                         # URITemplateAction(
                         #     label='大約價錢：30元',
@@ -112,6 +111,22 @@ def FoodK_message():
     )
     return message
 # ======================================店家介紹===========================================
+
+
+def Price_M():
+    message = TextSendMessage(text='蚵仔麵線(小碗) NT$50/碗\n蚵仔麵線(大碗) NT$60/碗')
+    return message
+
+
+def Price_Y():
+    message = TextSendMessage(text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n'
+                              + '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個')
+    return message
+
+
+def Price_D():
+    message = TextSendMessage(text='蔥餅加蛋 NT$30/個\n蜜地瓜糖 NT$35/個')
+    return message
 
 
 def GetIntroductionM():
@@ -611,3 +626,4 @@ def MenuIntroduction():
         text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
     message3 = TextSendMessage(
         text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
+    return message0, message1, message2, message3
