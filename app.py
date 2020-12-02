@@ -62,19 +62,19 @@ def handle_message(event):
         levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    if (levelF == '1' or levelF == '2'):
+    if levelF == '1':
         if '公館' in msg:
-            levelF = '2'
+            levelF = '2K'
             message = FoodK_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif '市場' in msg:
-            levelF = '2'
+            levelF = '2M'
             message = FoodW_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif '都不想' in msg:
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
-        if levelF == 2:
+        elif levelF == '2K':
             if '我想了解更多:兄弟麵線' in msg:
                 [message0, message1] = GetIntroductionM()
                 line_bot_api.reply_message(
