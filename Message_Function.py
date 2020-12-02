@@ -51,8 +51,8 @@ def FoodK_message():
                             # text='喜歡這家店'
                         ),
                         MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線',
+                            label='大約價錢：50元',
+                            text='蚵仔麵線(小碗) NT$50/碗\n蚵仔麵線(大碗) NT$60/碗',
                         ),
                         # URITemplateAction(
                         #     label='大約價錢：50元',
@@ -76,8 +76,9 @@ def FoodK_message():
                             # text='喜歡這家店'
                         ),
                         MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線',
+                            label='大約價錢：50元',
+                            text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n' +
+                            '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個'
                         ),
                         # URITemplateAction(
                         #     label='大約價錢：50元',
@@ -101,8 +102,8 @@ def FoodK_message():
                             # text='喜歡這家店'
                         ),
                         MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線',
+                            label='大約價錢：30元',
+                            text='蔥餅加蛋 NT$30/個\n蜜地瓜糖 NT$35/個',
                         ),
                         # URITemplateAction(
                         #     label='大約價錢：30元',
