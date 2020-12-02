@@ -55,13 +55,27 @@ def handle_message(event):
     global levelF
     global levelP
     global levelH
-# =============================美食==================================
+# ============================選單列表=================================
     if '美食' in msg:
         levelF = '1'
         levelP = '0'
         levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '拍照' in msg:
+        levelF = '0'
+        levelP = '1'
+        levelH = '0'
+        message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
+        message = photoLo_message()
+        line_bot_api.reply_message(event.reply_token, [message0, message])
+    elif '歷史' in msg:
+        levelF = '0'
+        levelP = '0'
+        levelH = '1'
+        message = HistoryLo_message()
+        line_bot_api.reply_message(event.reply_token, message)
+# =============================美食==================================
     elif (levelF == '1' or levelF == '2K' or levelF == '2W'):
         if '公館' in msg:
             levelF = '2K'
@@ -98,13 +112,6 @@ def handle_message(event):
                 line_bot_api.reply_message(
                     event.reply_token, [message0])
 # =============================拍照==================================
-    elif '拍照' in msg:
-        levelF = '0'
-        levelP = '1'
-        levelH = '0'
-        message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
-        message = photoLo_message()
-        line_bot_api.reply_message(event.reply_token, [message0, message])
     elif (levelP == '1' or levelP == '2B' or levelP == '2W'):
         if '寶藏巖' in msg:
             levelP = '2B'
@@ -135,12 +142,6 @@ def handle_message(event):
                 message = photolaW_message()
                 line_bot_api.reply_message(event.reply_token, message)
 # =============================歷史==================================
-    elif '歷史' in msg:
-        levelF = '0'
-        levelP = '0'
-        levelH = '1'
-        message = HistoryLo_message()
-        line_bot_api.reply_message(event.reply_token, message)
     elif levelH == '1':
         if '寶藏巖' in msg:
             message = HistoryB_message()
