@@ -483,7 +483,7 @@ def HistoryB_message():
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/dlk5RhE.png',
                     action=URITemplateAction(
-                        label='寶藏巖_(今)',
+                        label='寶藏巖(今)',
                         uri='https://i.imgur.com/dlk5RhE.png'
                     )
                 ),
@@ -525,43 +525,18 @@ def HistoryW_message():
     )
     return message
 
-# def History_message():
-#     message = ImagemapSendMessage(
-#         base_url='https://i.imgur.com/OKgp8Fa.png',
-#         alt_text='這裡有什麼歷史呢?',
-#         base_size=BaseSize(height=2000, width=2000),
-#         actions=[
-#             URIImagemapAction(
-#                 # 寶藏巖
-#                 link_uri='https://tw.shop.com/search/%E5%AE%B6%E6%A8%82%E7%A6%8F',
-#                 label='寶藏巖',
-#                 area=ImagemapArea(
-#                     x=0, y=0, width=1000, height=1000
-#                 )
-#             ),
-#             URIImagemapAction(
-#                 # 自來水廠
-#                 link_uri='https://tw.shop.com/search/%E7%94%9F%E6%B4%BB%E5%B8%82%E9%9B%86',
-#                 label='自來水廠',
-#                 area=ImagemapArea(
-#                     x=1000, y=0, width=1000, height=1000
-#                 )
-#             ),
-#         ]
-#     )
-#     return message
 # =====================================發送愛心========================================
 
 
 def Send_Heart():
     message = TextSendMessage(
         text='$',
-        emojis=MessageAction(
-            index='0',
-            productId='5ac1bfd5040ab15980c9b435',
-            emojiId='215')
+        emoji_heart=EmojiInfo(0, 10, '5ac1bfd5040ab15980c9b435', '215')
     )
     return message
+    # index = '0',
+    # productId = '5ac1bfd5040ab15980c9b435',
+    # emojiId = '215'
 # def Send_Heart():
 #     emoji_heart = (
 #         index=0,
