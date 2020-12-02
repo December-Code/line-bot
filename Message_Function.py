@@ -73,7 +73,7 @@ def FoodK_message():
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
-                            uri='https://i.imgur.com/5jNgx1V.jpg'
+                            uri='https://i.imgur.com/u2gZk4J.jpg'
                         ),
                         MessageTemplateAction(
                             label='我想了解更多~',
@@ -93,8 +93,8 @@ def FoodK_message():
                             text='喜歡這家店'
                         ),
                         URITemplateAction(
-                            label='大約價錢：45元',
-                            uri='https://goo.gl/maps/FodenKrdkMt7Kq4Z7'
+                            label='大約價錢：30元',
+                            uri='https://i.imgur.com/1eWyjG2.png'
                         ),
                         MessageTemplateAction(
                             label='我想了解更多~',
@@ -540,27 +540,6 @@ def Send_Heart():
         ]
     )
     return message
-    # index = '0',
-    # productId = '5ac1bfd5040ab15980c9b435',
-    # emojiId = '215'
-# def Send_Heart():
-#     emoji_heart = (
-#         index=0,
-#         lenghth=10,
-#         productId='5ac1bfd5040ab15980c9b435',
-#         emojiId='215'
-#     )
-#     message = TextSendMessage(
-#         text='$',
-#         emojis=[emoji_heart]
-#     )
-#     return message
-# def Send_Heart():
-#     message = StickerSendMessage(
-#         package_id='5ac1bfd5040ab15980c9b435',
-#         sticker_id='215'
-#     )
-#     return message
 
 # =====================================導覽確認========================================
 
