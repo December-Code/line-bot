@@ -531,7 +531,7 @@ def HistoryW_message():
 def Send_Heart():
     message = TextSendMessage(
         text='$',
-        emoji=(0, 10, '5ac1bfd5040ab15980c9b435', '215')
+        EmojiInfo=(0, 10, '5ac1bfd5040ab15980c9b435', '215')
     )
     return message
     # index = '0',
