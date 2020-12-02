@@ -555,8 +555,13 @@ def HistoryW_message():
 
 def Send_Heart():
     message = TextSendMessage(
-        productId='5ac1bfd5040ab15980c9b435',
-        emojiId='215'
+        text='$ LINE emoji $',
+        emojis=[
+            MessageActions(
+            productId='5ac1bfd5040ab15980c9b435',
+            emojiId='215'
+            )
+        ]
     )
     return message
 # def Send_Heart():
