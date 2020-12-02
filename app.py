@@ -86,7 +86,7 @@ def handle_message(event):
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
             elif '我想了解更多:兄弟麵線' in msg:
-                [message0, message1] = GetIntroductionM()
+                [message0] = GetIntroductionM()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
             elif '我想了解更多:鴉片粉圓' in msg:
@@ -94,9 +94,9 @@ def handle_message(event):
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
             elif '我想了解更多:劉記蔥蛋餅' in msg:
-                [message0, message1] = GetIntroductionD()
+                [message0] = GetIntroductionD()
                 line_bot_api.reply_message(
-                    event.reply_token, [message0, message1])
+                    event.reply_token, [message0])
 # =============================拍照==================================
     elif '拍照' in msg:
         levelF = '0'
@@ -105,7 +105,7 @@ def handle_message(event):
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
-    elif levelP == '1' or levelP == '2B' or levelP == '2W':
+    elif (levelP == '1' or levelP == '2B' or levelP == '2W'):
         if '寶藏巖' in msg:
             levelP = '2B'
             message = photo_message()
@@ -153,7 +153,7 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
     elif msg == '導覽':
-        [message0,message1,message2,message3,]=MenuIntroduction()
+        [message0, message1, message2, message3, ] = MenuIntroduction()
         message0 = TextSendMessage(text='從左到右分別代表:')
         message1 = TextSendMessage(
             text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
