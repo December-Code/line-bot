@@ -62,7 +62,7 @@ def handle_message(event):
         levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    if levelF == '1':
+    elif levelF == '1':
         if '公館' in msg:
             levelF = '2K'
             message = FoodK_message()
@@ -107,7 +107,7 @@ def handle_message(event):
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
-    if levelP == '1':
+    elif levelP == '1':
         if '寶藏巖' in msg:
             levelP = '2B'
             message = photo_message()
@@ -143,7 +143,7 @@ def handle_message(event):
         levelH = '1'
         message = HistoryLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    if levelH == '1':
+    elif levelH == '1':
         if '寶藏巖' in msg:
             message = HistoryB_message()
             line_bot_api.reply_message(event.reply_token, message)
