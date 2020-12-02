@@ -530,8 +530,7 @@ def HistoryW_message():
 
 def Send_Heart():
     message = TextSendMessage(
-        text='喜歡$',
-        Emoji=(2,3,'5ac1bfd5040ab15980c9b435', '215')
+        text='喜歡$0x100037',
     )
     return message
     # index = '0',
