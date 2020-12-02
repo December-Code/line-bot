@@ -556,13 +556,24 @@ def HistoryW_message():
 def Send_Heart():
     message = TextSendMessage(
         text='$',
-        emojis=SendMessage(
-            index='0',
+        emojis=TextMessage(
+            indpex='0',
             productId='5ac1bfd5040ab15980c9b435',
-            emojiId='215'
-        )
+            emojiId='215')
     )
     return message
+# def Send_Heart():
+#     emoji_heart = (
+#         index=0,
+#         lenghth=10,
+#         productId='5ac1bfd5040ab15980c9b435',
+#         emojiId='215'
+#     )
+#     message = TextSendMessage(
+#         text='$',
+#         emojis=[emoji_heart]
+#     )
+#     return message
 # def Send_Heart():
 #     message = StickerSendMessage(
 #         package_id='5ac1bfd5040ab15980c9b435',

@@ -141,6 +141,7 @@ def handle_message(event):
             text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
         message3 = TextSendMessage(
             text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
+        # message4 = TextSendMessage(text='測試表情。',emojis={index=14,length=6,productId='5ac1bfd5040ab15980c9b435',emojiId='222'})
         line_bot_api.reply_message(
             event.reply_token, [message, message1, message2, message3])
     elif msg != '好唷!，如果還有需要直接打導覽也可以唷!':
