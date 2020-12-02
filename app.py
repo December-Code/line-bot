@@ -81,6 +81,16 @@ def handle_message(event):
     elif levelF == '2' and '我想了解更多:劉記蔥蛋餅' in msg:
         message = TextSendMessage(text='下次再來唷~')
         line_bot_api.reply_message(event.reply_token, message)
+# =============================愛心==================================
+    elif msg == '喜歡這家店:兄弟麵線':
+        message = Send_Heart()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif msg == '喜歡這家店:鴉片粉圓':
+        message = Send_Heart()
+        line_bot_api.reply_message(event.reply_token, message)
+    elif msg == '喜歡這家店:劉記蔥蛋餅':
+        message = Send_Heart()
+        line_bot_api.reply_message(event.reply_token, message)
 # =============================拍照==================================
     elif '拍照' in msg:
         levelP = '1'
@@ -126,11 +136,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif levelH == '1' and '都不想' in msg:
         message = TextSendMessage(text='下次再來唷~')
-        line_bot_api.reply_message(event.reply_token, message)
-# =============================愛心==================================
-    elif msg == '喜歡這家店':
-        message = Send_Heart()
-        # message = TextSendMessage(text=0x100037)
         line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
     elif msg == '導覽':
