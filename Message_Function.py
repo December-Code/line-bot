@@ -123,10 +123,22 @@ def FoodK_message():
 
 
 def GetIntroductionM():
-    message0 = TextSendMessage(text='「兄弟麵線介紹」\n堅持傳統口味的用心維持了近三十年\n以前店面在東南亞劇院那邊的唱片行租房子賣麵線\n'
-                               + '某一次房東提議店名要不要一起用“兄弟”這個名子\n之後就決定叫做「“兄弟”蚵仔麵線」直到現在')
-    message1 = TextSendMessage(text='123')
+    message0 = TextSendMessage(text='「兄弟麵線介紹」\n堅持傳統口味的用心維持了近三十年，以前店面在東南亞劇院那邊的唱片行租房子賣麵線，'
+                               + '某一次房東提議店名要不要一起用“兄弟”這個名字，之後就決定叫做「“兄弟”蚵仔麵線」直到現在')
+    # message1 = TextSendMessage(text='「故事」')
+    return message0
+
+
+def GetIntroductionY():
+    message0 = TextSendMessage(text='「鴉片粉圓介紹」「鴉片」一吃就上癮')
+    message1 = TextSendMessage(text='「故事」')
     return message0, message1
+
+
+def GetIntroductionD():
+    message0 = TextSendMessage(text='「劉記蔥蛋餅」雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！')
+    # message1 = TextSendMessage(text='「故事」')
+    return message0
 
 # ===================================水源市場美食推薦========================================
 # def FoodK_message():

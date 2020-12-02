@@ -75,22 +75,8 @@ def handle_message(event):
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
         elif levelF == '2K':
-            if '我想了解更多:兄弟麵線' in msg:
-                [message0, message1] = GetIntroductionM()
-                line_bot_api.reply_message(
-                    event.reply_token, [message0, message1])
-            elif '我想了解更多:鴉片粉圓' in msg:
-                message0 = TextSendMessage(text='下次再來唷~')
-                message1 = TextSendMessage(text='')
-                line_bot_api.reply_message(
-                    event.reply_token, [message0, message1])
-            elif '我想了解更多:劉記蔥蛋餅' in msg:
-                message0 = TextSendMessage(text='下次再來唷~')
-                message1 = TextSendMessage(text='')
-                line_bot_api.reply_message(
-                    event.reply_token, [message0, message1])
-# =============================愛心==================================
-            elif msg == '喜歡這家店:兄弟麵線':
+            # =============================愛心==================================
+            if msg == '喜歡這家店:兄弟麵線':
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
             elif msg == '喜歡這家店:鴉片粉圓':
@@ -99,6 +85,18 @@ def handle_message(event):
             elif msg == '喜歡這家店:劉記蔥蛋餅':
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
+            elif '我想了解更多:兄弟麵線' in msg:
+                [message0, message1] = GetIntroductionM()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
+            elif '我想了解更多:鴉片粉圓' in msg:
+                [message0, message1] = GetIntroductionY()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
+            elif '我想了解更多:劉記蔥蛋餅' in msg:
+                [message0, message1] = GetIntroductionD()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
 # =============================拍照==================================
     elif '拍照' in msg:
         levelF = '0'
