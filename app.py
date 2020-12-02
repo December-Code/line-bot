@@ -47,6 +47,7 @@ def callback():
 levelF = '0'
 levelP = '0'
 levelH = '0'
+Location='0'
 
 
 @handler.add(MessageEvent, message=TextMessage)
@@ -55,6 +56,7 @@ def handle_message(event):
     global levelF
     global levelP
     global levelH
+    global Location
 # ============================選單列表=================================
     if '美食' in msg:
         levelF = '1'
@@ -100,17 +102,15 @@ def handle_message(event):
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
             elif '我想了解更多:兄弟麵線' in msg:
-                [message0] = GetIntroductionM()
-                line_bot_api.reply_message(
-                    event.reply_token, [message0, message1])
+                message0 = GetIntroductionM()
+                line_bot_api.reply_message(event.reply_token, message0,)
             elif '我想了解更多:鴉片粉圓' in msg:
                 [message0, message1] = GetIntroductionY()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
             elif '我想了解更多:劉記蔥蛋餅' in msg:
-                [message0] = GetIntroductionD()
-                line_bot_api.reply_message(
-                    event.reply_token, [message0])
+                message0 = GetIntroductionD()
+                line_bot_api.reply_message(event.reply_token, message0)
 # =============================拍照==================================
     elif (levelP == '1' or levelP == '2B' or levelP == '2W'):
         if '寶藏巖' in msg:
