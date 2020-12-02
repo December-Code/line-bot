@@ -46,8 +46,8 @@ def FoodK_message():
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
-                            data='使用者選擇喜歡',
-                            text='喜歡這家店!'
+                            data='使用者喜歡:兄弟麵線',
+                            text='喜歡這家店:兄弟麵線'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -65,8 +65,9 @@ def FoodK_message():
                     text='「鴉片」一吃就上癮\n地點:100台北市中正區羅斯福路四段52巷16弄4號',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                            label='喜歡這家店',
+                            data='使用者喜歡:鴉片粉圓',
+                            text='喜歡這家店:兄弟麵線'
                         ),
                         URITemplateAction(
                             label='大約價錢：50元',
@@ -84,8 +85,9 @@ def FoodK_message():
                     text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地點:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡'
+                            label='喜歡這家店',
+                            data='使用者喜歡:劉記蔥蛋餅',
+                            text='喜歡這家店:劉記蔥蛋餅'
                         ),
                         URITemplateAction(
                             label='大約價錢：45元',
