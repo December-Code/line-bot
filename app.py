@@ -129,8 +129,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 # =============================愛心==================================
     elif msg == '喜歡這家店':
-        # message = Send_Heart()
-        message = TextSendMessage(text=0x100037)
+        message = Send_Heart()
+        # message = TextSendMessage(text=0x100037)
         line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
     elif msg == '導覽':
