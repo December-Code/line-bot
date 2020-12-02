@@ -554,11 +554,17 @@ def HistoryW_message():
 
 
 def Send_Heart():
-    message = StickerSendMessage(
-        package_id='5ac1bfd5040ab15980c9b435',
-        sticker_id='215'
+    message = TextSendMessage(
+        productId='5ac1bfd5040ab15980c9b435',
+        emojiId='215'
     )
     return message
+# def Send_Heart():
+#     message = StickerSendMessage(
+#         package_id='5ac1bfd5040ab15980c9b435',
+#         sticker_id='215'
+#     )
+#     return message
 
 # =====================================導覽確認========================================
 
