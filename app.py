@@ -58,12 +58,12 @@ def handle_Follow(event):
 
 
 # 離開粉絲提示
-@handler.add(FollowEvent)
+@handler.add(UnfollowEvent)
 def handle_Follow(event):
     message = TextSendMessage(text='祝福您，如果還有需要，歡迎再找我『文化in水源』唷~')
     line_bot_api.reply_message(
         event.reply_token, message)
-    print("FlowEvent =", FollowEvent)
+    print("FlowEvent =", UnfollowEvent)
 
 
 # 加入群組提示
@@ -226,7 +226,7 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2, message3])
     elif msg == '我自己摸索就好~':
-        message = TextSendMessage(text='好唷!，如果還有需要直接打導覽也可以唷!')
+        message = TextSendMessage(text='好唷~!如果還有需要直接打導覽也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)
     else:
         message0 = TextSendMessage(
