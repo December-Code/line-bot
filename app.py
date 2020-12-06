@@ -46,9 +46,11 @@ def callback():
 
 @handler.add(FollowEvent)
 def handle_Follow(event):
+    Nickname = event.nickname
+    AccountName = event.account_name
     message0 = TextSendMessage(
-        text='{Nickname}，你好啊(*≧∇≦*)！\n感謝你成為{AccountName}的好友！\n{AccountName}除了會介紹你公館的美食跟相關的的故事，還有很多水源里的老照片哦~' +
-        '\n如果需要功能導覽的話，請輸入「導覽」，{AccountName}可以幫你介紹我的各個功能哦~')
+        text=Nickname+'，你好啊(*≧∇≦*)！\n感謝你成為'+AccountName+'的好友！\n'+AccountName+'除了會介紹你公館的美食跟相關的的故事，還有很多水源里的老照片哦~' +
+        '\n如果需要功能導覽的話，請輸入「導覽」，'+AccountName+'可以幫你介紹我的各個功能哦~')
     newcoming_message = Introduction_message()
     line_bot_api.reply_message(
         event.reply_token, [message0, newcoming_message])
@@ -74,7 +76,7 @@ def handle_leave(event):
     print("我被踢掉了QQ 相關資訊", event.source)
 
 
-# 處理訊息
+# 處理收到的訊息
 levelF = '0'
 levelP = '0'
 levelH = '0'
