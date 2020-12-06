@@ -45,10 +45,12 @@ def callback():
 # 加入提示
 @handler.add(JoinEvent)
 def handle_join(event):
-    newcoming_text = Introduction_message()
+    message0 = TextSendMessage(
+        text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
+    newcoming_message = Introduction_message()
 
     line_bot_api.reply_message(
-        event.reply_token, newcoming_text)
+        event.reply_token, [message0, newcoming_message])
     print("JoinEvent =", JoinEvent)
 
 
