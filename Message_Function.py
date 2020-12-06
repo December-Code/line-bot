@@ -489,13 +489,17 @@ def photolaW_message():
 
 
 def Camera_message():
-    message = QuickReply(
+    message = TextSendMessage(
         alt_text='馬上拍出好照片吧!',
-        actions=[
-            CameraAction(
-                label='立刻嘗試啟動相機'
-            ),
-        ]
+        text='想要馬上嘗試嗎?',
+        quick_reply=QuickReply(
+            items=[
+                QuickReplyButton(
+                    action=CameraAction(
+                        label="立刻啟動相機",
+                        text="text"))
+            ]
+        )
     )
     # message = TemplateSendMessage(
     #     alt_text='馬上拍出好照片吧!',
