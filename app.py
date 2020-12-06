@@ -47,13 +47,11 @@ def callback():
 @handler.add(FollowEvent)
 def handle_Follow(event):
     message0 = TextSendMessage(
-        text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
+        text='{Nickname}，你好啊(*≧∇≦*)！\n感謝你成為{AccountName}的好友！\n{AccountName}除了會介紹你公館的美食跟相關的的故事，還有很多水源里的老照片哦~' +
+        '\n如果需要功能導覽的話，請輸入「導覽」，{AccountName}可以幫你介紹我的各個功能哦~')
     newcoming_message = Introduction_message()
-
     line_bot_api.reply_message(
-        event.reply_token, newcoming_message)
-    # line_bot_api.reply_message(
-    #     event.reply_token, [message0, newcoming_message])
+        event.reply_token, [message0, newcoming_message])
     print("FlowEvent =", FollowEvent)
 
 # 加入群組提示
@@ -62,13 +60,11 @@ def handle_Follow(event):
 @handler.add(JoinEvent)
 def handle_join(event):
     message0 = TextSendMessage(
-        text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
+        text='謝謝你讓我成為你們的一員 \n 需要幫助的話，可以選擇「導覽」，讓我向你介紹一次我的各個功能哦~')
     newcoming_message = Introduction_message()
 
     line_bot_api.reply_message(
-        event.reply_token, newcoming_message)
-    # line_bot_api.reply_message(
-    #     event.reply_token, [message0, newcoming_message])
+        event.reply_token, [message0, newcoming_message])
     print("JoinEvent =", JoinEvent)
 
 
