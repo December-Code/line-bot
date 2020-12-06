@@ -50,7 +50,9 @@ def handle_join(event):
     newcoming_message = Introduction_message()
 
     line_bot_api.reply_message(
-        event.reply_token, [message0, newcoming_message])
+        event.reply_token, newcoming_message)
+    # line_bot_api.reply_message(
+    #     event.reply_token, [message0, newcoming_message])
     print("JoinEvent =", JoinEvent)
 
 
