@@ -485,6 +485,27 @@ def photolaW_message():
     )
     return message
 
+# =====================================相機開啟=======================================
+
+
+def Camera_message():
+    message = TemplateSendMessage(
+        alt_text='馬上拍出好照片吧!',
+        template=ConfirmTemplate(
+            text='等不及嘗試了嗎?',
+            actions=[
+                CameraAction(
+                    label='立刻嘗試'
+                ),
+                MessageTemplateAction(
+                    label='再等一下了@@',
+                    text='再等一下了'
+                )
+            ]
+        )
+    )
+    return message
+
 # =====================================歷史對照==========================================
 
 

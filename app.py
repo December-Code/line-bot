@@ -47,12 +47,14 @@ def callback():
 @handler.add(FollowEvent)
 def handle_Follow(event):
     AccountName = '文化in水源'
-    message0 = TextSendMessage(
-        text='你好啊(*≧∇≦*)！\n感謝你成為'+AccountName+'的好友！\n'+AccountName+'除了會介紹你公館的美食跟相關的的故事，還有很多水源里的老照片哦~' +
-        '\n如果需要功能導覽的話，請輸入「導覽」，'+AccountName+'可以幫你介紹我的各個功能哦~')
     newcoming_message = Introduction_message()
     line_bot_api.reply_message(
-        event.reply_token, [message0, newcoming_message])
+        event.reply_token, newcoming_message)
+    # message0 = TextSendMessage(
+    #     text='你好啊(*≧∇≦*)！\n感謝你成為'+AccountName+'的好友！\n'+AccountName+'除了會介紹你公館的美食跟相關的的故事，還有很多水源里的老照片哦~' +
+    #     '\n如果需要功能導覽的話，請輸入「導覽」，'+AccountName+'可以幫你介紹我的各個功能哦~')
+    # line_bot_api.reply_message(
+    #     event.reply_token, [message0, newcoming_message])
     print("FlowEvent =", FollowEvent)
 
 # 加入群組提示
@@ -164,8 +166,12 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, message)
         elif levelP == '2B':
             if '站' in msg:
-                message = photoStB_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoStB_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
+                # message = photoStB_message()
+                # line_bot_api.reply_message(event.reply_token, message)
             elif '坐' in msg:
                 message = photoSiB_message()
                 line_bot_api.reply_message(event.reply_token, message)
