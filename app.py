@@ -45,7 +45,7 @@ def callback():
 # 成為粉絲提示
 @handler.add(FollowEvent)
 def handle_Follow(event):
-    AccountName = '文化in水源'
+    # AccountName = '文化in水源'
     newcoming_message = Introduction_message()
     line_bot_api.reply_message(
         event.reply_token, newcoming_message)
@@ -58,12 +58,12 @@ def handle_Follow(event):
 
 
 # 離開粉絲提示
-@handler.add(UnfollowEvent)
-def handle_Follow(event):
-    message = TextSendMessage(text='祝福您，如果還有需要，歡迎再找我『文化in水源』唷~')
-    line_bot_api.reply_message(
-        event.reply_token, message)
-    print("FlowEvent =", UnfollowEvent)
+# @handler.add(UnfollowEvent)
+# def handle_Follow(event):
+#     message = TextSendMessage(text='祝福您，如果還有需要，歡迎再找我『文化in水源』唷~')
+#     line_bot_api.reply_message(
+#         event.reply_token, message)
+#     print("FlowEvent =", UnfollowEvent)
 
 
 # 加入群組提示
@@ -118,6 +118,14 @@ def handle_message(event):
         levelP = '0'
         levelH = '1'
         message = HistoryLo_message()
+        line_bot_api.reply_message(event.reply_token, message)
+# =============================導覽==================================
+    elif msg == '導覽':
+        [message0, message1, message2, message3, ] = MenuIntroduction()
+        line_bot_api.reply_message(
+            event.reply_token, [message0, message1, message2, message3])
+    elif '我自己摸索就好~' in msg:
+        message = TextSendMessage(text='好唷~!如果還有需要直接打導覽也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================美食==================================
     elif (levelF == '1' or levelF == '2K' or levelF == '2W'):
@@ -220,14 +228,7 @@ def handle_message(event):
             levelH = '0'
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
-# =============================導覽==================================
-    elif msg == '導覽':
-        [message0, message1, message2, message3, ] = MenuIntroduction()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1, message2, message3])
-    elif msg == '我自己摸索就好~':
-        message = TextSendMessage(text='好唷~!如果還有需要直接打導覽也可以唷!')
-        line_bot_api.reply_message(event.reply_token, message)
+
     else:
         message0 = TextSendMessage(
             text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
