@@ -178,24 +178,32 @@ def handle_message(event):
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
-                # message = photoStB_message()
-                # line_bot_api.reply_message(event.reply_token, message)
             elif '坐' in msg:
-                message = photoSiB_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoSiB_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '躺' in msg:
-                message = photolaB_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photolaB_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
         elif levelP == '2W':
             if '站' in msg:
-                message = photoStW_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoStW_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '坐' in msg:
-                message = photoSiW_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoSiW_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '躺' in msg:
-                message = photolaW_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photolaW_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
 # =============================歷史==================================
     elif levelH == '1':
         if '寶藏巖' in msg:
