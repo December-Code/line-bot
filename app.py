@@ -41,9 +41,8 @@ def callback():
         abort(400)
     return 'OK'
 
+
 # 成為粉絲提示
-
-
 @handler.add(FollowEvent)
 def handle_Follow(event):
     AccountName = '文化in水源'
@@ -57,9 +56,17 @@ def handle_Follow(event):
     #     event.reply_token, [message0, newcoming_message])
     print("FlowEvent =", FollowEvent)
 
+
+# 離開粉絲提示
+@handler.add(FollowEvent)
+def handle_Follow(event):
+    message = TextSendMessage(text='祝福您，如果還有需要，歡迎再找我『文化in水源』唷~')
+    line_bot_api.reply_message(
+        event.reply_token, message)
+    print("FlowEvent =", FollowEvent)
+
+
 # 加入群組提示
-
-
 @handler.add(JoinEvent)
 def handle_join(event):
     message0 = TextSendMessage(
@@ -71,6 +78,7 @@ def handle_join(event):
     print("JoinEvent =", JoinEvent)
 
 
+# 離開群組提示
 @handler.add(LeaveEvent)
 def handle_leave(event):
     print("leave Event =", event)
