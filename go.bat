@@ -1,3 +1,3 @@
 git add .
-git commit -am "Send Heart"
+git commit -am "NewNumber"
 git push heroku master
