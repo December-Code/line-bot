@@ -41,9 +41,24 @@ def callback():
         abort(400)
     return 'OK'
 
+
+# 加入提示
+@handler.add(JoinEvent)
+def handle_join(event):
+    newcoming_text = Introduction_message()
+
+    line_bot_api.reply_message(
+        event.reply_token, TextMessage(text=newcoming_text))
+    print("JoinEvent =", JoinEvent)
+
+
+@handler.add(LeaveEvent)
+def handle_leave(event):
+    print("leave Event =", event)
+    print("我被踢掉了QQ 相關資訊", event.source)
+
+
 # 處理訊息
-
-
 levelF = '0'
 levelP = '0'
 levelH = '0'
