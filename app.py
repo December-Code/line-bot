@@ -41,8 +41,24 @@ def callback():
         abort(400)
     return 'OK'
 
+# 成為粉絲提示
 
-# 加入提示
+
+@handler.add(FollowEvent)
+def handle_Follow(event):
+    message0 = TextSendMessage(
+        text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
+    newcoming_message = Introduction_message()
+
+    line_bot_api.reply_message(
+        event.reply_token, newcoming_message)
+    # line_bot_api.reply_message(
+    #     event.reply_token, [message0, newcoming_message])
+    print("FlowEvent =", FollowEvent)
+
+# 加入群組提示
+
+
 @handler.add(JoinEvent)
 def handle_join(event):
     message0 = TextSendMessage(
