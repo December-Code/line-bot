@@ -16,11 +16,11 @@ def FoodLo_message():
             actions=[
                 MessageTemplateAction(
                     label='公館美食',
-                    text='公館',
+                    text='我想找美食:公館',
                 ),
                 MessageTemplateAction(
-                    label='水源市場美食',
-                    text='水源市場',
+                    label='水源市場',
+                    text='我想找美食:水源市場',
                 ),
                 MessageTemplateAction(
                     label='都沒有耶QQ',
@@ -225,15 +225,15 @@ def photoLo_message():
         base_size=BaseSize(height=1000, width=1000),
         actions=[
             MessageImagemapAction(
-                text='自來水廠',
+                text='拍照地點:寶藏巖',
                 area=ImagemapArea(
-                    x=500, y=0, width=500, height=500
+                    x=0, y=0, width=500, height=500
                 )
             ),
             MessageImagemapAction(
-                text='寶藏巖',
+                text='拍照地點:自來水廠',
                 area=ImagemapArea(
-                    x=0, y=0, width=500, height=500
+                    x=500, y=0, width=500, height=500
                 )
             )
         ]
@@ -498,11 +498,11 @@ def HistoryLo_message():
             actions=[
                 MessageTemplateAction(
                     label='我想瞭解寶藏巖',
-                    text='寶藏巖',
+                    text='瞭解歷史:寶藏巖',
                 ),
                 MessageTemplateAction(
                     label='我想瞭解自來水廠',
-                    text='自來水廠',
+                    text='瞭解歷史:自來水廠',
                 ),
                 MessageTemplateAction(
                     label='都沒有耶QQ',
