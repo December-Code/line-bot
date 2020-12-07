@@ -51,7 +51,7 @@ def FoodK_message():
                             # text='喜歡這家店'
                         ),
                         MessageTemplateAction(
-                            label='大約價錢：50元',
+                            label='菜單(約50元)',
                             text='想知道價目表:兄弟麵線',
                         ),
                         MessageTemplateAction(
@@ -72,7 +72,7 @@ def FoodK_message():
 
                         ),
                         MessageTemplateAction(
-                            label='大約價錢：50元',
+                            label='菜單(約50元)',
                             text='想知道價目表:鴉片粉圓'
                         ),
                         MessageTemplateAction(
@@ -90,10 +90,9 @@ def FoodK_message():
                             label='喜歡這家店',
                             data='使用者喜歡:劉記蔥蛋餅',
                             text='喜歡這家店:劉記蔥蛋餅'
-                            # text='喜歡這家店'
                         ),
                         MessageTemplateAction(
-                            label='大約價錢：30元',
+                            label='菜單(約30元)',
                             text='想知道價目表:劉記蔥蛋餅',
                         ),
                         # URITemplateAction(
@@ -480,6 +479,25 @@ def photolaW_message():
                         uri='https://i.imgur.com/MkPeQQY.jpg'
                     )
                  )
+            ]
+        )
+    )
+    return message
+
+# =====================================相機開啟=======================================
+
+
+def Camera_message():
+    message = TextSendMessage(
+        text='想要馬上嘗試嗎?',
+        quick_reply=QuickReply(
+            items=[
+                QuickReplyButton(
+                    action=CameraAction(
+                        label="立刻啟動Line相機",
+                        text="text"
+                    )
+                )
             ]
         )
     )

@@ -41,9 +41,51 @@ def callback():
         abort(400)
     return 'OK'
 
+
+# 成為粉絲提示
+@handler.add(FollowEvent)
+def handle_Follow(event):
+    # AccountName = '文化in水源'
+    newcoming_message = Introduction_message()
+    line_bot_api.reply_message(
+        event.reply_token, newcoming_message)
+    # message0 = TextSendMessage(
+    #     text='你好啊(*≧∇≦*)！\n感謝你成為'+AccountName+'的好友！\n'+AccountName+'除了會介紹你公館的美食跟相關的的故事，還有很多水源里的老照片哦~' +
+    #     '\n如果需要功能導覽的話，請輸入「導覽」，'+AccountName+'可以幫你介紹我的各個功能哦~')
+    # line_bot_api.reply_message(
+    #     event.reply_token, [message0, newcoming_message])
+    print("FlowEvent =", FollowEvent)
+
+
+# 離開粉絲提示
+# @handler.add(UnfollowEvent)
+# def handle_Follow(event):
+#     message = TextSendMessage(text='祝福您，如果還有需要，歡迎再找我『文化in水源』唷~')
+#     line_bot_api.reply_message(
+#         event.reply_token, message)
+#     print("FlowEvent =", UnfollowEvent)
+
+
+# 加入群組提示
+@handler.add(JoinEvent)
+def handle_join(event):
+    message0 = TextSendMessage(
+        text='謝謝你讓我成為你們的一員 \n 需要幫助的話，可以選擇「導覽」，讓我向你介紹一次我的各個功能哦~')
+    newcoming_message = Introduction_message()
+
+    line_bot_api.reply_message(
+        event.reply_token, [message0, newcoming_message])
+    print("JoinEvent =", JoinEvent)
+
+
+# 離開群組提示
+@handler.add(LeaveEvent)
+def handle_leave(event):
+    print("leave Event =", event)
+    print("很高興為你們服務唷!", event.source)
+
+
 # 處理訊息
-
-
 levelF = '0'
 levelP = '0'
 levelH = '0'
@@ -140,24 +182,36 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, message)
         elif levelP == '2B':
             if '站' in msg:
-                message = photoStB_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoStB_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '坐' in msg:
-                message = photoSiB_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoSiB_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '躺' in msg:
-                message = photolaB_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photolaB_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
         elif levelP == '2W':
             if '站' in msg:
-                message = photoStW_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoStW_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '坐' in msg:
-                message = photoSiW_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photoSiW_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
             elif '躺' in msg:
-                message = photolaW_message()
-                line_bot_api.reply_message(event.reply_token, message)
+                message0 = photolaW_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
 # =============================歷史==================================
     elif levelH == '1':
         if msg == '瞭解歷史:寶藏巖':
