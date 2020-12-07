@@ -138,7 +138,7 @@ def handle_message(event):
             message = FoodW_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif '都不想' in msg:
-            message = TextSendMessage(text='下次再來唷~')
+            message = TextSendMessage(text='想要再點選再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
         elif levelF == '2K':
             # =============================愛心==================================

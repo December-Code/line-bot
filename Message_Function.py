@@ -48,7 +48,6 @@ def FoodK_message():
                             label='我喜歡這家店',
                             data='使用者喜歡:兄弟麵線',
                             text='喜歡這家店:兄弟麵線'
-                            # text='喜歡這家店'
                         ),
                         MessageTemplateAction(
                             label='菜單(約50元)',
