@@ -204,7 +204,7 @@ def handle_message(event):
             levelP = '2W'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)
-        elif msg == '拍照地點:公館':
+        elif msg == '拍照地點:公館商圈':
             levelP = '2K'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)

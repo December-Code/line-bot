@@ -1,3 +1,3 @@
 @REM git add .
-git commit -am "Rich_menu"
+git commit -am "K_market"
 git push heroku master
