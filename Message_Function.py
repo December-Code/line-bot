@@ -624,7 +624,7 @@ def HistoryLo_message():
 
 # ====================================寶藏巖對照=========================================
 def HistoryB_message():
-    message = TemplateSendMessage(
+    message0 = TemplateSendMessage(
         alt_text='先看看寶藏巖的今昔對比',
         template=ImageCarouselTemplate(
             columns=[
@@ -645,21 +645,19 @@ def HistoryB_message():
             ]
         )
     )
-    return message
+    message1 = TextSendMessage(text='「寶藏巖介紹」\n福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
+                               '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
+    return message0, message1
 
 
 # ====================================寶藏巖介紹=========================================
 def HistoryBIntro():
-    message0 = TextSendMessage(text='「寶藏巖介紹」\n福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
-                               '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
-    # message0 = TextSendMessage(text='「寶藏巖介紹」\n寶藏巖又稱寶藏巖觀音寺、寶藏巖觀音亭、寶藏巖寺、石壁潭寺、觀音媽廟等\n' +
-    #                            '靠虎空山小山坡而建，為福建泉州安溪移民的信仰中心，主奉觀音菩薩，1997年8月5日，' +
-    #                            '由臺北市政府公告指定「寶藏巖」為市定古蹟')
-    # message1 = TextSendMessage(text='福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
-    #                            '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
-    # message2 = TextSendMessage(text='「寶藏巖國際藝術村」以「聚落共生」概念引入「寶藏家園」、「駐村計畫」與「青年會所」等計劃，用藝、居共構的做法' +
-    #                            '活化保存歷時兩、三百年的山邊佛寺寶藏巖，注入了寶藏巖新的生命力')
-    return message0
+    message0 = TextSendMessage(text='寶藏巖又稱寶藏巖觀音寺、寶藏巖觀音亭、寶藏巖寺、石壁潭寺、觀音媽廟等\n' +
+                               '靠虎空山小山坡而建，為福建泉州安溪移民的信仰中心，主奉觀音菩薩，1997年8月5日，' +
+                               '由臺北市政府公告指定「寶藏巖」為市定古蹟')
+    message1 = TextSendMessage(text='「寶藏巖國際藝術村」以「聚落共生」概念引入「寶藏家園」、「駐村計畫」與「青年會所」等計劃，用藝、居共構的做法' +
+                               '活化保存歷時兩、三百年的山邊佛寺寶藏巖，注入了寶藏巖新的生命力')
+    return message0, message1
 
 
 # ====================================自來水廠對照========================================
@@ -699,16 +697,16 @@ def HistoryWIntro():
     return message0, message1
 
 
-def MoreInfo_message():
-    # if L =='2B':
+def MoreInfo_message(L):
+    if L == '2B':
         message = TextSendMessage(
             text='想要瞭解更多嗎?',
             quick_reply=QuickReply(
                 items=[
                     QuickReplyButton(
                         action=MessageTemplateAction(
-                            label='我想瞭解自來水博物館',
-                            text='瞭解歷史:自來水博物館',
+                            label='我想瞭解寶藏巖',
+                            text='瞭解更多:寶藏巖',
                         ),
                     )
                 ]
