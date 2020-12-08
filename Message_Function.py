@@ -10,7 +10,7 @@ def FoodLo_message():
     message = TemplateSendMessage(
         alt_text='你想要找哪裡的美食呢?',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/cMyF8lN.png',
+            thumbnail_image_url='https://i.imgur.com/NbgfxlT.png',
             title='找哪裡的美食呢?',
             text='選擇你的地點',
             actions=[
@@ -329,7 +329,6 @@ def photo_message(L):
         return message
 
 
-
 # =====================================公館商圈站姿的照片推薦=======================================
 def photoStK_message():
     message = TemplateSendMessage(
@@ -644,7 +643,7 @@ def HistoryLo_message():
     message = TemplateSendMessage(
         alt_text='你想要了解那裡的歷史呢?',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/8ze9PtV.png',
+            thumbnail_image_url='https://i.imgur.com/xdZ779W.png',
             title='想了解那裡的歷史呢?',
             text='選擇想要的地點',
             actions=[
