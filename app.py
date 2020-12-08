@@ -151,7 +151,7 @@ def handle_message(event):
         message = TextSendMessage(text='好唷!，如果還有需要直接打『導覽』也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================美食==================================
-    elif (levelF == '1' or levelF == '2K' or levelF == '2W'):
+    elif (levelF == '1' or levelF == '2K' or levelF == '2M'):
 
         if msg == '我想找美食:公館':
             levelF = '2K'
