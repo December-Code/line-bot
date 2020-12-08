@@ -218,12 +218,12 @@ def GetIntroductionD():
 
 def photoLo_message():
     message = ImagemapSendMessage(
-        base_url='https://i.imgur.com/OKgp8Fa.png',
+        base_url='https://i.imgur.com/sdX4RWc.png',
         alt_text='想要拍照了嗎 ?',
         base_size=BaseSize(height=1000, width=1000),
         actions=[
             MessageImagemapAction(
-                text='拍照地點:寶藏巖',
+                text='拍照地點:公館商圈',
                 area=ImagemapArea(
                     x=0, y=0, width=500, height=500
                 )
@@ -232,6 +232,12 @@ def photoLo_message():
                 text='拍照地點:自來水博物館',
                 area=ImagemapArea(
                     x=500, y=0, width=500, height=500
+                )
+            ),
+            MessageImagemapAction(
+                text='拍照地點:寶藏巖',
+                area=ImagemapArea(
+                    x=235, y=500, width=500, height=500
                 )
             )
         ]
