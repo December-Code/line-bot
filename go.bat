@@ -1,3 +1,3 @@
 @REM git add .
-git commit -am "K_market"
+git commit -am "repair"
 git push heroku master
