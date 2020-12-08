@@ -293,20 +293,6 @@ def photoStK_message():
                         uri='https://i.imgur.com/vSLhuNN.jpg'
                     )
                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾(站)',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
-                    )
-                ),
             ]
         )
     )
