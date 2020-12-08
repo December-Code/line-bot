@@ -218,7 +218,7 @@ def handle_message(event):
             message0 = HistoryB_message()
             message1 = HistoryBIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
-        elif msg == '瞭解歷史:自來水廠':
+        elif msg == '瞭解歷史:自來水博物館':
             message0 = HistoryW_message()
             message1 = HistoryWIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])

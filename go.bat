@@ -1,3 +1,3 @@
 @REM git add .
-git commit -am "NewNumber"
+git commit -am "water_name"
 git push heroku master

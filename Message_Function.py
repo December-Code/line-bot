@@ -229,7 +229,7 @@ def photoLo_message():
                 )
             ),
             MessageImagemapAction(
-                text='拍照地點:自來水廠',
+                text='拍照地點:自來水博物館',
                 area=ImagemapArea(
                     x=500, y=0, width=500, height=500
                 )
@@ -374,12 +374,12 @@ def photolaB_message():
     )
     return message
 
-# =====================================自來水廠站姿的照片推薦=======================================
+# =====================================自來水博物館站姿的照片推薦=======================================
 
 
 def photoStW_message():
     message = TemplateSendMessage(
-        alt_text='自來水站姿推薦',
+        alt_text='自來水博物館站姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
@@ -415,12 +415,12 @@ def photoStW_message():
     )
     return message
 
-# ==================================自來水廠坐著的照片推薦=========================================
+# ==================================自來水博物館坐姿的照片推薦=========================================
 
 
 def photoSiW_message():
     message = TemplateSendMessage(
-        alt_text='自來水坐姿推薦',
+        alt_text='自來水博物館坐姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
@@ -447,7 +447,7 @@ def photoSiW_message():
 
 def photolaW_message():
     message = TemplateSendMessage(
-        alt_text='自來水躺姿推薦',
+        alt_text='自來水博物館躺姿推薦',
         template=ImageCarouselTemplate(
             columns=[
                  ImageCarouselColumn(
@@ -518,8 +518,8 @@ def HistoryLo_message():
                     text='瞭解歷史:寶藏巖',
                 ),
                 MessageTemplateAction(
-                    label='我想瞭解自來水廠',
-                    text='瞭解歷史:自來水廠',
+                    label='我想瞭解自來水博物館',
+                    text='瞭解歷史:自來水博物館',
                 ),
                 MessageTemplateAction(
                     label='都沒有耶QQ',
@@ -566,20 +566,20 @@ def HistoryBIntro():
 
 def HistoryW_message():
     message = TemplateSendMessage(
-        alt_text='先看看自來水廠的今昔對比',
+        alt_text='先看看自來水博物館的今昔對比',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/3K6Kl1s.png',
                     action=URITemplateAction(
-                        label='自來水廠(今)',
+                        label='自來水博物館(今)',
                         uri='https://i.imgur.com/3K6Kl1s.png'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/YA3NPS5.png',
                     action=URITemplateAction(
-                        label='自來水廠(昔)',
+                        label='自來水博物館(昔)',
                         uri='https://i.imgur.com/YA3NPS5.png'
                     )
                 )
@@ -591,7 +591,7 @@ def HistoryW_message():
 
 
 def HistoryWIntro():
-    message = TextSendMessage(text='「自來水廠介紹」')
+    message = TextSendMessage(text='「自來水博物館介紹」')
     return message
 # =====================================發送愛心========================================
 
