@@ -264,7 +264,7 @@ def handle_message(event):
             line_bot_api.reply_message(
                 event.reply_token, [message0, message1, message2])
         elif msg == '瞭解更多:寶藏巖':
-            [message0, message1] = HistoryBIntro('2B')
+            [message0, message1] = HistoryBIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
         elif msg == '瞭解歷史:自來水博物館':
             message0 = HistoryW_message()
