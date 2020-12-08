@@ -85,7 +85,7 @@ def handle_leave(event):
     print("很高興為你們服務唷!", event.source)
 
 
-# 處理收到的訊息
+# 處理訊息
 levelF = '0'
 levelP = '0'
 levelH = '0'
@@ -100,20 +100,20 @@ def handle_message(event):
     global levelH
     # global Location
 # ============================選單列表=================================
-    if '美食' in msg:
+    if '我想吃美食' in msg:
         levelF = '1'
         levelP = '0'
         levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '拍照' in msg:
+    elif '我想拍照' in msg:
         levelF = '0'
         levelP = '1'
         levelH = '0'
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
-    elif '歷史' in msg:
+    elif '知道歷史' in msg:
         levelF = '0'
         levelP = '0'
         levelH = '1'
@@ -124,16 +124,16 @@ def handle_message(event):
         [message0, message1, message2, message3, ] = MenuIntroduction()
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2, message3])
-    elif '我自己摸索就好~' in msg:
-        message = TextSendMessage(text='好唷~!如果還有需要直接打導覽也可以唷!')
+    elif msg == '我自己摸索就好~':
+        message = TextSendMessage(text='好唷!，如果還有需要直接打『導覽』也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================美食==================================
     elif (levelF == '1' or levelF == '2K' or levelF == '2W'):
-        if '公館' in msg:
+        if msg == '我想找美食:公館':
             levelF = '2K'
             message = FoodK_message()
             line_bot_api.reply_message(event.reply_token, message)
-        elif '市場' in msg:
+        elif msg == '我想找美食:水源市場':
             levelF = '2M'
             message = FoodW_message()
             line_bot_api.reply_message(event.reply_token, message)
@@ -160,23 +160,23 @@ def handle_message(event):
             elif msg == '想知道價目表:劉記蔥蛋餅':
                 message = Price_D()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif '我想了解更多:兄弟麵線' in msg:
+            elif msg == '我想了解更多:兄弟麵線':
                 message0 = GetIntroductionM()
                 line_bot_api.reply_message(event.reply_token, message0,)
-            elif '我想了解更多:鴉片粉圓' in msg:
+            elif msg == '我想了解更多:鴉片粉圓':
                 [message0, message1] = GetIntroductionY()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
-            elif '我想了解更多:劉記蔥蛋餅' in msg:
+            elif msg == '我想了解更多:劉記蔥蛋餅':
                 message0 = GetIntroductionD()
                 line_bot_api.reply_message(event.reply_token, message0)
 # =============================拍照==================================
     elif (levelP == '1' or levelP == '2B' or levelP == '2W'):
-        if '寶藏巖' in msg:
+        if msg == '拍照地點:寶藏巖':
             levelP = '2B'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)
-        elif '自來水廠' in msg:
+        elif msg == '拍照地點:自來水廠':
             levelP = '2W'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)
@@ -214,18 +214,15 @@ def handle_message(event):
                     event.reply_token, [message0, message1])
 # =============================歷史==================================
     elif levelH == '1':
-        if '寶藏巖' in msg:
+        if msg == '瞭解歷史:寶藏巖':
             message0 = HistoryB_message()
             message1 = HistoryBIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
-        elif '自來水廠' in msg:
+        elif msg == '瞭解歷史:自來水廠':
             message0 = HistoryW_message()
             message1 = HistoryWIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
         elif '都不想' in msg:
-            levelF = '0'
-            levelP = '0'
-            levelH = '0'
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
 
