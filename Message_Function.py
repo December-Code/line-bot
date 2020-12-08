@@ -295,10 +295,10 @@ def photo_message(L):
                         label='我想坐姿',
                         text='坐',
                     ),
-                    MessageTemplateAction(
-                        label='我想躺姿',
-                        text='躺',
-                    ),
+                    # MessageTemplateAction(
+                    #     label='我想躺姿',
+                    #     text='躺',
+                    # ),
                 ]
             )
         )
