@@ -379,10 +379,10 @@ def photoStB_message():
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/VXv3hUF.jpg',
+                    image_url='https://i.imgur.com/fq034OP.jpg',
                     action=URITemplateAction(
                         label='巷弄',
-                        uri='https://i.imgur.com/VXv3hUF.jpg'
+                        uri='https://i.imgur.com/fq034OP.jpg'
                     )
                 ),
                 ImageCarouselColumn(
