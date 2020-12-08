@@ -260,9 +260,9 @@ def handle_message(event):
     elif levelH == '1':
         if msg == '瞭解歷史:寶藏巖':
             message0 = HistoryB_message()
-            [message1, message2, message3] = HistoryBIntro()
+            message1 = HistoryBIntro()
             line_bot_api.reply_message(
-                event.reply_token, [message0, message1, message2, message3])
+                event.reply_token, [message0, message1])
         elif msg == '瞭解歷史:自來水博物館':
             message0 = HistoryW_message()
             [message1, message2] = HistoryWIntro()
