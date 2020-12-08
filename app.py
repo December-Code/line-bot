@@ -125,14 +125,20 @@ def handle_message(event):
 # ============================選單列表=================================
     if '我想吃美食' in msg:
         levelF = '1'
+        levelP = '0'
+        levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '我想拍照' in msg:
+        levelF = '0'
         levelP = '1'
+        levelH = '0'
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
     elif '知道歷史' in msg:
+        levelF = '0'
+        levelP = '0'
         levelH = '1'
         message = HistoryLo_message()
         line_bot_api.reply_message(event.reply_token, message)
