@@ -586,7 +586,7 @@ def Camera_message():
                 QuickReplyButton(
                     action=CameraAction(
                         label="立刻啟動Line相機",
-                        text="text"
+                        text="啟動相機"
                     )
                 )
             ]
@@ -650,9 +650,11 @@ def HistoryB_message():
 
 # ====================================寶藏巖介紹=========================================
 def HistoryBIntro():
-    message0 = TextSendMessage(text='「寶藏巖介紹」\n寶藏巖又稱寶藏巖觀音寺、寶藏巖觀音亭、寶藏巖寺、石壁潭寺、觀音媽廟等\n' +
-                               '靠虎空山小山坡而建，為福建泉州安溪移民的信仰中心，主奉觀音菩薩，1997年8月5日，' +
-                               '由臺北市政府公告指定「寶藏巖」為市定古蹟')
+    message0 = TextSendMessage(text='「寶藏巖介紹」\n福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
+                               '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
+    # message0 = TextSendMessage(text='「寶藏巖介紹」\n寶藏巖又稱寶藏巖觀音寺、寶藏巖觀音亭、寶藏巖寺、石壁潭寺、觀音媽廟等\n' +
+    #                            '靠虎空山小山坡而建，為福建泉州安溪移民的信仰中心，主奉觀音菩薩，1997年8月5日，' +
+    #                            '由臺北市政府公告指定「寶藏巖」為市定古蹟')
     # message1 = TextSendMessage(text='福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
     #                            '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
     # message2 = TextSendMessage(text='「寶藏巖國際藝術村」以「聚落共生」概念引入「寶藏家園」、「駐村計畫」與「青年會所」等計劃，用藝、居共構的做法' +
@@ -695,6 +697,24 @@ def HistoryWIntro():
                                '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌' +
                                '融合古希臘、羅馬及巴洛克等建築風格，兼有莊嚴古典外觀與象徵現化功能的水源地唧筒室，就是在這種特定的社會歷史脈絡下所建構的')
     return message0, message1
+
+
+def MoreInfo_message():
+    # if L =='2B':
+        message = TextSendMessage(
+            text='想要瞭解更多嗎?',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(
+                        action=MessageTemplateAction(
+                            label='我想瞭解自來水博物館',
+                            text='瞭解歷史:自來水博物館',
+                        ),
+                    )
+                ]
+            )
+        )
+        return message
 
 
 # =====================================發送愛心========================================
