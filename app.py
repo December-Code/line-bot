@@ -198,15 +198,15 @@ def handle_message(event):
     elif (levelP == '1' or levelP == '2B' or levelP == '2W' or levelP == '2K'):
         if msg == '拍照地點:寶藏巖':
             levelP = '2B'
-            message = photo_message()
+            message = photo_message('B')
             line_bot_api.reply_message(event.reply_token, message)
         elif msg == '拍照地點:自來水博物館':
             levelP = '2W'
-            message = photo_message()
+            message = photo_message('W')
             line_bot_api.reply_message(event.reply_token, message)
         elif msg == '拍照地點:公館商圈':
             levelP = '2K'
-            message = photo_message()
+            message = photo_message('K')
             line_bot_api.reply_message(event.reply_token, message)
         elif levelP == '2B':
             if '站' in msg:

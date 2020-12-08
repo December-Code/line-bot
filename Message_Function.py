@@ -254,30 +254,80 @@ def photoLo_message():
 # ===================================照片的姿勢推薦=========================================
 
 
-def photo_message():
-    message = TemplateSendMessage(
-        alt_text='選擇你想要的姿勢',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/raFTzTo.jpg',
-            title='想要拍照了嗎?',
-            text='選擇想要的姿勢',
-            actions=[
-                MessageTemplateAction(
-                    label='我想站姿',
-                    text='站',
-                ),
-                MessageTemplateAction(
-                    label='我想坐姿',
-                    text='坐',
-                ),
-                MessageTemplateAction(
-                    label='我想躺姿',
-                    text='躺',
-                ),
-            ]
+def photo_message(L):
+    if L == 'K':
+        message = TemplateSendMessage(
+            alt_text='選擇你想要的姿勢',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/FmZo2Eu.png',
+                title='想要拍照了嗎?',
+                text='選擇想要的姿勢',
+                actions=[
+                    MessageTemplateAction(
+                        label='我想站姿',
+                        text='站',
+                    ),
+                    MessageTemplateAction(
+                        label='我想坐姿',
+                        text='坐',
+                    ),
+                    MessageTemplateAction(
+                        label='我想躺姿',
+                        text='躺',
+                    ),
+                ]
+            )
         )
-    )
-    return message
+        return message
+    elif L == 'B':
+        message = TemplateSendMessage(
+            alt_text='選擇你想要的姿勢',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/yWRa31N.png',
+                title='想要拍照了嗎?',
+                text='選擇想要的姿勢',
+                actions=[
+                    MessageTemplateAction(
+                        label='我想站姿',
+                        text='站',
+                    ),
+                    MessageTemplateAction(
+                        label='我想坐姿',
+                        text='坐',
+                    ),
+                    MessageTemplateAction(
+                        label='我想躺姿',
+                        text='躺',
+                    ),
+                ]
+            )
+        )
+        return message
+    elif L == 'W':
+        message = TemplateSendMessage(
+            alt_text='選擇你想要的姿勢',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/2VMl7Jq.png',
+                title='想要拍照了嗎?',
+                text='選擇想要的姿勢',
+                actions=[
+                    MessageTemplateAction(
+                        label='我想站姿',
+                        text='站',
+                    ),
+                    MessageTemplateAction(
+                        label='我想坐姿',
+                        text='坐',
+                    ),
+                    MessageTemplateAction(
+                        label='我想躺姿',
+                        text='躺',
+                    ),
+                ]
+            )
+        )
+        return message
+
 
 
 # =====================================公館商圈站姿的照片推薦=======================================
