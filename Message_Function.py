@@ -40,26 +40,6 @@ def FoodK_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
-                    title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年\n地點:100台北市中正區汀州路三段235號',
-                    actions=[
-                        PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡:兄弟麵線',
-                            text='喜歡這家店:兄弟麵線'
-                        ),
-                        MessageTemplateAction(
-                            label='菜單(約50元)',
-                            text='想知道價目表:兄弟麵線',
-                        ),
-                        MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線',
-                        )
-                    ]
-                ),
-                CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
                     title='鴉片粉圓',
                     text='「鴉片」一吃就上癮\n地點:100台北市中正區羅斯福路四段52巷16弄4號',
@@ -77,6 +57,26 @@ def FoodK_message():
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:鴉片粉圓'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
+                    title='兄弟蚵仔麵線',
+                    text='堅持傳統口味的用心維持了近三十年\n地點:100台北市中正區汀州路三段235號',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='我喜歡這家店',
+                            data='使用者喜歡:兄弟麵線',
+                            text='喜歡這家店:兄弟麵線'
+                        ),
+                        MessageTemplateAction(
+                            label='菜單(約50元)',
+                            text='想知道價目表:兄弟麵線',
+                        ),
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
                         )
                     ]
                 ),
