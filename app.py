@@ -195,13 +195,17 @@ def handle_message(event):
                 message0 = GetIntroductionD()
                 line_bot_api.reply_message(event.reply_token, message0)
 # =============================拍照==================================
-    elif (levelP == '1' or levelP == '2B' or levelP == '2W'):
+    elif (levelP == '1' or levelP == '2B' or levelP == '2W' or levelP == '2K'):
         if msg == '拍照地點:寶藏巖':
             levelP = '2B'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif msg == '拍照地點:自來水博物館':
             levelP = '2W'
+            message = photo_message()
+            line_bot_api.reply_message(event.reply_token, message)
+        elif msg == '拍照地點:公館':
+            levelP = '2K'
             message = photo_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif levelP == '2B':
@@ -236,6 +240,22 @@ def handle_message(event):
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
+        elif levelP == '2K':
+            if '站' in msg:
+                message0 = photoStK_message()
+                message1 = Camera_message()
+                line_bot_api.reply_message(
+                    event.reply_token, [message0, message1])
+            # elif '坐' in msg:
+            #     message0 = photoSiK_message()
+            #     message1 = Camera_message()
+            #     line_bot_api.reply_message(
+            #         event.reply_token, [message0, message1])
+            # elif '躺' in msg:
+            #     message0 = photolaK_message()
+            #     message1 = Camera_message()
+            #     line_bot_api.reply_message(
+            #         event.reply_token, [message0, message1])
 # =============================歷史==================================
     elif levelH == '1':
         if msg == '瞭解歷史:寶藏巖':

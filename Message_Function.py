@@ -271,9 +271,115 @@ def photo_message():
         )
     )
     return message
+
+
+# =====================================公館商圈站姿的照片推薦=======================================
+def photoStK_message():
+    message = TemplateSendMessage(
+        alt_text='公館商圈站姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/pqJbKt2.jpg',
+                    action=URITemplateAction(
+                        label='里長家',
+                        uri='https://i.imgur.com/pqJbKt2.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/vSLhuNN.jpg',
+                    action=URITemplateAction(
+                        label='里長家(站)',
+                        uri='https://i.imgur.com/vSLhuNN.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='幸福餅乾',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='幸福餅乾(站)',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                ),
+            ]
+        )
+    )
+    return message
+
+
+# ==================================公館商圈坐姿的照片推薦=========================================
+def photoSiK_message():
+    message = TemplateSendMessage(
+        alt_text='公館商圈坐姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='幸福餅乾',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    action=URITemplateAction(
+                        label='幸福餅乾(坐)',
+                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                    )
+                )
+            ]
+        )
+    )
+    return message
+
+
+# ==================================公館商圈躺著的照片推薦==========================================
+def photolaK_message():
+    message = TemplateSendMessage(
+        alt_text='公館商圈躺姿推薦',
+        template=ImageCarouselTemplate(
+            columns=[
+                 ImageCarouselColumn(
+                     image_url='https://i.imgur.com/4PZvAlV.jpg',
+                     action=URITemplateAction(
+                         label='管中世界',
+                         uri='https://i.imgur.com/4PZvAlV.jpg'
+                     )
+                 ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/RkrmZjH.jpg',
+                    action=URITemplateAction(
+                        label='管中世界(躺)',
+                        uri='https://i.imgur.com/RkrmZjH.jpg'
+                    )
+                 ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/1DHNhgM.jpg',
+                    action=URITemplateAction(
+                        label='長椅下午后',
+                        uri='https://i.imgur.com/1DHNhgM.jpg'
+                    )
+                 ),
+                ImageCarouselColumn(
+                    image_url='https://i.imgur.com/MkPeQQY.jpg',
+                    action=URITemplateAction(
+                        label='長椅下午后(躺)',
+                        uri='https://i.imgur.com/MkPeQQY.jpg'
+                    )
+                 )
+            ]
+        )
+    )
+    return message
+
+
 # =====================================寶藏巖站姿的照片推薦=======================================
-
-
 def photoStB_message():
     message = TemplateSendMessage(
         alt_text='寶藏巖站姿推薦',
@@ -312,9 +418,8 @@ def photoStB_message():
     )
     return message
 
+
 # ==================================寶藏巖坐著的照片推薦=========================================
-
-
 def photoSiB_message():
     message = TemplateSendMessage(
         alt_text='寶藏巖坐姿推薦',
@@ -339,9 +444,8 @@ def photoSiB_message():
     )
     return message
 
+
 # =====================================寶藏巖躺著的照片推薦==========================================
-
-
 def photolaB_message():
     message = TemplateSendMessage(
         alt_text='寶藏巖躺姿推薦',
@@ -380,9 +484,8 @@ def photolaB_message():
     )
     return message
 
+
 # =====================================自來水博物館站姿的照片推薦=======================================
-
-
 def photoStW_message():
     message = TemplateSendMessage(
         alt_text='自來水博物館站姿推薦',
@@ -421,9 +524,8 @@ def photoStW_message():
     )
     return message
 
+
 # ==================================自來水博物館坐姿的照片推薦=========================================
-
-
 def photoSiW_message():
     message = TemplateSendMessage(
         alt_text='自來水博物館坐姿推薦',
@@ -448,9 +550,8 @@ def photoSiW_message():
     )
     return message
 
+
 # =====================================自來水廠躺著的照片推薦==========================================
-
-
 def photolaW_message():
     message = TemplateSendMessage(
         alt_text='自來水博物館躺姿推薦',
@@ -489,9 +590,8 @@ def photolaW_message():
     )
     return message
 
+
 # =====================================相機開啟=======================================
-
-
 def Camera_message():
     message = TextSendMessage(
         text='想要馬上嘗試嗎?',
@@ -508,9 +608,8 @@ def Camera_message():
     )
     return message
 
+
 # =====================================歷史對照==========================================
-
-
 def HistoryLo_message():
     message = TemplateSendMessage(
         alt_text='你想要了解那裡的歷史呢?',
@@ -535,9 +634,9 @@ def HistoryLo_message():
         )
     )
     return message
+
+
 # ====================================寶藏巖對照=========================================
-
-
 def HistoryB_message():
     message = TemplateSendMessage(
         alt_text='先看看寶藏巖的今昔對比',
@@ -599,9 +698,9 @@ def HistoryW_message():
         )
     )
     return message
+
+
 # =================================自來水博物館介紹=======================================
-
-
 def HistoryWIntro():
     message0 = TextSendMessage(text='「自來水博物館介紹」\n位於台北市公館的思源路上的自來水博物館，是台灣第一座自來水博物館\n' +
                                '民眾夏日消暑、戶外教學、新人婚紗攝影的最佳地點，' +
@@ -610,9 +709,9 @@ def HistoryWIntro():
                                '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌' +
                                '融合古希臘、羅馬及巴洛克等建築風格，兼有莊嚴古典外觀與象徵現化功能的水源地唧筒室，就是在這種特定的社會歷史脈絡下所建構的')
     return message0, message1
+
+
 # =====================================發送愛心========================================
-
-
 def Send_Heart():
     message = TextMessage(
         text='$',
@@ -626,9 +725,8 @@ def Send_Heart():
     )
     return message
 
+
 # =====================================導覽確認========================================
-
-
 def Introduction_message():
     message = TemplateSendMessage(
         alt_text='想要功能導覽嗎?',
@@ -649,9 +747,8 @@ def Introduction_message():
     )
     return message
 
+
 # =====================================導覽========================================
-
-
 def MenuIntroduction():
     message0 = TextSendMessage(text='點選下面選單，將出現功能選擇列表')
     message1 = TextSendMessage(text='從左到右分別代表:')
