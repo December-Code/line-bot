@@ -636,11 +636,12 @@ def Introduction_message():
 
 
 def MenuIntroduction():
-    message0 = TextSendMessage(text='從左到右分別代表:')
-    message1 = TextSendMessage(
-        text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
+    message0 = TextSendMessage(text='點選下面選單，將出現功能選擇列表')
+    message1 = TextSendMessage(text='從左到右分別代表:')
     message2 = TextSendMessage(
-        text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
+        text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
     message3 = TextSendMessage(
+        text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
+    message4 = TextSendMessage(
         text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
-    return message0, message1, message2, message3
+    return message0, message1, message2, message3, message4

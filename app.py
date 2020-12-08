@@ -84,6 +84,30 @@ def handle_leave(event):
     print("leave Event =", event)
     print("很高興為你們服務唷!", event.source)
 
+# ============================RichMenu===============================
+    rich_menu_to_create = RichMenu(
+        size=RichMenuSize(width=2500, height=843),
+        selected=False,
+        name="Nice richmenu",
+        chat_bar_text="Tap here",
+        areas=[
+            RichMenuArea(
+                bounds=RichMenuBounds(
+                    x=0,
+                    y=0,
+                    width=2500,
+                    height=843
+                ),
+                action=URIAction(
+                    label='Go to line.me',
+                    uri='https://line.me'
+                )
+            )
+        ]
+    )
+    rich_menu_id = line_bot_api.create_rich_menu(rich_menu=rich_menu_to_create)
+    print(rich_menu_id)
+
 
 # 處理訊息
 levelF = '0'
@@ -121,9 +145,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 # =============================導覽==================================
     elif msg == '導覽':
-        [message0, message1, message2, message3, ] = MenuIntroduction()
+        [message0, message1, message2, message3, message4] = MenuIntroduction()
         line_bot_api.reply_message(
-            event.reply_token, [message0, message1, message2, message3])
+            event.reply_token, [message0, message1, message2, message3, message4])
     elif msg == '我自己摸索就好~':
         message = TextSendMessage(text='好唷!，如果還有需要直接打『導覽』也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)

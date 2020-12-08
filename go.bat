@@ -1,3 +1,3 @@
 @REM git add .
-git commit -am "water_name"
+git commit -am "Rich_menu"
 git push heroku master
