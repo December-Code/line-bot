@@ -89,7 +89,6 @@ def handle_leave(event):
 levelF = '0'
 levelP = '0'
 levelH = '0'
-# Location='0'
 
 
 @handler.add(MessageEvent, message=TextMessage)
@@ -102,20 +101,14 @@ def handle_message(event):
 # ============================選單列表=================================
     if '我想吃美食' in msg:
         levelF = '1'
-        levelP = '0'
-        levelH = '0'
         message = FoodLo_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '我想拍照' in msg:
-        levelF = '0'
         levelP = '1'
-        levelH = '0'
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
     elif '知道歷史' in msg:
-        levelF = '0'
-        levelP = '0'
         levelH = '1'
         message = HistoryLo_message()
         line_bot_api.reply_message(event.reply_token, message)
@@ -129,6 +122,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 # =============================美食==================================
     elif (levelF == '1' or levelF == '2K' or levelF == '2W'):
+
         if msg == '我想找美食:公館':
             levelF = '2K'
             message = FoodK_message()
@@ -225,7 +219,7 @@ def handle_message(event):
         elif '都不想' in msg:
             message = TextSendMessage(text='下次再來唷~')
             line_bot_api.reply_message(event.reply_token, message)
-
+# ====================================================================
     else:
         message0 = TextSendMessage(
             text='不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~')
