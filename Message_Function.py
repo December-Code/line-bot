@@ -42,7 +42,7 @@ def FoodK_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
                     title='鴉片粉圓',
-                    text='「鴉片」一吃就上癮\n地點:100台北市中正區羅斯福路四段52巷16弄4號',
+                    text='「鴉片」一吃就上癮\n地址:100台北市中正區羅斯福路四段52巷16弄4號',
                     actions=[
                         PostbackTemplateAction(
                             label='喜歡這家店',
@@ -63,7 +63,7 @@ def FoodK_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
                     title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年\n地點:100台北市中正區汀州路三段235號',
+                    text='堅持傳統口味的用心維持了近三十年\n地址:100台北市中正區汀州路三段235號',
                     actions=[
                         PostbackTemplateAction(
                             label='我喜歡這家店',
@@ -83,7 +83,7 @@ def FoodK_message():
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
                     title='劉記古早味蔥蛋餅',
-                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地點:100台北市中正區羅斯福路四段108巷2-3號',
+                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地址:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
                             label='喜歡這家店',
@@ -112,18 +112,18 @@ def FoodK_message():
 
 
 def Price_M():
-    message = TextSendMessage(text='蚵仔麵線(小碗) NT$50/碗\n蚵仔麵線(大碗) NT$60/碗')
+    message = TextSendMessage(text='蚵仔麵線(小碗) NT$50/份\n蚵仔麵線(大碗) NT$60/份')
     return message
 
 
 def Price_Y():
-    message = TextSendMessage(text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n'
-                              + '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個')
+    message = TextSendMessage(text='鴉片粉圓(冰/熱) NT$50/份\n綜合紅豆(冰/熱) NT$50/份\n三圓冰(冰/熱) NT$50/份\n檸檬愛玉(冰/熱) NT$50/份\n'
+                              + '檸檬愛玉粉圓(冰) NT$50/份\n香Q芋圓(冰/熱) NT$50/份\n鮮奶粉圓(正常/去冰) (NT$60/65)/份\n檸檬汁(冰) NT$50/份')
     return message
 
 
 def Price_D():
-    message = TextSendMessage(text='蔥餅加蛋 NT$30/個\n蜜地瓜糖 NT$35/個')
+    message = TextSendMessage(text='蔥餅加蛋 NT$30/份\n蜜地瓜糖 NT$35/份')
     return message
 
 
@@ -267,14 +267,14 @@ def photo_message(L):
                         label='我想站姿',
                         text='站',
                     ),
-                    MessageTemplateAction(
-                        label='我想坐姿',
-                        text='坐',
-                    ),
-                    MessageTemplateAction(
-                        label='我想躺姿',
-                        text='躺',
-                    ),
+                    # MessageTemplateAction(
+                    #     label='我想坐姿',
+                    #     text='坐',
+                    # ),
+                    # MessageTemplateAction(
+                    #     label='我想躺姿',
+                    #     text='躺',
+                    # ),
                 ]
             )
         )
