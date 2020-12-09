@@ -10,7 +10,7 @@ def FoodLo_message():
     message = TemplateSendMessage(
         alt_text='你想要找哪裡的美食呢?',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/cMyF8lN.png',
+            thumbnail_image_url='https://i.imgur.com/NbgfxlT.png',
             title='找哪裡的美食呢?',
             text='選擇你的地點',
             actions=[
@@ -40,29 +40,9 @@ def FoodK_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
-                    title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年\n地點:100台北市中正區汀州路三段235號',
-                    actions=[
-                        PostbackTemplateAction(
-                            label='我喜歡這家店',
-                            data='使用者喜歡:兄弟麵線',
-                            text='喜歡這家店:兄弟麵線'
-                        ),
-                        MessageTemplateAction(
-                            label='菜單(約50元)',
-                            text='想知道價目表:兄弟麵線',
-                        ),
-                        MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線',
-                        )
-                    ]
-                ),
-                CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
                     title='鴉片粉圓',
-                    text='「鴉片」一吃就上癮\n地點:100台北市中正區羅斯福路四段52巷16弄4號',
+                    text='「鴉片」一吃就上癮\n地址:100台北市中正區羅斯福路四段52巷16弄4號',
                     actions=[
                         PostbackTemplateAction(
                             label='喜歡這家店',
@@ -81,9 +61,29 @@ def FoodK_message():
                     ]
                 ),
                 CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
+                    title='兄弟蚵仔麵線',
+                    text='堅持傳統口味的用心維持了近三十年\n地址:100台北市中正區汀州路三段235號',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='喜歡這家店',
+                            data='使用者喜歡:兄弟麵線',
+                            text='喜歡這家店:兄弟麵線'
+                        ),
+                        MessageTemplateAction(
+                            label='菜單(約50元)',
+                            text='想知道價目表:兄弟麵線',
+                        ),
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
+                        )
+                    ]
+                ),
+                CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
                     title='劉記古早味蔥蛋餅',
-                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地點:100台北市中正區羅斯福路四段108巷2-3號',
+                    text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地址:100台北市中正區羅斯福路四段108巷2-3號',
                     actions=[
                         PostbackTemplateAction(
                             label='喜歡這家店',
@@ -112,18 +112,18 @@ def FoodK_message():
 
 
 def Price_M():
-    message = TextSendMessage(text='蚵仔麵線(小碗) NT$50/碗\n蚵仔麵線(大碗) NT$60/碗')
+    message = TextSendMessage(text='蚵仔麵線(小碗) NT$50/份\n蚵仔麵線(大碗) NT$60/份')
     return message
 
 
 def Price_Y():
-    message = TextSendMessage(text='鴉片粉圓(冰/熱) NT$50/個\n綜合紅豆(冰/熱) NT$50/個\n三圓冰(冰/熱) NT$50/個\n檸檬愛玉(冰/熱) NT$50/個\n'
-                              + '檸檬愛玉粉圓(冰) NT$50/個\n香Q芋圓(冰/熱) NT$50/個\n鮮奶粉圓(正常/去冰) (NT$60/65)/個\n檸檬汁(冰) NT$50/個')
+    message = TextSendMessage(text='鴉片粉圓(冰/熱) NT$50/份\n綜合紅豆(冰/熱) NT$50/份\n三圓冰(冰/熱) NT$50/份\n檸檬愛玉(冰/熱) NT$50/份\n'
+                              + '檸檬愛玉粉圓(冰) NT$50/份\n香Q芋圓(冰/熱) NT$50/份\n鮮奶粉圓(正常/去冰) (NT$60/65)/份\n檸檬汁(冰) NT$50/份')
     return message
 
 
 def Price_D():
-    message = TextSendMessage(text='蔥餅加蛋 NT$30/個\n蜜地瓜糖 NT$35/個')
+    message = TextSendMessage(text='蔥餅加蛋 NT$30/份\n蜜地瓜糖 NT$35/份')
     return message
 
 
@@ -135,9 +135,16 @@ def GetIntroductionM():
 
 
 def GetIntroductionY():
-    message0 = TextSendMessage(text='「鴉片粉圓介紹」「鴉片」一吃就上癮')
-    message1 = TextSendMessage(text='「故事」')
-    return message0, message1
+    message0 = TextSendMessage(
+        text='「鴉片粉圓介紹」\n位於「公館商圈」一間隱匿於小巷的「鴉片粉圓」是你夏日消暑聖品！' +
+        '飽滿嫩Ｑ粉圓搭配甘甜的沁脾的黑糖冰，如同冰品名稱「鴉片」，讓你一口接一口停不下來')
+    message1 = TextSendMessage(
+        text='隔壁的「得記麻辣脆皮臭豆腐」也是十分有名！酷熱的白天來碗通體舒暢的粉圓冰，入夜後就是來一鍋暖胃的麻辣臭豆腐！' +
+        '清蒸臭豆腐搭上麻辣鴨血還有肥腸，一鍋又辣又臭的麻辣五更熱呼呼的端上桌！')
+    message2 = TextSendMessage(
+        '無論是因為天氣熱想先來碗，讓人上癮的「鴉片粉圓」消暑；' +
+        '或是深夜後飢腸轆轆，想來一鍋餘味無窮的「得記麻辣臭豆腐」在這裡都是一個不錯的選擇')
+    return message0, message1, message2
 
 
 def GetIntroductionD():
@@ -218,7 +225,7 @@ def GetIntroductionD():
 
 def photoLo_message():
     message = ImagemapSendMessage(
-        base_url='https://i.imgur.com/sdX4RWc.png',
+        base_url='https://i.imgur.com/cFFeXLt.png',
         alt_text='想要拍照了嗎 ?',
         base_size=BaseSize(height=1000, width=1000),
         actions=[
@@ -237,9 +244,16 @@ def photoLo_message():
             MessageImagemapAction(
                 text='拍照地點:寶藏巖',
                 area=ImagemapArea(
-                    x=235, y=500, width=500, height=500
+                    x=0, y=500, width=1000, height=500
                 )
             )
+            # MessageImagemapAction(
+            #     text='拍照地點:寶藏巖',
+            #     area=ImagemapArea(
+            #         x=235, y=500, width=500, height=500
+            #     )
+            # )
+
         ]
     )
     return message
@@ -247,30 +261,79 @@ def photoLo_message():
 # ===================================照片的姿勢推薦=========================================
 
 
-def photo_message():
-    message = TemplateSendMessage(
-        alt_text='選擇你想要的姿勢',
-        template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/raFTzTo.jpg',
-            title='想要拍照了嗎?',
-            text='選擇想要的姿勢',
-            actions=[
-                MessageTemplateAction(
-                    label='我想站姿',
-                    text='站',
-                ),
-                MessageTemplateAction(
-                    label='我想坐姿',
-                    text='坐',
-                ),
-                MessageTemplateAction(
-                    label='我想躺姿',
-                    text='躺',
-                ),
-            ]
+def photo_message(L):
+    if L == 'K':
+        message = TemplateSendMessage(
+            alt_text='選擇你想要的姿勢',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/FmZo2Eu.png',
+                title='想要拍照了嗎?',
+                text='選擇想要的姿勢',
+                actions=[
+                    MessageTemplateAction(
+                        label='我想站姿',
+                        text='站',
+                    ),
+                    # MessageTemplateAction(
+                    #     label='我想坐姿',
+                    #     text='坐',
+                    # ),
+                    # MessageTemplateAction(
+                    #     label='我想躺姿',
+                    #     text='躺',
+                    # ),
+                ]
+            )
         )
-    )
-    return message
+        return message
+    elif L == 'B':
+        message = TemplateSendMessage(
+            alt_text='選擇你想要的姿勢',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/yWRa31N.png',
+                title='想要拍照了嗎?',
+                text='選擇想要的姿勢',
+                actions=[
+                    MessageTemplateAction(
+                        label='我想站姿',
+                        text='站',
+                    ),
+                    MessageTemplateAction(
+                        label='我想坐姿',
+                        text='坐',
+                    ),
+                    # MessageTemplateAction(
+                    #     label='我想躺姿',
+                    #     text='躺',
+                    # ),
+                ]
+            )
+        )
+        return message
+    elif L == 'W':
+        message = TemplateSendMessage(
+            alt_text='選擇你想要的姿勢',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://i.imgur.com/2VMl7Jq.png',
+                title='想要拍照了嗎?',
+                text='選擇想要的姿勢',
+                actions=[
+                    MessageTemplateAction(
+                        label='我想站姿',
+                        text='站',
+                    ),
+                    # MessageTemplateAction(
+                    #     label='我想坐姿',
+                    #     text='坐',
+                    # ),
+                    MessageTemplateAction(
+                        label='我想躺姿',
+                        text='躺',
+                    ),
+                ]
+            )
+        )
+        return message
 
 
 # =====================================公館商圈站姿的照片推薦=======================================
@@ -282,29 +345,15 @@ def photoStK_message():
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/pqJbKt2.jpg',
                     action=URITemplateAction(
-                        label='里長家',
+                        label='里長辦公室',
                         uri='https://i.imgur.com/pqJbKt2.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/vSLhuNN.jpg',
                     action=URITemplateAction(
-                        label='里長家(站)',
+                        label='里長辦公室(站姿)',
                         uri='https://i.imgur.com/vSLhuNN.jpg'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾(站)',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
                     )
                 ),
             ]
@@ -386,33 +435,34 @@ def photoStB_message():
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/rpIHO7w.jpg',
+                    image_url='https://i.imgur.com/fq034OP.jpg',
                     action=URITemplateAction(
-                        label='扭曲水管',
-                        uri='https://i.imgur.com/rpIHO7w.jpg'
+                        label='巷弄',
+                        uri='https://i.imgur.com/fq034OP.jpg'
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/lZSR4Bq.jpg',
+                    image_url='https://i.imgur.com/65KSqgr.jpg',
                     action=URITemplateAction(
-                        label='扭曲水管(站)',
-                        uri='https://i.imgur.com/lZSR4Bq.jpg'
+                        label='巷弄(站)',
+                        uri='https://i.imgur.com/65KSqgr.jpg'
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    image_url='https://i.imgur.com/rdjEYNk.jpg',
                     action=URITemplateAction(
-                        label='幸福餅乾',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                        label='等車的鴿們',
+                        uri='https://i.imgur.com/rdjEYNk.jpg'
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    image_url='https://i.imgur.com/Bkz5LU9.jpg',
                     action=URITemplateAction(
-                        label='幸福餅乾(站)',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                        label='等車的鴿們(站)',
+                        uri='https://i.imgur.com/Bkz5LU9.jpg'
                     )
                 ),
+
             ]
         )
     )
@@ -433,10 +483,10 @@ def photoSiB_message():
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
+                    image_url='https://i.imgur.com/MjvPRiq.jpg',
                     action=URITemplateAction(
                         label='幸福餅乾(坐)',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                        uri='https://i.imgur.com/MjvPRiq.jpg'
                     )
                 )
             ]
@@ -499,24 +549,10 @@ def photoStW_message():
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/lZSR4Bq.jpg',
+                    image_url='https://i.imgur.com/YpBmGQY.jpg',
                     action=URITemplateAction(
                         label='扭曲水管(站)',
-                        uri='https://i.imgur.com/lZSR4Bq.jpg'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾(站)',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
+                        uri='https://i.imgur.com/YpBmGQY.jpg'
                     )
                 ),
             ]
@@ -565,24 +601,24 @@ def photolaW_message():
                      )
                  ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/RkrmZjH.jpg',
+                    image_url='https://i.imgur.com/UVbVxkQ.jpg',
                     action=URITemplateAction(
                         label='管中世界(躺)',
-                        uri='https://i.imgur.com/RkrmZjH.jpg'
+                        uri='https://i.imgur.com/UVbVxkQ.jpg'
                     )
                  ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/1DHNhgM.jpg',
                     action=URITemplateAction(
-                        label='長椅下午后',
+                        label='長椅',
                         uri='https://i.imgur.com/1DHNhgM.jpg'
                     )
                  ),
                 ImageCarouselColumn(
-                    image_url='https://i.imgur.com/MkPeQQY.jpg',
+                    image_url='https://i.imgur.com/qJLJPpw.jpg',
                     action=URITemplateAction(
-                        label='長椅下午后(躺)',
-                        uri='https://i.imgur.com/MkPeQQY.jpg'
+                        label='長椅(躺)',
+                        uri='https://i.imgur.com/qJLJPpw.jpg'
                     )
                  )
             ]
@@ -600,7 +636,7 @@ def Camera_message():
                 QuickReplyButton(
                     action=CameraAction(
                         label="立刻啟動Line相機",
-                        text="text"
+                        text="啟動相機"
                     )
                 )
             ]
@@ -614,7 +650,7 @@ def HistoryLo_message():
     message = TemplateSendMessage(
         alt_text='你想要了解那裡的歷史呢?',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/8ze9PtV.png',
+            thumbnail_image_url='https://i.imgur.com/xdZ779W.png',
             title='想了解那裡的歷史呢?',
             text='選擇想要的地點',
             actions=[
@@ -638,7 +674,7 @@ def HistoryLo_message():
 
 # ====================================寶藏巖對照=========================================
 def HistoryB_message():
-    message = TemplateSendMessage(
+    message0 = TemplateSendMessage(
         alt_text='先看看寶藏巖的今昔對比',
         template=ImageCarouselTemplate(
             columns=[
@@ -659,24 +695,24 @@ def HistoryB_message():
             ]
         )
     )
-    return message
+    message1 = TextSendMessage(text='「寶藏巖介紹」\n福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
+                               '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
+    return message0, message1
 
 
-# ====================================寶藏巖介紹=========================================
+# ===================================寶藏巖更多介紹=========================================
 def HistoryBIntro():
-    message0 = TextSendMessage(text='「寶藏巖介紹」\n寶藏巖又稱寶藏巖觀音寺、寶藏巖觀音亭、寶藏巖寺、石壁潭寺、觀音媽廟等\n' +
+    message0 = TextSendMessage(text='寶藏巖又稱寶藏巖觀音寺、寶藏巖觀音亭、寶藏巖寺、石壁潭寺、觀音媽廟等\n' +
                                '靠虎空山小山坡而建，為福建泉州安溪移民的信仰中心，主奉觀音菩薩，1997年8月5日，' +
                                '由臺北市政府公告指定「寶藏巖」為市定古蹟')
-    message1 = TextSendMessage(text='福和橋下自來水廠附近的寶藏巖，屬於歷史型態聚落，' +
-                               '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
-    message2 = TextSendMessage(text='「寶藏巖國際藝術村」以「聚落共生」概念引入「寶藏家園」、「駐村計畫」與「青年會所」等計劃，用藝、居共構的做法' +
+    message1 = TextSendMessage(text='「寶藏巖國際藝術村」以「聚落共生」概念引入「寶藏家園」、「駐村計畫」與「青年會所」等計劃，用藝、居共構的做法' +
                                '活化保存歷時兩、三百年的山邊佛寺寶藏巖，注入了寶藏巖新的生命力')
-    return message0, message1, message2
+    return message0, message1
 
 
 # ====================================自來水廠對照========================================
 def HistoryW_message():
-    message = TemplateSendMessage(
+    message0 = TemplateSendMessage(
         alt_text='先看看自來水博物館的今昔對比',
         template=ImageCarouselTemplate(
             columns=[
@@ -697,18 +733,52 @@ def HistoryW_message():
             ]
         )
     )
-    return message
+    message1 = TextSendMessage(
+        text='「自來水博物館介紹」\n位於台北市公館的思源路上的自來水博物館，是台灣第一座自來水博物館')
+    return message0, message1
 
 
 # =================================自來水博物館介紹=======================================
 def HistoryWIntro():
-    message0 = TextSendMessage(text='「自來水博物館介紹」\n位於台北市公館的思源路上的自來水博物館，是台灣第一座自來水博物館\n' +
-                               '民眾夏日消暑、戶外教學、新人婚紗攝影的最佳地點，' +
-                               '自1908創建迄今己有100年的歷史，於民國82年6月被內政部列為三級古蹟')
+    message0 = TextSendMessage(text='民眾夏日消暑、戶外教學、新人婚紗攝影的最佳地點，' +
+                               '自西元1908創建迄今己有100多年的歷史，於民國82年6月被內政部列為三級古蹟')
     message1 = TextSendMessage(text='唧筒室的正面，半圓弧由圓柱構成的門廊為愛奧尼柱式的門廊，外型則是仿自古希臘神殿，' +
                                '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌' +
                                '融合古希臘、羅馬及巴洛克等建築風格，兼有莊嚴古典外觀與象徵現化功能的水源地唧筒室，就是在這種特定的社會歷史脈絡下所建構的')
     return message0, message1
+
+
+def MoreInfo_message(L):
+    if L == '2B':
+        message = TextSendMessage(
+            text='想要瞭解更多嗎?',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(
+                        action=MessageTemplateAction(
+                            label='我想瞭解寶藏巖',
+                            text='瞭解更多:寶藏巖',
+                        ),
+                    )
+                ]
+            )
+        )
+        return message
+    elif L == '2W':
+        message = TextSendMessage(
+            text='想要瞭解更多嗎?',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(
+                        action=MessageTemplateAction(
+                            label='我想瞭解自來水博物館',
+                            text='瞭解更多:自來水博物館',
+                        ),
+                    )
+                ]
+            )
+        )
+        return message
 
 
 # =====================================發送愛心========================================
