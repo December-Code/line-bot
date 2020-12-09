@@ -120,7 +120,7 @@ def Price_M():
                                   "emojiId": "062"
                               },
                               {
-                                  "index": 19,
+                                  "index": 17,
                                   "productId": "5ac21a18040ab15980c9b43e",
                                   "emojiId": "062"
                               },
@@ -131,70 +131,70 @@ def Price_M():
 
 def Price_Y():
     message = TextMessage(text='$鴉片粉圓(冰/熱) NT$50/份\n$綜合紅豆(冰/熱) NT$50/份\n' +
-                              '$三圓冰(冰/熱) NT$50/份\n$檸檬愛玉(冰/熱) NT$50/份\n' +
-                              '$檸檬愛玉粉圓(冰) NT$50/份\n$香Q芋圓(冰/熱) NT$50/份\n' +
-                              '$鮮奶粉圓(正常/去冰) (NT$60/65)/份\n$檸檬汁(冰) NT$50/份',
-                              emojis=[
-                                  {
-                                      "index": 0,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 18,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 36,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 48,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 66,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 89,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 107,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                                  {
-                                      "index": 133,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "029"
-                                  },
-                              ]
-                              )
+                          '$三圓冰(冰/熱) NT$50/份\n$檸檬愛玉(冰/熱) NT$50/份\n' +
+                          '$檸檬愛玉粉圓(冰) NT$50/份\n$香Q芋圓(冰/熱) NT$50/份\n' +
+                          '$鮮奶粉圓(正常/去冰) (NT$60/65)/份\n$檸檬汁(冰) NT$50/份',
+                          emojis=[
+                              {
+                                  "index": 0,
+                                  "productId": "5ac21a18040ab15980c9b43e",
+                                  "emojiId": "029"
+                              },
+                              {
+                                  "index": 18,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
+                              },
+                              #   {
+                              #       "index": 36,
+                              #       "productId": "5ac21a18040ab15980c9b43e",
+                              #       "emojiId": "029"
+                              #   },
+                              #   {
+                              #       "index": 48,
+                              #       "productId": "5ac21a18040ab15980c9b43e",
+                              #       "emojiId": "029"
+                              #   },
+                              #   {
+                              #       "index": 66,
+                              #       "productId": "5ac21a18040ab15980c9b43e",
+                              #       "emojiId": "029"
+                              #   },
+                              #   {
+                              #       "index": 89,
+                              #       "productId": "5ac21a18040ab15980c9b43e",
+                              #       "emojiId": "029"
+                              #   },
+                              #   {
+                              #       "index": 107,
+                              #       "productId": "5ac21a18040ab15980c9b43e",
+                              #       "emojiId": "029"
+                              #   },
+                              #   {
+                              #       "index": 133,
+                              #       "productId": "5ac21a18040ab15980c9b43e",
+                              #       "emojiId": "029"
+                              #   },
+                          ]
+                          )
 
     return message
 
 
 def Price_D():
     message = TextMessage(text='$蔥餅加蛋 NT$30/份\n$蜜地瓜糖 NT$35/份',
-                              emojis=[
-                                  {
-                                      "index": 0,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "062"
-                                  },
-                                  {
-                                      "index": 13,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "062"
-                                  },
-                              ])
+                          emojis=[
+                              {
+                                  "index": 0,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
+                              },
+                              {
+                                  "index": 14,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
+                              },
+                          ])
     return message
 
 
