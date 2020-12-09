@@ -119,18 +119,18 @@ def Price_M():
                                   "productId": "5ac21a18040ab15980c9b43e",
                                   "emojiId": "062"
                               },
-                              #   {
-                              #       "index": 19,
-                              #       "productId": "5ac21a18040ab15980c9b43e",
-                              #       "emojiId": "062"
-                              #   },
+                              {
+                                  "index": 19,
+                                  "productId": "5ac21a18040ab15980c9b43e",
+                                  "emojiId": "062"
+                              },
                           ]
                           )
     return message
 
 
 def Price_Y():
-    message = TextSendMessage(text='$鴉片粉圓(冰/熱) NT$50/份\n$綜合紅豆(冰/熱) NT$50/份\n' +
+    message = TextMessage(text='$鴉片粉圓(冰/熱) NT$50/份\n$綜合紅豆(冰/熱) NT$50/份\n' +
                               '$三圓冰(冰/熱) NT$50/份\n$檸檬愛玉(冰/熱) NT$50/份\n' +
                               '$檸檬愛玉粉圓(冰) NT$50/份\n$香Q芋圓(冰/熱) NT$50/份\n' +
                               '$鮮奶粉圓(正常/去冰) (NT$60/65)/份\n$檸檬汁(冰) NT$50/份',
@@ -182,7 +182,7 @@ def Price_Y():
 
 
 def Price_D():
-    message = TextSendMessage(text='$蔥餅加蛋 NT$30/份\n$蜜地瓜糖 NT$35/份',
+    message = TextMessage(text='$蔥餅加蛋 NT$30/份\n$蜜地瓜糖 NT$35/份',
                               emojis=[
                                   {
                                       "index": 0,
