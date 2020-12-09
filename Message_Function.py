@@ -116,13 +116,13 @@ def Price_M():
                           emojis=[
                               {
                                   "index": 0,
-                                  "productId": "5ac21a18040ab15980c9b43e",
-                                  "emojiId": "062"
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
                               },
                               {
-                                  "index": 17,
-                                  "productId": "5ac21a18040ab15980c9b43e",
-                                  "emojiId": "062"
+                                  "index": 18,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
                               },
                           ]
                           )
@@ -141,7 +141,7 @@ def Price_Y():
                                   "emojiId": "029"
                               },
                               {
-                                  "index": 18,
+                                  "index": 17,
                                   "productId": "5ac1de17040ab15980c9b438",
                                   "emojiId": "035"
                               },
