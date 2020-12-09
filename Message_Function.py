@@ -141,20 +141,20 @@ def Price_Y():
                                   "emojiId": "029"
                               },
                               {
-                                  "index": 17,
+                                  "index": 18,
                                   "productId": "5ac1de17040ab15980c9b438",
                                   "emojiId": "035"
                               },
-                              #   {
-                              #       "index": 36,
-                              #       "productId": "5ac21a18040ab15980c9b43e",
-                              #       "emojiId": "029"
-                              #   },
-                              #   {
-                              #       "index": 48,
-                              #       "productId": "5ac21a18040ab15980c9b43e",
-                              #       "emojiId": "029"
-                              #   },
+                              {
+                                  "index": 37,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
+                              },
+                              {
+                                  "index": 55,
+                                  "productId": "5ac21a18040ab15980c9b43e",
+                                  "emojiId": "029"
+                              },
                               #   {
                               #       "index": 66,
                               #       "productId": "5ac21a18040ab15980c9b43e",
