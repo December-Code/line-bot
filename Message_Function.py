@@ -112,13 +112,72 @@ def FoodK_message():
 
 
 def Price_M():
-    message = TextSendMessage(text='蚵仔麵線(小碗) NT$50/份\n蚵仔麵線(大碗) NT$60/份')
+    message = TextSendMessage(text='$蚵仔麵線(小碗) NT$50/份\n$蚵仔麵線(大碗) NT$60/份',
+                              emojis=[
+                                  {
+                                      "index": 0,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "062"
+                                  },
+                                  {
+                                      "index": 17,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "062"
+                                  },
+                              ]
+                              )
     return message
 
 
 def Price_Y():
-    message = TextSendMessage(text='鴉片粉圓(冰/熱) NT$50/份\n綜合紅豆(冰/熱) NT$50/份\n三圓冰(冰/熱) NT$50/份\n檸檬愛玉(冰/熱) NT$50/份\n'
-                              + '檸檬愛玉粉圓(冰) NT$50/份\n香Q芋圓(冰/熱) NT$50/份\n鮮奶粉圓(正常/去冰) (NT$60/65)/份\n檸檬汁(冰) NT$50/份')
+    message = TextSendMessage(text='$鴉片粉圓(冰/熱) NT$50/份\n$綜合紅豆(冰/熱) NT$50/份\n' +
+                              '$三圓冰(冰/熱) NT$50/份\n$檸檬愛玉(冰/熱) NT$50/份\n' +
+                              '$檸檬愛玉粉圓(冰) NT$50/份\n$香Q芋圓(冰/熱) NT$50/份\n' +
+                              '$鮮奶粉圓(正常/去冰) (NT$60/65)/份\n$檸檬汁(冰) NT$50/份',
+                              emojis=[
+                                  {
+                                      "index": 0,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 18,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 36,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 48,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 66,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 89,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 107,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                                  {
+                                      "index": 133,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "029"
+                                  },
+                              ]
+                              )
+
     return message
 
 
