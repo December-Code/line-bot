@@ -120,7 +120,7 @@ def Price_M():
                                       "emojiId": "062"
                                   },
                                   {
-                                      "index": 17,
+                                      "index": 19,
                                       "productId": "5ac21a18040ab15980c9b43e",
                                       "emojiId": "062"
                                   },
@@ -182,7 +182,19 @@ def Price_Y():
 
 
 def Price_D():
-    message = TextSendMessage(text='蔥餅加蛋 NT$30/份\n蜜地瓜糖 NT$35/份')
+    message = TextSendMessage(text='$蔥餅加蛋 NT$30/份\n$蜜地瓜糖 NT$35/份',
+                              emojis=[
+                                  {
+                                      "index": 0,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "062"
+                                  },
+                                  {
+                                      "index": 13,
+                                      "productId": "5ac21a18040ab15980c9b43e",
+                                      "emojiId": "062"
+                                  },
+                              ])
     return message
 
 
