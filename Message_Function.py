@@ -119,11 +119,11 @@ def Price_M():
                                       "productId": "5ac21a18040ab15980c9b43e",
                                       "emojiId": "062"
                                   },
-                                  {
-                                      "index": 19,
-                                      "productId": "5ac21a18040ab15980c9b43e",
-                                      "emojiId": "062"
-                                  },
+                                  #   {
+                                  #       "index": 19,
+                                  #       "productId": "5ac21a18040ab15980c9b43e",
+                                  #       "emojiId": "062"
+                                  #   },
                               ]
                               )
     return message
