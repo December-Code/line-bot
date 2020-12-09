@@ -137,7 +137,7 @@ def handle_message(event):
         message0 = TextSendMessage(text='點擊圖示選擇地點唷~')
         message = photoLo_message()
         line_bot_api.reply_message(event.reply_token, [message0, message])
-    elif '知道歷史' in msg:
+    elif '想知道歷史' in msg:
         levelF = '0'
         levelP = '0'
         levelH = '1'
@@ -149,7 +149,7 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2, message3, message4])
     elif msg == '我自己摸索就好~':
-        message = TextSendMessage(text='好唷!，如果還有需要直接打『導覽』也可以唷!')
+        message = TextSendMessage(text='好唷! 如果還有需要直接打『導覽』也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================美食==================================
     elif (levelF == '1' or levelF == '2K' or levelF == '2W'):
