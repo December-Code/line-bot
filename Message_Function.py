@@ -165,16 +165,16 @@ def Price_Y():
                                   "productId": "5ac1de17040ab15980c9b438",
                                   "emojiId": "035"
                               },
-                              #   {
-                              #       "index": 107,
-                              #       "productId": "5ac21a18040ab15980c9b43e",
-                              #       "emojiId": "029"
-                              #   },
-                              #   {
-                              #       "index": 133,
-                              #       "productId": "5ac21a18040ab15980c9b43e",
-                              #       "emojiId": "029"
-                              #   },
+                              {
+                                  "index": 113,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
+                              },
+                              {
+                                  "index": 139,
+                                  "productId": "5ac1de17040ab15980c9b438",
+                                  "emojiId": "035"
+                              },
                           ]
                           )
 
