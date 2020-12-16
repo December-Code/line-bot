@@ -168,32 +168,32 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, message)
         elif levelF == '2K':
             # =============================愛心==================================
-            if msg == '喜歡這家店:兄弟麵線':
+            if '喜歡這家店:兄弟麵線' in msg:
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif msg == '喜歡這家店:鴉片粉圓':
+            elif '喜歡這家店:鴉片粉圓' in msg:
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif msg == '喜歡這家店:劉記蔥蛋餅':
+            elif '喜歡這家店:劉記蔥蛋餅' in msg:
                 message = Send_Heart()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif msg == '想知道價目表:兄弟麵線':
+            elif '想知道價目表:兄弟麵線' in msg:
                 message = Price_M()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif msg == '想知道價目表:鴉片粉圓':
+            elif '想知道價目表:鴉片粉圓' in msg:
                 message = Price_Y()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif msg == '想知道價目表:劉記蔥蛋餅':
+            elif '想知道價目表:劉記蔥蛋餅' in msg:
                 message = Price_D()
                 line_bot_api.reply_message(event.reply_token, message)
-            elif msg == '我想了解更多:兄弟麵線':
+            elif '我想了解更多:兄弟麵線' in msg:
                 message0 = GetIntroductionM()
                 line_bot_api.reply_message(event.reply_token, message0,)
-            elif msg == '我想了解更多:鴉片粉圓':
+            elif '我想了解更多:鴉片粉圓' in msg:
                 [message0, message1, message2] = GetIntroductionY()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1, message2])
-            elif msg == '我想了解更多:劉記蔥蛋餅':
+            elif '我想了解更多:劉記蔥蛋餅' in msg:
                 message0 = GetIntroductionD()
                 line_bot_api.reply_message(event.reply_token, message0)
 # =============================拍照==================================
