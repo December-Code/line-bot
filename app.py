@@ -159,7 +159,9 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, message)
         elif msg == '我想找美食:水源市場':
             levelF = '2M'
-            message = FoodW_message()
+            message = TextSendMessage(text='這裡還沒有新增，可以選其他地方看看唷!')
+            line_bot_api.reply_message(event.reply_token, message)
+            # message = FoodW_message()
             line_bot_api.reply_message(event.reply_token, message)
         elif '都不想' in msg:
             message = TextSendMessage(text='想要再點選再來唷~')
