@@ -147,17 +147,17 @@ def handle_message(event):
         [message0, message1, message2, message3, message4] = MenuIntroduction()
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2, message3, message4])
-    elif msg == '我自己摸索就好~':
+    elif '我自己摸索就好~' in msg:
         message = TextSendMessage(text='好唷! 如果還有需要直接打『導覽』也可以唷!')
         line_bot_api.reply_message(event.reply_token, message)
 # =============================美食==================================
     elif (levelF == '1' or levelF == '2K' or levelF == '2M'):
 
-        if msg == '我想找美食:公館':
+        if '我想找美食:公館' in msg:
             levelF = '2K'
             message = FoodK_message()
             line_bot_api.reply_message(event.reply_token, message)
-        elif msg == '我想找美食:水源市場':
+        elif '我想找美食:水源市場' in msg:
             levelF = '2M'
             message = TextSendMessage(text='這裡還沒有新增，可以選其他地方看看唷!')
             line_bot_api.reply_message(event.reply_token, message)
@@ -198,15 +198,15 @@ def handle_message(event):
                 line_bot_api.reply_message(event.reply_token, message0)
 # =============================拍照==================================
     elif (levelP == '1' or levelP == '2B' or levelP == '2W' or levelP == '2K'):
-        if msg == '拍照地點:寶藏巖':
+        if '拍照地點:寶藏巖' in msg:
             levelP = '2B'
             message = photo_message('B')
             line_bot_api.reply_message(event.reply_token, message)
-        elif msg == '拍照地點:自來水博物館':
+        elif '拍照地點:自來水博物館' in msg:
             levelP = '2W'
             message = photo_message('W')
             line_bot_api.reply_message(event.reply_token, message)
-        elif msg == '拍照地點:公館商圈':
+        elif '拍照地點:公館商圈' in msg:
             levelP = '2K'
             message = photo_message('K')
             line_bot_api.reply_message(event.reply_token, message)
@@ -260,21 +260,21 @@ def handle_message(event):
             #         event.reply_token, [message0, message1])
 # =============================歷史==================================
     elif levelH == '1':
-        if msg == '瞭解歷史:寶藏巖':
+        if '瞭解歷史:寶藏巖' in msg:
             [message0, message1] = HistoryB_message()
             message2 = MoreInfo_message('2B')
             line_bot_api.reply_message(
                 event.reply_token, [message0, message1, message2])
-        elif msg == '瞭解更多:寶藏巖':
+        elif '瞭解更多:寶藏巖' in msg:
             [message0, message1] = HistoryBIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
-        elif msg == '瞭解歷史:自來水博物館':
+        elif '瞭解歷史:自來水博物館' in msg:
             [message0, message1] = HistoryW_message()
             message2 = MoreInfo_message('2W')
             # [message1, message2] = HistoryWIntro()
             line_bot_api.reply_message(
                 event.reply_token, [message0, message1, message2])
-        elif msg == '瞭解更多:自來水博物館':
+        elif '瞭解更多:自來水博物館' in msg:
             [message0, message1] = HistoryWIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
         elif '都不想' in msg:
