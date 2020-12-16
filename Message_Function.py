@@ -460,43 +460,43 @@ def photoSiK_message():
 
 
 # ==================================公館商圈躺著的照片推薦==========================================
-def photolaK_message():
-    message = TemplateSendMessage(
-        alt_text='公館商圈躺姿推薦',
-        template=ImageCarouselTemplate(
-            columns=[
-                 ImageCarouselColumn(
-                     image_url='https://i.imgur.com/4PZvAlV.jpg',
-                     action=URITemplateAction(
-                         label='管中世界',
-                         uri='https://i.imgur.com/4PZvAlV.jpg'
-                     )
-                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/RkrmZjH.jpg',
-                    action=URITemplateAction(
-                        label='管中世界(躺)',
-                        uri='https://i.imgur.com/RkrmZjH.jpg'
-                    )
-                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/1DHNhgM.jpg',
-                    action=URITemplateAction(
-                        label='長椅下午后',
-                        uri='https://i.imgur.com/1DHNhgM.jpg'
-                    )
-                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/MkPeQQY.jpg',
-                    action=URITemplateAction(
-                        label='長椅下午后(躺)',
-                        uri='https://i.imgur.com/MkPeQQY.jpg'
-                    )
-                 )
-            ]
-        )
-    )
-    return message
+# def photolaK_message():
+#     message = TemplateSendMessage(
+#         alt_text='公館商圈躺姿推薦',
+#         template=ImageCarouselTemplate(
+#             columns=[
+#                  ImageCarouselColumn(
+#                      image_url='https://i.imgur.com/4PZvAlV.jpg',
+#                      action=URITemplateAction(
+#                          label='管中世界',
+#                          uri='https://i.imgur.com/4PZvAlV.jpg'
+#                      )
+#                  ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/RkrmZjH.jpg',
+#                     action=URITemplateAction(
+#                         label='管中世界(躺)',
+#                         uri='https://i.imgur.com/RkrmZjH.jpg'
+#                     )
+#                  ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/1DHNhgM.jpg',
+#                     action=URITemplateAction(
+#                         label='長椅下午后',
+#                         uri='https://i.imgur.com/1DHNhgM.jpg'
+#                     )
+#                  ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/MkPeQQY.jpg',
+#                     action=URITemplateAction(
+#                         label='長椅下午后(躺)',
+#                         uri='https://i.imgur.com/MkPeQQY.jpg'
+#                     )
+#                  )
+#             ]
+#         )
+#     )
+#     return message
 
 
 # =====================================寶藏巖站姿的照片推薦=======================================
@@ -567,43 +567,43 @@ def photoSiB_message():
 
 
 # =====================================寶藏巖躺著的照片推薦==========================================
-def photolaB_message():
-    message = TemplateSendMessage(
-        alt_text='寶藏巖躺姿推薦',
-        template=ImageCarouselTemplate(
-            columns=[
-                 ImageCarouselColumn(
-                     image_url='https://i.imgur.com/4PZvAlV.jpg',
-                     action=URITemplateAction(
-                         label='管中世界',
-                         uri='https://i.imgur.com/4PZvAlV.jpg'
-                     )
-                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/RkrmZjH.jpg',
-                    action=URITemplateAction(
-                        label='管中世界(躺)',
-                        uri='https://i.imgur.com/RkrmZjH.jpg'
-                    )
-                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/1DHNhgM.jpg',
-                    action=URITemplateAction(
-                        label='長椅下午后',
-                        uri='https://i.imgur.com/1DHNhgM.jpg'
-                    )
-                 ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/MkPeQQY.jpg',
-                    action=URITemplateAction(
-                        label='長椅下午后(躺)',
-                        uri='https://i.imgur.com/MkPeQQY.jpg'
-                    )
-                 )
-            ]
-        )
-    )
-    return message
+# def photolaB_message():
+#     message = TemplateSendMessage(
+#         alt_text='寶藏巖躺姿推薦',
+#         template=ImageCarouselTemplate(
+#             columns=[
+#                  ImageCarouselColumn(
+#                      image_url='https://i.imgur.com/4PZvAlV.jpg',
+#                      action=URITemplateAction(
+#                          label='管中世界',
+#                          uri='https://i.imgur.com/4PZvAlV.jpg'
+#                      )
+#                  ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/RkrmZjH.jpg',
+#                     action=URITemplateAction(
+#                         label='管中世界(躺)',
+#                         uri='https://i.imgur.com/RkrmZjH.jpg'
+#                     )
+#                  ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/1DHNhgM.jpg',
+#                     action=URITemplateAction(
+#                         label='長椅下午后',
+#                         uri='https://i.imgur.com/1DHNhgM.jpg'
+#                     )
+#                  ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/MkPeQQY.jpg',
+#                     action=URITemplateAction(
+#                         label='長椅下午后(躺)',
+#                         uri='https://i.imgur.com/MkPeQQY.jpg'
+#                     )
+#                  )
+#             ]
+#         )
+#     )
+#     return message
 
 
 # =====================================自來水博物館站姿的照片推薦=======================================
@@ -633,29 +633,29 @@ def photoStW_message():
 
 
 # ==================================自來水博物館坐姿的照片推薦=========================================
-def photoSiW_message():
-    message = TemplateSendMessage(
-        alt_text='自來水博物館坐姿推薦',
-        template=ImageCarouselTemplate(
-            columns=[
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://i.imgur.com/xuS9nUe.jpg',
-                    action=URITemplateAction(
-                        label='幸福餅乾(坐)',
-                        uri='https://i.imgur.com/xuS9nUe.jpg'
-                    )
-                )
-            ]
-        )
-    )
-    return message
+# def photoSiW_message():
+#     message = TemplateSendMessage(
+#         alt_text='自來水博物館坐姿推薦',
+#         template=ImageCarouselTemplate(
+#             columns=[
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/xuS9nUe.jpg',
+#                     action=URITemplateAction(
+#                         label='幸福餅乾',
+#                         uri='https://i.imgur.com/xuS9nUe.jpg'
+#                     )
+#                 ),
+#                 ImageCarouselColumn(
+#                     image_url='https://i.imgur.com/xuS9nUe.jpg',
+#                     action=URITemplateAction(
+#                         label='幸福餅乾(坐)',
+#                         uri='https://i.imgur.com/xuS9nUe.jpg'
+#                     )
+#                 )
+#             ]
+#         )
+#     )
+#     return message
 
 
 # =====================================自來水廠躺著的照片推薦==========================================
