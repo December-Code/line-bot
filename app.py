@@ -209,39 +209,39 @@ def handle_message(event):
             message = photo_message('K')
             line_bot_api.reply_message(event.reply_token, message)
         elif levelP == '2B':
-            if '站' in msg:
+            if '寶藏巖:站' in msg:
                 message0 = photoStB_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
-            elif '坐' in msg:
+            elif '寶藏巖:坐' in msg:
                 message0 = photoSiB_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
-            elif '躺' in msg:
+            elif '寶藏巖:躺' in msg:
                 message0 = photolaB_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
         elif levelP == '2W':
-            if '站' in msg:
+            if '自來水博物館:站' in msg:
                 message0 = photoStW_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
-            elif '坐' in msg:
+            elif '自來水博物館:坐' in msg:
                 message0 = photoSiW_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
-            elif '躺' in msg:
+            elif '自來水博物館:躺' in msg:
                 message0 = photolaW_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
                     event.reply_token, [message0, message1])
         elif levelP == '2K':
-            if '站' in msg:
+            if '公館:站' in msg:
                 message0 = photoStK_message()
                 message1 = Camera_message()
                 line_bot_api.reply_message(
@@ -276,7 +276,7 @@ def handle_message(event):
             [message0, message1] = HistoryWIntro()
             line_bot_api.reply_message(event.reply_token, [message0, message1])
         elif '都不想' in msg:
-            message = TextSendMessage(text='下次再來唷~')
+            message = TextSendMessage(text='有需要再找我唷~')
             line_bot_api.reply_message(event.reply_token, message)
 # ====================================================================
     else:

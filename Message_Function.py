@@ -18,10 +18,10 @@ def FoodLo_message():
                     label='公館美食',
                     text='我想找美食:公館',
                 ),
-                MessageTemplateAction(
-                    label='水源市場',
-                    text='我想找美食:水源市場',
-                ),
+                # MessageTemplateAction(
+                #     label='水源市場',
+                #     text='我想找美食:水源市場',
+                # ),
                 MessageTemplateAction(
                     label='都沒有耶QQ',
                     text='都不想',
@@ -40,6 +40,26 @@ def FoodK_message():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
+                    title='兄弟蚵仔麵線',
+                    text='堅持傳統口味的用心維持了近三十年\n地址:100台北市中正區汀州路三段235號',
+                    actions=[
+                        PostbackTemplateAction(
+                            label='喜歡這家店',
+                            data='使用者喜歡:兄弟麵線',
+                            text='喜歡這家店:兄弟麵線'
+                        ),
+                        MessageTemplateAction(
+                            label='菜單(約50元)',
+                            text='想知道價目表:兄弟麵線',
+                        ),
+                        MessageTemplateAction(
+                            label='我想了解更多~',
+                            text='我想了解更多:兄弟麵線',
+                        )
+                    ]
+                ),
+                CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
                     title='鴉片粉圓',
                     text='「鴉片」一吃就上癮\n地址:100台北市中正區羅斯福路四段52巷16弄4號',
@@ -57,26 +77,6 @@ def FoodK_message():
                         MessageTemplateAction(
                             label='我想了解更多~',
                             text='我想了解更多:鴉片粉圓'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
-                    title='兄弟蚵仔麵線',
-                    text='堅持傳統口味的用心維持了近三十年\n地址:100台北市中正區汀州路三段235號',
-                    actions=[
-                        PostbackTemplateAction(
-                            label='喜歡這家店',
-                            data='使用者喜歡:兄弟麵線',
-                            text='喜歡這家店:兄弟麵線'
-                        ),
-                        MessageTemplateAction(
-                            label='菜單(約50元)',
-                            text='想知道價目表:兄弟麵線',
-                        ),
-                        MessageTemplateAction(
-                            label='我想了解更多~',
-                            text='我想了解更多:兄弟麵線',
                         )
                     ]
                 ),
@@ -343,15 +343,15 @@ def photo_message(L):
                 actions=[
                     MessageTemplateAction(
                         label='我想站姿',
-                        text='站',
+                        text='公館:站',
                     ),
                     # MessageTemplateAction(
                     #     label='我想坐姿',
-                    #     text='坐',
+                    #     text='公館:坐',
                     # ),
                     # MessageTemplateAction(
                     #     label='我想躺姿',
-                    #     text='躺',
+                    #     text='公館:躺',
                     # ),
                 ]
             )
@@ -367,11 +367,11 @@ def photo_message(L):
                 actions=[
                     MessageTemplateAction(
                         label='我想站姿',
-                        text='站',
+                        text='寶藏巖:站',
                     ),
                     MessageTemplateAction(
                         label='我想坐姿',
-                        text='坐',
+                        text='寶藏巖:坐',
                     ),
                     # MessageTemplateAction(
                     #     label='我想躺姿',
@@ -391,15 +391,15 @@ def photo_message(L):
                 actions=[
                     MessageTemplateAction(
                         label='我想站姿',
-                        text='站',
+                        text='自來水博物館:站',
                     ),
                     # MessageTemplateAction(
                     #     label='我想坐姿',
-                    #     text='坐',
+                    #     text='自來水博物館:坐',
                     # ),
                     MessageTemplateAction(
                         label='我想躺姿',
-                        text='躺',
+                        text='自來水博物館:躺',
                     ),
                 ]
             )

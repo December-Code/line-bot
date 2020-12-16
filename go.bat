@@ -1,3 +1,3 @@
 @REM git add .
-git commit -am "repair"
+git commit -am "add switch"
 git push heroku master
