@@ -430,14 +430,14 @@ def photoStK_message():
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/GEmmxnl.jpg',
                     action=URITemplateAction(
-                        label='鴨血',
+                        label='得記麻辣',
                         uri='https://i.imgur.com/GEmmxnl.jpg'
                     )
                 ),
                 ImageCarouselColumn(
                     image_url='https://i.imgur.com/Do6PKWw.jpg',
                     action=URITemplateAction(
-                        label='鴨血(站姿)',
+                        label='得記麻辣(站姿)',
                         uri='https://i.imgur.com/Do6PKWw.jpg'
                     )
                 ),
