@@ -5,18 +5,33 @@ from linebot.models import *
 
 
 def FoodW_message():
+    # message = FlexSendMessage(
+    #     alt_text='hello',
+    #     contents=BubbleContainer(
+    #         direction='ltr',
+    #         hero=ImageComponent(
+    #             url='https://example.com/cafe.jpg',
+    #             size='full',
+    #             aspect_ratio='20:13',
+    #             aspect_mode='cover',
+    #             action=URIAction(uri='http://example.com', label='label')
+    #         )
+    #     )
+    # )
     message = FlexSendMessage(
         alt_text='hello',
-        contents=BubbleContainer(
-            direction='ltr',
-            hero=ImageComponent(
-                url='https://example.com/cafe.jpg',
-                size='full',
-                aspect_ratio='20:13',
-                aspect_mode='cover',
-                action=URIAction(uri='http://example.com', label='label')
-            )
-        )
+        contents={
+            'type': 'bubble',
+            'direction': 'ltr',
+            'hero': {
+                'type': 'image',
+                'url': 'https://example.com/cafe.jpg',
+                'size': 'full',
+                'aspectRatio': '20:13',
+                'aspectMode': 'cover',
+                'action': {'type': 'uri', 'uri': 'http://example.com', 'label': 'label'}
+            }
+        }
     )
     return message
 
