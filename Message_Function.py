@@ -226,21 +226,21 @@ def GetIntroductionD():
 # ===================================水源市場美食推薦========================================
 
 
-def FoodW_message():
-    message = FlexSendMessage(
-        alt_text='hello',
-        contents=BubbleContainer(
-            direction='ltr',
-            hero=ImageComponent(
-                url='https://example.com/cafe.jpg',
-                size='full',
-                aspect_ratio='20:13',
-                aspect_mode='cover',
-                action=URIAction(uri='http://example.com', label='label')
-            )
-        )
-    )
-    return message
+# def FoodW_message():
+#     message = FlexSendMessage(
+#         alt_text='hello',
+#         contents=BubbleContainer(
+#             direction='ltr',
+#             hero=ImageComponent(
+#                 url='https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
+#                 size='full',
+#                 aspect_ratio='20:13',
+#                 aspect_mode='cover',
+#                 action=URIAction(uri='http://example.com', label='label')
+#             )
+#         )
+#     )
+#     return message
 
 # ====================================拍照推薦地點=============================================
 

@@ -15,6 +15,7 @@ import time
 
 # ======這裡是呼叫的檔案內容=====
 from Message_Function import *
+from Flex import *
 
 # ========ChatBot開始==========
 app = Flask(__name__)
