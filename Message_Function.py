@@ -39,7 +39,6 @@ def FoodK_message():
         alt_text='最近美食資訊',
         template=CarouselTemplate(
             columns=[
-                noodle,
                 CarouselColumn(
                     thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
                     title='兄弟蚵仔麵線',
