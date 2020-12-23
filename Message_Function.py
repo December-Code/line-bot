@@ -882,5 +882,8 @@ def MenuIntroduction():
         text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
     message3 = TextSendMessage(
         text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
-    message4 = TextSendMessage(text='從左到右分別代表:')
+    message4 = message = VideoSendMessage(
+        original_content_url='',
+        preview_image_url='https://i.imgur.com/mtn1Tmw.jpg'
+    )
     return message0, message1, message2, message3, message4
