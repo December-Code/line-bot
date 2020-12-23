@@ -42,8 +42,10 @@ def callback():
         abort(400)
     return 'OK'
 
-
+# TEHE
 # 成為粉絲提示
+
+
 @handler.add(FollowEvent)
 def handle_Follow(event):
     # AccountName = '文化in水源'
