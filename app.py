@@ -8,14 +8,15 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-import tempfile
+# ======這裡是呼叫的py功能======
+
 import os
 import datetime
 import time
 
 # ======這裡是呼叫的檔案內容=====
 from Message_Function import *
-from Flex import *
+from Message_Flex import *
 
 # ========ChatBot開始==========
 app = Flask(__name__)
