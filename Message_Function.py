@@ -807,9 +807,9 @@ def MoreInfo_message(L):
             text='想要瞭解更多嗎?',
             quick_reply=QuickReply(
                 items=[
+                    imageUrl='https://i.imgur.com/CXFNuhB.png'
                     QuickReplyButton(
                         action=MessageTemplateAction(
-                            image_url='https://i.imgur.com/CXFNuhB.png'
                             label='我想瞭解寶藏巖',
                             text='瞭解更多:寶藏巖',
                         ),
@@ -823,10 +823,9 @@ def MoreInfo_message(L):
             text='想要瞭解更多嗎?',
             quick_reply=QuickReply(
                 items=[
-                    
+                    imageurl='https://i.imgur.com/CXFNuhB.png'
                     QuickReplyButton(
                         action=MessageTemplateAction(
-                            image_url='https://i.imgur.com/CXFNuhB.png'
                             label='我想瞭解自來水博物館',
                             text='瞭解更多:自來水博物館',
                         ),
