@@ -1,6 +1,6 @@
 def FoodW_message():
     message = FlexSendMessage(
-        alt_text='',
+        alt_text='測試',
         contents=index
     )
     return message
