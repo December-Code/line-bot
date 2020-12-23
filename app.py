@@ -42,7 +42,6 @@ def callback():
         abort(400)
     return 'OK'
 
-# TEHE
 # 成為粉絲提示
 
 
