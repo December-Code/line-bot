@@ -169,32 +169,30 @@ def handle_message(event):
         message1 = Price("D")
         line_bot_api.reply_message(event.reply_token, message1)
     elif "我想了解更多:兄弟麵線" in msg:
-        message1 = GetInformatiom("M")
+        message1 = GetInformation("M")
         line_bot_api.reply_message(event.reply_token, message1)
     elif "我想了解更多:鴉片粉圓" in msg:
-        [message1, message2, message3] = GetInformatiom("Y")
+        [message1, message2, message3] = GetInformation("Y")
         line_bot_api.reply_message(
             event.reply_token, [message1, message2, message3])
     elif "我想了解更多:劉記蔥蛋餅" in msg:
-        message1 = GetInformatiom("D")
+        message1 = GetInformation("D")
         line_bot_api.reply_message(event.reply_token, message1)
 # =============================拍照==================================
     elif "拍照地點:寶藏巖" in msg:
-        message = photo_message("B")
-        line_bot_api.reply_message(event.reply_token, message)
+        message1 = photo_message("B")
+        line_bot_api.reply_message(event.reply_token, message1)
     elif "拍照地點:自來水博物館" in msg:
-        levelP = "2W"
-        message = photo_message("W")
-        line_bot_api.reply_message(event.reply_token, message)
+        message1 = photo_message("W")
+        line_bot_api.reply_message(event.reply_token, message1)
     elif "拍照地點:公館商圈" in msg:
-        levelP = "2K"
-        message = photo_message("K")
-        line_bot_api.reply_message(event.reply_token, message)
+        message1 = photo_message("K")
+        line_bot_api.reply_message(event.reply_token, message1)
     elif "寶藏巖:站" in msg:
-        message0 = photoStB_message()
-        message1 = Camera_message()
+        message1 = photoStB_message()
+        message2 = Camera_message()
         line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
+            event.reply_token, [message1, message2])
     elif "寶藏巖:坐" in msg:
         message0 = photoSiB_message()
         message1 = Camera_message()

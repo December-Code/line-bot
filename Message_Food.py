@@ -1,4 +1,8 @@
+from linebot.models import *
+
 # ===================================美食推薦地點=======================================
+
+
 def FoodLo_message():
     message = TemplateSendMessage(
         alt_text='你想要找哪裡的美食呢?',
@@ -103,8 +107,23 @@ def Food_message(Location):
             )
         )
         return message
-    # elif (Location == "W"):
+        # ===================================水源市場美食推薦========================================
 
+        # elif (Location == "W"):
+        #     message = FlexSendMessage(
+        #         alt_text='hello',
+        #         contents=BubbleContainer(
+        #             direction='ltr',
+        #             hero=ImageComponent(
+        #                 url='https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
+        #                 size='full',
+        #                 aspect_ratio='20:13',
+        #                 aspect_mode='cover',
+        #                 action=URIAction(uri='http://example.com', label='label')
+        #             )
+        #         )
+        #     )
+        #     return message
         # ======================================店家介紹===========================================
 
 
@@ -191,7 +210,7 @@ def Price(Location):
         return message
 
 
-def GetInformatiom(Location):
+def GetInformation(Location):
     if(Location == "M"):
         message1 = TextSendMessage(text='「兄弟麵線介紹」\n堅持傳統口味的用心維持了近三十年，以前店面在東南亞劇院那邊的唱片行租房子賣麵線，'
                                    + '某一次房東提議店名要不要一起用“兄弟”這個名字，之後就決定叫做「“兄弟”蚵仔麵線」直到現在')
@@ -212,22 +231,3 @@ def GetInformatiom(Location):
         message1 = TextSendMessage(text='「劉記蔥蛋餅」雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！')
         # message1 = TextSendMessage(text='「故事」')
         return message1
-
-# ===================================水源市場美食推薦========================================
-
-
-# def FoodW_message():
-#     message = FlexSendMessage(
-#         alt_text='hello',
-#         contents=BubbleContainer(
-#             direction='ltr',
-#             hero=ImageComponent(
-#                 url='https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
-#                 size='full',
-#                 aspect_ratio='20:13',
-#                 aspect_mode='cover',
-#                 action=URIAction(uri='http://example.com', label='label')
-#             )
-#         )
-#     )
-#     return message
