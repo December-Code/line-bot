@@ -18,7 +18,7 @@ noodle = {
         "action": {
             "type": "uri",
             "label": "Line",
-            "uri": "https://linecorp.com/"
+            "uri": "https://i.imgur.com/HOyJCWN.jpg"
         }
     },
     "body": {
@@ -186,7 +186,7 @@ opiumIce = {
         "action": {
             "type": "uri",
             "label": "Line",
-            "uri": "https://linecorp.com/"
+            "uri": "https://i.imgur.com/HOyJCWN.jpg"
         }
     },
     "body": {
@@ -356,7 +356,7 @@ LiuEgg = {
             "action": {
                 "type": "uri",
                 "label": "Line",
-                "uri": "https://linecorp.com/"
+                "uri": "https://i.imgur.com/HOyJCWN.jpg"
             }
     },
     "body": {
@@ -440,7 +440,7 @@ LiuEgg = {
                                   },
                                     {
                                       "type": "text",
-                                      "text": "台北市 中正區 羅斯福路 四段 108巷 2-3號",
+                                      "text": "台北市 中正區 羅斯福路四段 108巷 2-3號",
                                       "weight": "bold",
                                       "size": "md",
                                       "flex": 5,
