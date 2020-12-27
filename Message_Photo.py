@@ -38,50 +38,67 @@ def photo_UserLocation(Latitude, Longitude):
 # 判斷哪個位置最小
     minDistance = locationDistance.index(min(locationDistance))
 
+    message1 = ""
     if minDistance == 2:
         Location = "B"
         message1 = photo_message(Location)
-        return message1
+        # return message1
     elif minDistance == 1:
         Location = "W"
         message1 = photo_message(Location)
-        return message1
+        # return message1
     elif minDistance == 0:
         Location = "K"
         message1 = photo_message(Location)
-        return message1
+        # return message1
 
-        # message1 = TextSendMessage(text=minDistance)
-        # message2 = TextSendMessage(text=min(locationDistance))
-        # return message1, message2
+    message2 = TextSendMessage(
+        text="尋找其他地方?\n點選下面按鈕",
+        quick_reply=QuickReply(
+            items=[
+                QuickReplyButton(
+                    image_url='https://i.imgur.com/2wbSWAD.png',
+                    action=MessageTemplateAction(
+                        label='想要其他地方',
+                        text='其他地方選單:顯示',
+                    ),
+                )
+            ]
+        )
+    )
+    return message1, message2
 
-        # message = ImagemapSendMessage(
-        #     base_url="https://i.imgur.com/cFFeXLt.png",
-        #     alt_text="想要拍照了嗎 ?",
-        #     base_size=BaseSize(height=1000, width=1000),
-        #     actions=[
-        #         MessageImagemapAction(
-        #             text="拍照地點:公館商圈",
-        #             area=ImagemapArea(
-        #                 x=0, y=0, width=500, height=500
-        #             )
-        #         ),
-        #         MessageImagemapAction(
-        #             text="拍照地點:自來水博物館",
-        #             area=ImagemapArea(
-        #                 x=500, y=0, width=500, height=500
-        #             )
-        #         ),
-        #         MessageImagemapAction(
-        #             text="拍照地點:寶藏巖",
-        #             area=ImagemapArea(
-        #                 x=0, y=500, width=1000, height=500
-        #             )
-        #         )
-        #     ]
-        # )
+    # message1 = TextSendMessage(text=minDistance)
+    # message2 = TextSendMessage(text=min(locationDistance))
+    # return message1, message2
 
-        # ===================================照片的姿勢推薦=========================================
+    # message = ImagemapSendMessage(
+    #     base_url="https://i.imgur.com/cFFeXLt.png",
+    #     alt_text="想要拍照了嗎 ?",
+    #     base_size=BaseSize(height=1000, width=1000),
+    #     actions=[
+    #         MessageImagemapAction(
+    #             text="拍照地點:公館商圈",
+    #             area=ImagemapArea(
+    #                 x=0, y=0, width=500, height=500
+    #             )
+    #         ),
+    #         MessageImagemapAction(
+    #             text="拍照地點:自來水博物館",
+    #             area=ImagemapArea(
+    #                 x=500, y=0, width=500, height=500
+    #             )
+    #         ),
+    #         MessageImagemapAction(
+    #             text="拍照地點:寶藏巖",
+    #             area=ImagemapArea(
+    #                 x=0, y=500, width=1000, height=500
+    #             )
+    #         )
+    #     ]
+    # )
+
+    # ===================================照片的姿勢推薦=========================================
 
 
 def photo_message(Location):

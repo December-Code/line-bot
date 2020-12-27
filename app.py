@@ -210,20 +210,20 @@ def handle_Message(event):
         line_bot_api.reply_message(event.reply_token, message)
 # ====================================================================
     else:
-        message0 = TextSendMessage(
+        message1 = TextSendMessage(
             text="不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~")
-        message1 = Introduction_message()
-        line_bot_api.reply_message(event.reply_token, [message0, message1])
+        message0 = Introduction_message()
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
 
 
 @handler.add(MessageEvent, message=LocationMessage)
 def handle_Message(Location):
     Latitude = Location.message.latitude
     Longitude = Location.message.longitude
-    message1 = photo_UserLocation(Latitude, Longitude)
-    line_bot_api.reply_message(Location.reply_token, message1)
-    # [message1, message2] = photo_UserLocation(Latitude, Longitude)
-    # line_bot_api.reply_message(Location.reply_token, [message1, message2])
+    [message1, message2] = photo_UserLocation(Latitude, Longitude)
+    line_bot_api.reply_message(Location.reply_token, [message1, message2])
+    # message1 = photo_UserLocation(Latitude, Longitude)
+    # line_bot_api.reply_message(Location.reply_token, message1)
 
 
 if __name__ == "__main__":
