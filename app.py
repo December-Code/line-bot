@@ -117,7 +117,7 @@ def handle_leave(event):
 # 處理訊息
 
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
+def handle_Message(event):
     msg = event.message.text
     # global Location
 # ============================選單列表=================================
@@ -150,13 +150,13 @@ def handle_message(event):
         # line_bot_api.reply_message(event.reply_token, message)
     # =============================愛心==================================
     elif "喜歡這家店:兄弟麵線" in msg:
-        message1 = Send_Heart()
+        message1 = Send_Heart("M")
         line_bot_api.reply_message(event.reply_token, message1)
     elif "喜歡這家店:鴉片粉圓" in msg:
-        message1 = Send_Heart()
+        message1 = Send_Heart("Y")
         line_bot_api.reply_message(event.reply_token, message1)
     elif "喜歡這家店:劉記蔥蛋餅" in msg:
-        message1 = Send_Heart()
+        message1 = Send_Heart("D")
         line_bot_api.reply_message(event.reply_token, message1)
     elif "想知道價目表:兄弟麵線" in msg:
         message1 = Price("M")
@@ -188,7 +188,6 @@ def handle_message(event):
         message1 = photo_message("K")
         line_bot_api.reply_message(event.reply_token, message1)
 # =============================歷史==================================
-
     elif "瞭解歷史:寶藏巖" in msg:
         [message0, message1] = History_message("B")
         message2 = MoreInfo_message("B")
@@ -215,6 +214,15 @@ def handle_message(event):
             text="不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~")
         message1 = Introduction_message()
         line_bot_api.reply_message(event.reply_token, [message0, message1])
+
+
+@handler.add(MessageEvent, message=LocationMessage)
+def handler_Message(Location):
+    Longitude = Location.message.longitude
+    Latitude = Location.message.latitude
+    message1 = TextSendMessage(text=Longitude)
+    message2 = TextSendMessage(text=Latitude)
+    line_bot_api.reply_message(Location.reply_token, [message1, message2])
 
 
 if __name__ == "__main__":

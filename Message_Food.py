@@ -40,26 +40,26 @@ def Food_message(Location):
         )
         return message
 
-        # ===================================水源市場美食推薦========================================
+# ===================================水源市場美食推薦========================================
 
-        # elif (Location == "W"):
-        #     message = FlexSendMessage(
-        #         alt_text='hello',
-        #         contents=BubbleContainer(
-        #             direction='ltr',
-        #             hero=ImageComponent(
-        #                 url='https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
-        #                 size='full',
-        #                 aspect_ratio='20:13',
-        #                 aspect_mode='cover',
-        #                 action=URIAction(uri='http://example.com', label='label')
-        #             )
-        #         )
-        #     )
-        #     return message
+# elif (Location == "W"):
+#     message = FlexSendMessage(
+#         alt_text='hello',
+#         contents=BubbleContainer(
+#             direction='ltr',
+#             hero=ImageComponent(
+#                 url='https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
+#                 size='full',
+#                 aspect_ratio='20:13',
+#                 aspect_mode='cover',
+#                 action=URIAction(uri='http://example.com', label='label')
+#             )
+#         )
+#     )
+#     return message
 
 
-# ======================================店家介紹===========================================
+# ======================================店家菜單===========================================
 def Price(Location):
     if(Location == "M"):
         message = TextMessage(text='$蚵仔麵線(小碗) NT$50/份\n$蚵仔麵線(大碗) NT$60/份',
@@ -143,6 +143,7 @@ def Price(Location):
         return message
 
 
+# ======================================店家介紹===========================================
 def GetInformation(Location):
     if(Location == "M"):
         message1 = TextSendMessage(text='「兄弟麵線介紹」\n堅持傳統口味的用心維持了近三十年，以前店面在東南亞劇院那邊的唱片行租房子賣麵線，'
@@ -169,6 +170,30 @@ def GetInformation(Location):
 # =====================================發送愛心========================================
 def Send_Heart(Location):
     if(Location == "M"):
+        message = TextMessage(
+            text='$',
+            emojis=[
+                {
+                    "index": 0,
+                    "productId": "5ac1bfd5040ab15980c9b435",
+                    "emojiId": "215"
+                }
+            ]
+        )
+        return message
+    elif(Location == "Y"):
+        message = TextMessage(
+            text='$',
+            emojis=[
+                {
+                    "index": 0,
+                    "productId": "5ac1bfd5040ab15980c9b435",
+                    "emojiId": "215"
+                }
+            ]
+        )
+        return message
+    elif(Location == "D"):
         message = TextMessage(
             text='$',
             emojis=[

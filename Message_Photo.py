@@ -4,58 +4,56 @@ from linebot.models import *
 
 # ====================================拍照推薦地點=============================================
 def photoLo_message():
-    # message = TextSendMessage(
-    #     text="想要馬上嘗試嗎?",
-    #     quick_reply=QuickReply(
-    #         items=[
-    #             QuickReplyButton(
-    #                 action=LocationAction(
-    #                     label="傳送我的地點",
-    #                 ),
-    #             ),
-    #             QuickReplyButton(
-    #                 action=CameraRollAction(
-    #                     label="相機啟動",
-    #                 ),
-    #             )
-    #         ]
-    #     )
-    # )
-    message = ImagemapSendMessage(
-        base_url="https://i.imgur.com/cFFeXLt.png",
-        alt_text="想要拍照了嗎 ?",
-        base_size=BaseSize(height=1000, width=1000),
-        actions=[
-            MessageImagemapAction(
-                text="拍照地點:公館商圈",
-                area=ImagemapArea(
-                    x=0, y=0, width=500, height=500
+    message = TextSendMessage(
+        text="想要拍照了嗎?\n傳送你的地點，讓我們推薦最近的景點與姿勢",
+        quick_reply=QuickReply(
+            items=[
+                QuickReplyButton(
+                    action=LocationAction(
+                        label="傳送我的地點",
+                    ),
+                ),
+                QuickReplyButton(
+                    action=CameraAction(
+                        label="相機啟動",
+                    ),
                 )
-            ),
-            MessageImagemapAction(
-                text="拍照地點:自來水博物館",
-                area=ImagemapArea(
-                    x=500, y=0, width=500, height=500
-                )
-            ),
-            MessageImagemapAction(
-                text="拍照地點:寶藏巖",
-                area=ImagemapArea(
-                    x=0, y=500, width=1000, height=500
-                )
-            )
-            # MessageImagemapAction(
-            #     text="拍照地點:寶藏巖",
-            #     area=ImagemapArea(
-            #         x=235, y=500, width=500, height=500
-            #     )
-            # )
-
-        ]
+            ]
+        )
     )
     return message
 
-# ===================================照片的姿勢推薦=========================================
+
+def photo_UserLocation():
+    
+
+    # message = ImagemapSendMessage(
+    #     base_url="https://i.imgur.com/cFFeXLt.png",
+    #     alt_text="想要拍照了嗎 ?",
+    #     base_size=BaseSize(height=1000, width=1000),
+    #     actions=[
+    #         MessageImagemapAction(
+    #             text="拍照地點:公館商圈",
+    #             area=ImagemapArea(
+    #                 x=0, y=0, width=500, height=500
+    #             )
+    #         ),
+    #         MessageImagemapAction(
+    #             text="拍照地點:自來水博物館",
+    #             area=ImagemapArea(
+    #                 x=500, y=0, width=500, height=500
+    #             )
+    #         ),
+    #         MessageImagemapAction(
+    #             text="拍照地點:寶藏巖",
+    #             area=ImagemapArea(
+    #                 x=0, y=500, width=1000, height=500
+    #             )
+    #         )
+    #     ]
+    # )
+
+    # ===================================照片的姿勢推薦=========================================
 
 
 def photo_message(Location):
@@ -83,7 +81,7 @@ def photo_message(Location):
             )
         )
         return message1
-    # ================================寶藏巖的照片推薦===================================
+# ================================寶藏巖的照片推薦===================================
     elif (Location == 'B'):
         message1 = TemplateSendMessage(
             alt_text='寶藏巖站姿推薦',
@@ -114,7 +112,7 @@ def photo_message(Location):
             )
         )
         return message1
-    # ================================自來水廠的照片推薦===================================
+# ================================自來水廠的照片推薦===================================
     elif (Location == 'W'):
         message1 = TemplateSendMessage(
             alt_text='自來水博物館站姿推薦',
