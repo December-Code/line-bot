@@ -24,8 +24,10 @@ def photoLo_message():
     return message
 
 
-def photo_UserLocation():
-    
+def photo_UserLocation(Longitude, Latitude):
+    message1 = TextSendMessage(text=Longitude)
+    message2 = TextSendMessage(text=Latitude)
+    return message1, message2
 
     # message = ImagemapSendMessage(
     #     base_url="https://i.imgur.com/cFFeXLt.png",

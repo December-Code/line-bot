@@ -216,13 +216,12 @@ def handle_Message(event):
         line_bot_api.reply_message(event.reply_token, [message0, message1])
 
 
-@handler.add(MessageEvent, message=LocationMessage)
-def handler_Message(Location):
-    Longitude = Location.message.longitude
-    Latitude = Location.message.latitude
-    message1 = TextSendMessage(text=Longitude)
-    message2 = TextSendMessage(text=Latitude)
-    line_bot_api.reply_message(Location.reply_token, [message1, message2])
+# @handler.add(MessageEvent, message=LocationMessage)
+# def handler_Message(Location):
+#     Longitude = Location.message.longitude
+#     Latitude = Location.message.latitude
+#     [message1, message2] = photo_UserLocation(Longitude, Latitude)
+#     line_bot_api.reply_message(Location.reply_token, [message1, message2])
 
 
 if __name__ == "__main__":
