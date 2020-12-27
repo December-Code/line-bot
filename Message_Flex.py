@@ -26,7 +26,7 @@ noodle = {
         "contents": [
             {
                 "type": "text",
-                "text": "%E5%85%84%E5%BC%9F%E9%BA%B5%E7%B7%9A",
+                "text": "兄弟蚵仔麵線",
                 "weight": "bold",
                 "size": "xl",
                 "contents": []
@@ -52,21 +52,21 @@ noodle = {
                     },
                     {
                         "type": "text",
-                        "text": "%E4%BA%BA%E6%8E%A8%E8%96%A6",
+                        "text": "人推薦",
                         "size": "md",
                         "margin": "sm",
                         "contents": []
                     },
                     {
                         "type": "icon",
-                        "url": "https://i.imgur.com/baY264N.png",
+                        "url": "https://i.imgur.com/IB5Xh7u.png",
                         "size": "xxl",
                         "position": "relative",
                         "offsetStart": "12%"
                     },
                     {
                         "type": "text",
-                        "text": "%E6%88%91%E6%8E%A8%E8%96%A6",
+                        "text": "我推薦",
                         "weight": "regular",
                         "align": "end",
                         "action": {
@@ -92,20 +92,18 @@ noodle = {
                         "contents": [
                             {
                                 "type": "text",
-                                "text": "%E5%9C%B0%E5%9D%80",
+                                "text": "地址",
                                 "weight": "bold",
                                 "size": "md",
-                                "color": "#AAAAAA",
                                 "flex": 1,
                                 "align": "start",
                                 "contents": []
                             },
                             {
                                 "type": "text",
-                                "text": "100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E6%B1%80%E5%B7%9E%E8%B7%AF%E4%B8%89%E6%AE%B5235%E8%99%9F",
+                                "text": "台北市 中正區 汀州路三段 235號",
                                 "weight": "bold",
                                 "size": "md",
-                                "color": "#666666",
                                 "flex": 5,
                                 "align": "start",
                                 "wrap": True,
@@ -120,15 +118,16 @@ noodle = {
                         "contents": [
                             {
                                 "type": "text",
-                                "text": "Time",
+                                "text": "時間",
+                                "weight": "bold",
                                 "size": "md",
-                                "color": "#AAAAAA",
                                 "flex": 1,
                                 "contents": []
                             },
                             {
                                 "type": "text",
-                                "text": "10%3A00%EF%BD%9E20%3A30%20%20(%E9%80%B1%E4%B8%80%E5%85%AC%E4%BC%91)",
+                                "text": "10:00～20:30  (週一公休)",
+                                "weight": "bold",
                                 "size": "md",
                                 "flex": 5,
                                 "wrap": True,
@@ -150,7 +149,7 @@ noodle = {
                 "type": "button",
                 "action": {
                     "type": "message",
-                    "label": "菜單(點擊)",
+                    "label": "菜單",
                     "text": "想知道價目表:兄弟麵線"
                 },
                 "height": "sm",
