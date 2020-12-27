@@ -178,6 +178,9 @@ def handle_Message(event):
         message1 = GetInformation("D")
         line_bot_api.reply_message(event.reply_token, message1)
 # =============================拍照==================================
+    elif "其他地方選單:顯示" in msg:
+        message1 = photo_menu()
+        line_bot_api.reply_message(event.reply_token, message1)
     elif "拍照地點:寶藏巖" in msg:
         message1 = photo_message("B")
         line_bot_api.reply_message(event.reply_token, message1)
