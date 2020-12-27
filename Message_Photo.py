@@ -60,7 +60,7 @@ def photoLo_message():
 
 def photo_message(Location):
     # ================================公館商圈的照片推薦===================================
-    if Location == 'K':
+    if (Location == 'K'):
         message1 = TemplateSendMessage(
             alt_text='公館商圈站姿推薦',
             template=ImageCarouselTemplate(
@@ -84,7 +84,7 @@ def photo_message(Location):
         )
         return message1
     # ================================寶藏巖的照片推薦===================================
-    elif Location == 'B':
+    elif (Location == 'B'):
         message1 = TemplateSendMessage(
             alt_text='寶藏巖站姿推薦',
             template=ImageCarouselTemplate(
@@ -115,7 +115,7 @@ def photo_message(Location):
         )
         return message1
     # ================================自來水廠的照片推薦===================================
-    elif Location == 'W':
+    elif (Location == 'W'):
         message1 = TemplateSendMessage(
             alt_text='自來水博物館站姿推薦',
             template=ImageCarouselTemplate(

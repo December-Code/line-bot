@@ -15,7 +15,6 @@ import datetime
 import time
 
 # ======這裡是呼叫的檔案內容=====
-from Message_Function import *
 from Message_Food import *
 from Message_Photo import *
 from Message_History import *
@@ -186,59 +185,24 @@ def handle_message(event):
     elif "拍照地點:公館商圈" in msg:
         message1 = photo_message("K")
         line_bot_api.reply_message(event.reply_token, message1)
-    elif "寶藏巖:站" in msg:
-        message1 = photoStB_message()
-        message2 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message1, message2])
-    elif "寶藏巖:坐" in msg:
-        message0 = photoSiB_message()
-        message1 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
-    elif "寶藏巖:躺" in msg:
-        message0 = photolaB_message()
-        message1 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
-    elif "自來水博物館:站" in msg:
-        message0 = photoStW_message()
-        message1 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
-    elif "自來水博物館:坐" in msg:
-        message0 = photoSiW_message()
-        message1 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
-    elif "自來水博物館:躺" in msg:
-        message0 = photolaW_message()
-        message1 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
-    elif "公館:站" in msg:
-        message0 = photoStK_message()
-        message1 = Camera_message()
-        line_bot_api.reply_message(
-            event.reply_token, [message0, message1])
 # =============================歷史==================================
 
     elif "瞭解歷史:寶藏巖" in msg:
-        [message0, message1] = HistoryB_message()
-        message2 = MoreInfo_message("2B")
+        [message0, message1] = History_message("B")
+        message2 = MoreInfo_message("B")
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2])
     elif "瞭解更多:寶藏巖" in msg:
-        [message0, message1] = HistoryBIntro()
+        [message0, message1] = HistoryIntro("B")
         line_bot_api.reply_message(event.reply_token, [message0, message1])
     elif "瞭解歷史:自來水博物館" in msg:
-        [message0, message1] = HistoryW_message()
-        message2 = MoreInfo_message("2W")
+        [message0, message1] = History_message("W")
+        message2 = MoreInfo_message("W")
         # [message1, message2] = HistoryWIntro()
         line_bot_api.reply_message(
             event.reply_token, [message0, message1, message2])
     elif "瞭解更多:自來水博物館" in msg:
-        [message0, message1] = HistoryWIntro()
+        [message0, message1] = HistoryIntro("W")
         line_bot_api.reply_message(event.reply_token, [message0, message1])
     elif "都不想" in msg:
         message = TextSendMessage(text="有需要再找我唷~")
@@ -254,3 +218,41 @@ def handle_message(event):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
+
+# =====================================導覽確認========================================
+def Introduction_message():
+    message = TemplateSendMessage(
+        alt_text='想要功能導覽嗎?',
+        template=ConfirmTemplate(
+            text='需要功能導覽嗎?',
+            actions=[
+                PostbackTemplateAction(
+                    label='好呀~',
+                    text='導覽',
+                    data='action=Introduction'
+                ),
+                MessageTemplateAction(
+                    label='我自己摸索沒關係',
+                    text='我自己摸索就好~'
+                )
+            ]
+        )
+    )
+    return message
+
+
+# =====================================導覽========================================
+def MenuIntroduction():
+    message0 = TextSendMessage(text='點選下面選單，將出現功能選擇列表\n從左到右分別代表:')
+    message1 = TextSendMessage(
+        text='「美食好好知」\n 推薦你水源里的美食時，一邊讓你了解美食背後鮮為人知的小秘密。')
+    message2 = TextSendMessage(
+        text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
+    message3 = TextSendMessage(
+        text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
+    message4 = VideoSendMessage(
+        original_content_url='https://example.com/original.mp4',
+        preview_image_url='https://i.imgur.com/mtn1Tmw.jpg'
+    )
+    return message0, message1, message2, message3, message4
