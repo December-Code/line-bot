@@ -488,8 +488,8 @@ LiuEgg = {
                         "type": "button",
                         "action": {
                           "type": "message",
-                          "label": "菜單(點擊)",
-                          "text": "想知道價目表:兄弟麵線"
+                          "label": "菜單",
+                          "text": "想知道價目表:劉記蔥蛋餅"
                         },
                         "height": "sm",
                         "style": "primary"
@@ -516,7 +516,7 @@ FoodK = {
     "type": "carousel",
     "contents": [
         noodle,
-        opiumIce,
-        # LiuEgg,
+        # opiumIce,
+        LiuEgg,
     ]
 }
