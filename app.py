@@ -19,8 +19,6 @@ from Message_Function import *
 from Message_Food import *
 from Message_Photo import *
 from Message_History import *
-from Message_Flex import *
-
 # ========ChatBot開始==========
 app = Flask(__name__)
 
