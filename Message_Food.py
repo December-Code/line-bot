@@ -1,4 +1,5 @@
 from linebot.models import *
+from Message_Flex import *
 
 
 # ===================================美食推薦地點=======================================
@@ -33,79 +34,12 @@ def FoodLo_message():
 
 def Food_message(Location):
     if (Location == "K"):
-        message = TemplateSendMessage(
-            alt_text='最近美食資訊',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/LupmODQ.jpg',
-                        title='兄弟蚵仔麵線',
-                        text='堅持傳統口味的用心維持了近三十年\n地址:100台北市中正區汀州路三段235號',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='喜歡這家店',
-                                data='使用者喜歡:兄弟麵線',
-                                text='喜歡這家店:兄弟麵線'
-                            ),
-                            MessageTemplateAction(
-                                label='菜單(約50元)',
-                                text='想知道價目表:兄弟麵線',
-                            ),
-                            MessageTemplateAction(
-                                label='我想了解更多~',
-                                text='我想了解更多:兄弟麵線',
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/HOyJCWN.jpg',
-                        title='鴉片粉圓',
-                        text='「鴉片」一吃就上癮\n地址:100台北市中正區羅斯福路四段52巷16弄4號',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='喜歡這家店',
-                                data='使用者喜歡:鴉片粉圓',
-                                text='喜歡這家店:鴉片粉圓'
-
-                            ),
-                            MessageTemplateAction(
-                                label='菜單(約50元)',
-                                text='想知道價目表:鴉片粉圓'
-                            ),
-                            MessageTemplateAction(
-                                label='我想了解更多~',
-                                text='我想了解更多:鴉片粉圓'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/HXNAAUG.jpg',
-                        title='劉記古早味蔥蛋餅',
-                        text='雖然外型酷似蔥油餅，但其實是蔥蛋餅，不一樣！\n地址:100台北市中正區羅斯福路四段108巷2-3號',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='喜歡這家店',
-                                data='使用者喜歡:劉記蔥蛋餅',
-                                text='喜歡這家店:劉記蔥蛋餅'
-                            ),
-                            MessageTemplateAction(
-                                label='菜單(約30元)',
-                                text='想知道價目表:劉記蔥蛋餅',
-                            ),
-                            # URITemplateAction(
-                            #     label='大約價錢：30元',
-                            #     uri='https://i.imgur.com/1eWyjG2.png'
-                            # ),
-                            MessageTemplateAction(
-                                label='我想了解更多~',
-                                text='我想了解更多:劉記蔥蛋餅'
-                            )
-                        ]
-                    ),
-                ]
-            )
+        message = FlexSendMessage(
+            alt_text='美食',
+            contents=noodle
         )
         return message
+
         # ===================================水源市場美食推薦========================================
 
         # elif (Location == "W"):
