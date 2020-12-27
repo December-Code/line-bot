@@ -36,7 +36,7 @@ def Food_message(Location):
     if (Location == "K"):
         message = FlexSendMessage(
             alt_text='美食',
-            contents=FoodK
+            contents=FoodK,
         )
         return message
 
