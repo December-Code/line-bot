@@ -119,7 +119,6 @@ def handle_leave(event):
 @handler.add(MessageEvent, message=TextMessage)
 def handle_Message(event):
     msg = event.message.text
-    # global Location
 # ============================選單列表=================================
     if "我想吃美食" in msg:
         message1 = FoodLo_message()
@@ -178,7 +177,7 @@ def handle_Message(event):
         message1 = GetInformation("D")
         line_bot_api.reply_message(event.reply_token, message1)
 # =============================拍照==================================
-    elif "其他地方選單:顯示" in msg:
+    elif "地點選單:顯示" in msg:
         message1 = photo_menu()
         line_bot_api.reply_message(event.reply_token, message1)
     elif "拍照地點:寶藏巖" in msg:

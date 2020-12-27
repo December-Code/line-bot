@@ -6,7 +6,7 @@ from operator import index
 # ====================================拍照推薦地點=============================================
 def photoLo_message():
     message1 = TextSendMessage(
-        text="想要拍照了嗎?\n傳送你的地點，讓我們推薦最近的景點與姿勢",
+        text="想要拍照了嗎?\n【傳送你的地點】 依照您的位置，推薦最近的景點與姿勢 \n【地方選單】依照點選圖式推薦景點與姿勢",
         quick_reply=QuickReply(
             items=[
                 QuickReplyButton(
@@ -15,8 +15,10 @@ def photoLo_message():
                     ),
                 ),
                 QuickReplyButton(
-                    action=CameraAction(
-                        label="相機啟動",
+                    image_url='https://i.imgur.com/2wbSWAD.png',
+                    action=MessageTemplateAction(
+                        label='地方選單',
+                        text='地點選單:顯示',
                     ),
                 )
             ]
@@ -38,7 +40,6 @@ def photo_UserLocation(Latitude, Longitude):
 # 判斷哪個位置最小
     minDistance = locationDistance.index(min(locationDistance))
 
-    # message1 = ""
     if minDistance == 2:
         Location = "B"
         message1 = photo_message(Location)
@@ -57,7 +58,7 @@ def photo_UserLocation(Latitude, Longitude):
                     image_url='https://i.imgur.com/2wbSWAD.png',
                     action=MessageTemplateAction(
                         label='想要其他地方',
-                        text='其他地方選單:顯示',
+                        text='地點選單:顯示',
                     ),
                 )
             ]
@@ -70,7 +71,7 @@ def photo_UserLocation(Latitude, Longitude):
 def photo_menu():
     message1 = ImagemapSendMessage(
         base_url="https://i.imgur.com/cFFeXLt.png",
-        alt_text="想要拍照了嗎 ?",
+        alt_text="想要拍照了嗎?",
         base_size=BaseSize(height=1000, width=1000),
         actions=[
             MessageImagemapAction(
@@ -95,9 +96,8 @@ def photo_menu():
     )
     return message1
 
-    # ===================================照片的姿勢推薦=========================================
 
-
+# ===================================照片的姿勢推薦=========================================
 def photo_message(Location):
     # ================================公館商圈的照片推薦===================================
     if (Location == 'K'):
