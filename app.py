@@ -208,8 +208,8 @@ def handle_Message(event):
         [message1, message2] = HistoryIntro("W")
         line_bot_api.reply_message(event.reply_token, [message1, message2])
     elif "都不想" in msg:
-        message = TextSendMessage(text="有需要再找我唷~")
-        line_bot_api.reply_message(event.reply_token, message)
+        message1 = TextSendMessage(text="有需要再找我唷~")
+        line_bot_api.reply_message(event.reply_token, message1)
 # ====================================================================
     else:
         message1 = TextSendMessage(

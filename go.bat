@@ -1,3 +1,3 @@
 git add .
-git commit -am "location md"
+git commit -am "intro md"
 git push heroku master
