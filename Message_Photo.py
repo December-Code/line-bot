@@ -6,7 +6,7 @@ from operator import index
 # ====================================拍照推薦地點=============================================
 def photoLo_message():
     message1 = TextSendMessage(
-        text="想要拍照了嗎?\n【傳送你的地點】】\n依照您的位置，推薦最近的景點與姿勢\n【地方選單】\n依照點選圖式推薦景點與姿勢",
+        text="想要拍照了嗎?\n【傳送你的地點】\n依照您的位置，推薦最近的景點與姿勢\n【地方選單】\n依照點選圖式推薦景點與姿勢",
         quick_reply=QuickReply(
             items=[
                 QuickReplyButton(
