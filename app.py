@@ -191,7 +191,7 @@ def handle_Message(event):
         line_bot_api.reply_message(event.reply_token, message1)
 # =============================歷史==================================
     elif "瞭解歷史:寶藏巖" in msg:
-        [message1 message2] = History_message("B")
+        [message1, message2] = History_message("B")
         message3 = MoreInfo_message("B")
         line_bot_api.reply_message(
             event.reply_token, [message1, message2, message3])
