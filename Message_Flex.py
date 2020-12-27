@@ -347,21 +347,21 @@ opiumIce = {
 
 LiuEgg = {
     "type": "bubble",
-            "hero": {
-                "type": "image",
-                "url": "https://i.imgur.com/HXNAAUG.jpg",
-                "size": "full",
-                "aspectRatio": "20:13",
-                "aspectMode": "cover",
-                "action": {
-                    "type": "uri",
-                    "label": "Line",
-                    "uri": "https://linecorp.com/"
-                }
-            },
+    "hero": {
+            "type": "image",
+            "url": "https://i.imgur.com/HXNAAUG.jpg",
+            "size": "full",
+            "aspectRatio": "20:13",
+            "aspectMode": "cover",
+            "action": {
+                "type": "uri",
+                "label": "Line",
+                "uri": "https://linecorp.com/"
+            }
+    },
     "body": {
-                "type": "box",
-                "layout": "vertical",
+        "type": "box",
+        "layout": "vertical",
                 "contents": [
                     {
                         "type": "text",
@@ -477,47 +477,46 @@ LiuEgg = {
                         ]
                     }
                 ]
-            },
+    },
     "footer": {
-                "type": "box",
-                "layout": "vertical",
-                "flex": 0,
-                "spacing": "sm",
-                "contents": [
-                    {
-                        "type": "button",
-                        "action": {
-                          "type": "message",
-                          "label": "菜單",
-                          "text": "想知道價目表:劉記蔥蛋餅"
-                        },
-                        "height": "sm",
-                        "style": "primary"
-                    },
-                    {
-                        "type": "button",
-                        "action": {
-                            "type": "message",
-                            "label": "我想了解更多~",
-                            "text": "我想了解更多:劉記蔥蛋餅"
-                        },
-                        "height": "sm",
-                        "style": "secondary"
-                    },
-                    {
-                        "type": "spacer",
-                        "size": "sm"
-                    }
-                ]
+        "type": "box",
+        "layout": "vertical",
+        "flex": 0,
+        "spacing": "sm",
+        "contents": [
+            {
+                "type": "button",
+                "action": {
+                    "type": "message",
+                    "label": "菜單",
+                    "text": "想知道價目表:劉記蔥蛋餅"
+                },
+                "height": "sm",
+                "style": "primary"
+            },
+            {
+                "type": "button",
+                "action": {
+                    "type": "message",
+                    "label": "我想了解更多~",
+                    "text": "我想了解更多:劉記蔥蛋餅"
+                },
+                "height": "sm",
+                "style": "secondary"
+            },
+            {
+                "type": "spacer",
+                "size": "sm"
             }
+        ]
+    }
 }
 
 FoodK = {
     "type": "carousel",
     "contents": [
         noodle,
-        # opiumIce,
-        LiuEgg,
+        opiumIce,
         LiuEgg,
     ]
 }
