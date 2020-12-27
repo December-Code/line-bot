@@ -4,6 +4,9 @@
 #         contents=noodle
 #     )
 #     return message
+
+
+# ===========================蚵仔麵線================================
 noodle = {
     "type": "bubble",
     "hero": {
@@ -171,12 +174,9 @@ noodle = {
     }
 }
 
-FoodK = {
-    "type": "carousel",
-    "contents": [
-            noodle,
-        {
-            "type": "bubble",
+# ===========================鴉片粉圓================================
+opiumIce = {
+    "type": "bubble",
             "hero": {
                 "type": "image",
                 "url": "https://i.imgur.com/HOyJCWN.jpg",
@@ -189,13 +189,13 @@ FoodK = {
                     "uri": "https://linecorp.com/"
                 }
             },
-            "body": {
+    "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                     {
                         "type": "text",
-                        "text": "%E9%B4%89%E7%89%87%E7%B2%89%E5%9C%93",
+                        "text": "鴉片粉圓",
                         "weight": "bold",
                         "size": "xl",
                         "contents": []
@@ -221,7 +221,7 @@ FoodK = {
                             },
                             {
                                 "type": "text",
-                                "text": "%E4%BA%BA%E6%8E%A8%E8%96%A6",
+                                "text": "人推薦",
                                 "size": "md",
                                 "margin": "sm",
                                 "contents": []
@@ -235,7 +235,7 @@ FoodK = {
                             },
                             {
                                 "type": "text",
-                                "text": "%E6%88%91%E6%8E%A8%E8%96%A6",
+                                "text": "我推薦",
                                 "weight": "regular",
                                 "align": "end",
                                 "action": {
@@ -261,7 +261,7 @@ FoodK = {
                                 "contents": [
                                   {
                                       "type": "text",
-                                      "text": "%E5%9C%B0%E5%9D%80",
+                                      "text": "地址",
                                       "weight": "bold",
                                       "size": "md",
                                       "flex": 1,
@@ -270,7 +270,7 @@ FoodK = {
                                   },
                                     {
                                       "type": "text",
-                                      "text": "%E5%8F%B0%E5%8C%97%E5%B8%82%20%E4%B8%AD%E6%AD%A3%E5%8D%80%20%E7%BE%85%E6%96%AF%E7%A6%8F%E8%B7%AF%E5%9B%9B%E6%AE%B5%2052%E5%B7%B7%2016%E5%BC%84%204%E8%99%9F",
+                                      "text": "台北市 中正區 羅斯福路四段 52巷 16弄 4號",
                                       "weight": "bold",
                                       "size": "md",
                                       "flex": 5,
@@ -287,7 +287,7 @@ FoodK = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "%E6%99%82%E9%96%93",
+                                        "text": "時間",
                                         "weight": "bold",
                                         "size": "md",
                                         "flex": 1,
@@ -295,7 +295,7 @@ FoodK = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "12%3A00%20~%2023%3A30",
+                                        "text": "12:00 ~ 23:30",
                                         "weight": "bold",
                                         "size": "md",
                                         "flex": 5,
@@ -308,7 +308,7 @@ FoodK = {
                     }
                 ]
             },
-            "footer": {
+    "footer": {
                 "type": "box",
                 "layout": "vertical",
                 "flex": 0,
@@ -340,9 +340,13 @@ FoodK = {
                     }
                 ]
             }
-        },
-        {
-            "type": "bubble",
+},
+
+
+# ===========================劉記蛋餅================================
+
+LiuEgg = {
+    "type": "bubble",
             "hero": {
                 "type": "image",
                 "url": "https://i.imgur.com/HXNAAUG.jpg",
@@ -355,13 +359,13 @@ FoodK = {
                     "uri": "https://linecorp.com/"
                 }
             },
-            "body": {
+    "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                     {
                         "type": "text",
-                        "text": "%E5%8A%89%E8%A8%98%E5%8F%A4%E6%97%A9%E5%91%B3%E8%94%A5%E8%9B%8B%E9%A4%85",
+                        "text": "劉記古早味蔥蛋餅",
                         "weight": "bold",
                         "size": "xl",
                         "contents": []
@@ -387,7 +391,7 @@ FoodK = {
                             },
                             {
                                 "type": "text",
-                                "text": "%E4%BA%BA%E6%8E%A8%E8%96%A6",
+                                "text": "人推薦",
                                 "size": "md",
                                 "margin": "sm",
                                 "contents": []
@@ -401,7 +405,7 @@ FoodK = {
                             },
                             {
                                 "type": "text",
-                                "text": "%E6%88%91%E6%8E%A8%E8%96%A6",
+                                "text": "我推薦",
                                 "weight": "regular",
                                 "align": "end",
                                 "action": {
@@ -427,7 +431,7 @@ FoodK = {
                                 "contents": [
                                   {
                                       "type": "text",
-                                      "text": "%E5%9C%B0%E5%9D%80",
+                                      "text": "地址",
                                       "weight": "bold",
                                       "size": "md",
                                       "flex": 1,
@@ -436,7 +440,7 @@ FoodK = {
                                   },
                                     {
                                       "type": "text",
-                                      "text": "%E5%8F%B0%E5%8C%97%E5%B8%82%20%E4%B8%AD%E6%AD%A3%E5%8D%80%20%E7%BE%85%E6%96%AF%E7%A6%8F%E8%B7%AF%E5%9B%9B%E6%AE%B5%20108%E5%B7%B7%202-3%E8%99%9F",
+                                      "text": "台北市 中正區 羅斯福路 四段 108巷 2-3號",
                                       "weight": "bold",
                                       "size": "md",
                                       "flex": 5,
@@ -453,7 +457,7 @@ FoodK = {
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "%E6%99%82%E9%96%93",
+                                        "text": "時間",
                                         "weight": "bold",
                                         "size": "md",
                                         "flex": 1,
@@ -461,7 +465,7 @@ FoodK = {
                                     },
                                     {
                                         "type": "text",
-                                        "text": "15%3A00%20~%2000%3A30%20%20(%E9%80%B1%E4%B8%89%E3%80%81%E5%9B%9B%E4%BC%91%E6%81%AF)",
+                                        "text": "15:00 ~ 00:30  (週三、四休息)",
                                         "weight": "bold",
                                         "size": "md",
                                         "flex": 5,
@@ -474,7 +478,7 @@ FoodK = {
                     }
                 ]
             },
-            "footer": {
+    "footer": {
                 "type": "box",
                 "layout": "vertical",
                 "flex": 0,
@@ -506,6 +510,13 @@ FoodK = {
                     }
                 ]
             }
-        }
+}
+
+FoodK = {
+    "type": "carousel",
+    "contents": [
+        noodle,
+        opiumIce,
+        LiuEgg,
     ]
 }
