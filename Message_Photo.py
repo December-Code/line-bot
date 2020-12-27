@@ -1,10 +1,11 @@
 # ============================呼叫line bot chat model=============================================
 from linebot.models import *
+from operator import index
 
 
 # ====================================拍照推薦地點=============================================
 def photoLo_message():
-    message = TextSendMessage(
+    message1 = TextSendMessage(
         text="想要拍照了嗎?\n傳送你的地點，讓我們推薦最近的景點與姿勢",
         quick_reply=QuickReply(
             items=[
@@ -21,41 +22,52 @@ def photoLo_message():
             ]
         )
     )
-    return message
+    return message1
 
 
-def photo_UserLocation(Longitude, Latitude):
-    message1 = TextSendMessage(text=Longitude)
-    message2 = TextSendMessage(text=Latitude)
+def photo_UserLocation(Latitude, Longitude):
+    Distance_B = ((25.01054359540193-Latitude) ** 2 +
+                  (121.53250731657413-Longitude)**2)**0.5
+    Distance_W = ((25.01279927214726-Latitude) ** 2 +
+                  (121.5304050577768-Longitude)**2)**0.5
+    Distance_K = ((25.013751929014315-Latitude) ** 2 +
+                  (121.53492210193112-Longitude)**2)**0.5
+
+    locationDistance = [Distance_B, Distance_W, Distance_K]
+
+    minDistance = index(min(locationDistance))
+
+    message1 = TextSendMessage(text=minDistance)
+    message2 = TextSendMessage(text=min(locationDistance))
     return message1, message2
 
-    # message = ImagemapSendMessage(
-    #     base_url="https://i.imgur.com/cFFeXLt.png",
-    #     alt_text="想要拍照了嗎 ?",
-    #     base_size=BaseSize(height=1000, width=1000),
-    #     actions=[
-    #         MessageImagemapAction(
-    #             text="拍照地點:公館商圈",
-    #             area=ImagemapArea(
-    #                 x=0, y=0, width=500, height=500
-    #             )
-    #         ),
-    #         MessageImagemapAction(
-    #             text="拍照地點:自來水博物館",
-    #             area=ImagemapArea(
-    #                 x=500, y=0, width=500, height=500
-    #             )
-    #         ),
-    #         MessageImagemapAction(
-    #             text="拍照地點:寶藏巖",
-    #             area=ImagemapArea(
-    #                 x=0, y=500, width=1000, height=500
-    #             )
-    #         )
-    #     ]
-    # )
+# message = ImagemapSendMessage(
+#     base_url="https://i.imgur.com/cFFeXLt.png",
+#     alt_text="想要拍照了嗎 ?",
+#     base_size=BaseSize(height=1000, width=1000),
+#     actions=[
+#         MessageImagemapAction(
+#             text="拍照地點:公館商圈",
+#             area=ImagemapArea(
+#                 x=0, y=0, width=500, height=500
+#             )
+#         ),
+#         MessageImagemapAction(
+#             text="拍照地點:自來水博物館",
+#             area=ImagemapArea(
+#                 x=500, y=0, width=500, height=500
+#             )
+#         ),
+#         MessageImagemapAction(
+#             text="拍照地點:寶藏巖",
+#             area=ImagemapArea(
+#                 x=0, y=500, width=1000, height=500
+#             )
+#         )
+#     ]
+# )
 
-    # ===================================照片的姿勢推薦=========================================
+# ===================================照片的姿勢推薦=========================================
 
 
 def photo_message(Location):

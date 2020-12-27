@@ -3,7 +3,7 @@ from linebot.models import *
 
 
 def HistoryLo_message():
-    message = TemplateSendMessage(
+    message1 = TemplateSendMessage(
         alt_text='你想要了解那裡的歷史呢?',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/xdZ779W.png',
@@ -25,7 +25,7 @@ def HistoryLo_message():
             ]
         )
     )
-    return message
+    return message1
 
 
 # ====================================寶藏巖對照=========================================
@@ -56,7 +56,7 @@ def History_message(Location):
                                    '具地景特殊性，景觀可見蜿蜒巷弄，階梯隨著緩坡起落，並沿著周圍山丘構築出天然地景與聚落錯落之風貌')
         return message1, message2
     elif(Location == "W"):
-        message0 = TemplateSendMessage(
+        message1 = TemplateSendMessage(
             alt_text='先看看自來水博物館的今昔對比',
             template=ImageCarouselTemplate(
                 columns=[
@@ -77,9 +77,9 @@ def History_message(Location):
                 ]
             )
         )
-        message1 = TextSendMessage(
+        message2 = TextSendMessage(
             text='「自來水博物館介紹」\n位於台北市公館的思源路上的自來水博物館，是台灣第一座自來水博物館')
-        return message0, message1
+        return message1, message2
 
 
 # ===================================更多歷史介紹=========================================
@@ -103,7 +103,7 @@ def HistoryIntro(Location):
 # ===========================瞭解更多確認鈕================================
 def MoreInfo_message(Location):
     if Location == 'B':
-        message = TextSendMessage(
+        message1 = TextSendMessage(
             text='想要瞭解更多嗎?',
             quick_reply=QuickReply(
                 items=[
@@ -117,9 +117,9 @@ def MoreInfo_message(Location):
                 ]
             )
         )
-        return message
+        return message1
     elif Location == 'W':
-        message = TextSendMessage(
+        message1 = TextSendMessage(
             text='想要瞭解更多嗎?',
             quick_reply=QuickReply(
                 items=[
@@ -133,4 +133,4 @@ def MoreInfo_message(Location):
                 ]
             )
         )
-        return message
+        return message1
