@@ -60,7 +60,7 @@ noodle = {
                     },
                     {
                         "type": "icon",
-                        "url": "https://i.imgur.com/IB5Xh7u.png",
+                        "url": "https://i.imgur.com/baY264N.png",
                         "size": "xxl",
                         "position": "relative",
                         "offsetStart": "12%"
@@ -270,7 +270,7 @@ opiumIce = {
                                   },
                                     {
                                       "type": "text",
-                                      "text": "台北市 中正區 羅斯福路四段 52巷 16弄 4號",
+                                      "text": "台北市 中正區 羅斯福路四段 52巷16弄4號",
                                       "weight": "bold",
                                       "size": "md",
                                       "flex": 5,
@@ -517,6 +517,7 @@ FoodK = {
     "contents": [
         noodle,
         # opiumIce,
+        LiuEgg,
         LiuEgg,
     ]
 }
