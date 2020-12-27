@@ -33,41 +33,52 @@ def photo_UserLocation(Latitude, Longitude):
     Distance_K = ((25.013751929014315-Latitude) ** 2 +
                   (121.53492210193112-Longitude)**2)**0.5
 
+# 放進list
     locationDistance = [Distance_B, Distance_W, Distance_K]
-
+# 判斷哪個位置最小
     minDistance = locationDistance.index(min(locationDistance))
 
-    message1 = TextSendMessage(text=minDistance)
-    message2 = TextSendMessage(text=min(locationDistance))
-    return message1, message2
+    if minDistance == 2:
+        Location = "B"
+        photo_message(Location)
+    elif minDistance == 1:
+        Location = "W"
+        photo_message(Location)
+    elif minDistance == 0:
+        Location = "K"
+        photo_message(Location)
 
-# message = ImagemapSendMessage(
-#     base_url="https://i.imgur.com/cFFeXLt.png",
-#     alt_text="想要拍照了嗎 ?",
-#     base_size=BaseSize(height=1000, width=1000),
-#     actions=[
-#         MessageImagemapAction(
-#             text="拍照地點:公館商圈",
-#             area=ImagemapArea(
-#                 x=0, y=0, width=500, height=500
-#             )
-#         ),
-#         MessageImagemapAction(
-#             text="拍照地點:自來水博物館",
-#             area=ImagemapArea(
-#                 x=500, y=0, width=500, height=500
-#             )
-#         ),
-#         MessageImagemapAction(
-#             text="拍照地點:寶藏巖",
-#             area=ImagemapArea(
-#                 x=0, y=500, width=1000, height=500
-#             )
-#         )
-#     ]
-# )
+        # message1 = TextSendMessage(text=minDistance)
+        # message2 = TextSendMessage(text=min(locationDistance))
+        # return message1, message2
 
-# ===================================照片的姿勢推薦=========================================
+        # message = ImagemapSendMessage(
+        #     base_url="https://i.imgur.com/cFFeXLt.png",
+        #     alt_text="想要拍照了嗎 ?",
+        #     base_size=BaseSize(height=1000, width=1000),
+        #     actions=[
+        #         MessageImagemapAction(
+        #             text="拍照地點:公館商圈",
+        #             area=ImagemapArea(
+        #                 x=0, y=0, width=500, height=500
+        #             )
+        #         ),
+        #         MessageImagemapAction(
+        #             text="拍照地點:自來水博物館",
+        #             area=ImagemapArea(
+        #                 x=500, y=0, width=500, height=500
+        #             )
+        #         ),
+        #         MessageImagemapAction(
+        #             text="拍照地點:寶藏巖",
+        #             area=ImagemapArea(
+        #                 x=0, y=500, width=1000, height=500
+        #             )
+        #         )
+        #     ]
+        # )
+
+        # ===================================照片的姿勢推薦=========================================
 
 
 def photo_message(Location):
