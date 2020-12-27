@@ -74,12 +74,12 @@ def handle_Follow(event):
 # 加入群組提示
 @handler.add(JoinEvent)
 def handle_join(event):
-    message0 = TextSendMessage(
+    message1 = TextSendMessage(
         text="謝謝你讓我成為你們的一員 \n 需要幫助的話，可以選擇「導覽」，讓我向你介紹一次我的各個功能哦~")
     newcoming_message = Introduction_message()
 
     line_bot_api.reply_message(
-        event.reply_token, [message0, newcoming_message])
+        event.reply_token, [message1, newcoming_message])
     print("JoinEvent =", JoinEvent)
 
 
@@ -191,22 +191,22 @@ def handle_Message(event):
         line_bot_api.reply_message(event.reply_token, message1)
 # =============================歷史==================================
     elif "瞭解歷史:寶藏巖" in msg:
-        [message0, message1] = History_message("B")
-        message2 = MoreInfo_message("B")
+        [message1 message2] = History_message("B")
+        message3 = MoreInfo_message("B")
         line_bot_api.reply_message(
-            event.reply_token, [message0, message1, message2])
+            event.reply_token, [message1, message2, message3])
     elif "瞭解更多:寶藏巖" in msg:
-        [message0, message1] = HistoryIntro("B")
-        line_bot_api.reply_message(event.reply_token, [message0, message1])
+        [message1, message2] = HistoryIntro("B")
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
     elif "瞭解歷史:自來水博物館" in msg:
-        [message0, message1] = History_message("W")
-        message2 = MoreInfo_message("W")
+        [message1, message2] = History_message("W")
+        message3 = MoreInfo_message("W")
         # [message1, message2] = HistoryWIntro()
         line_bot_api.reply_message(
-            event.reply_token, [message0, message1, message2])
+            event.reply_token, [message1, message2, message3])
     elif "瞭解更多:自來水博物館" in msg:
-        [message0, message1] = HistoryIntro("W")
-        line_bot_api.reply_message(event.reply_token, [message0, message1])
+        [message1, message2] = HistoryIntro("W")
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
     elif "都不想" in msg:
         message = TextSendMessage(text="有需要再找我唷~")
         line_bot_api.reply_message(event.reply_token, message)
@@ -214,7 +214,7 @@ def handle_Message(event):
     else:
         message1 = TextSendMessage(
             text="不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~")
-        message0 = Introduction_message()
+        message2 = Introduction_message()
         line_bot_api.reply_message(event.reply_token, [message1, message2])
 
 
