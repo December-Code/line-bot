@@ -1,3 +1,3 @@
 git add .
-git commit -am "md new after interview"
+git commit -am "md  logic"
 git push heroku master
