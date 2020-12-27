@@ -1,3 +1,3 @@
 git add .
-git commit -am "add flex food"
+git commit -am "add ;ocation check"
 git push heroku master

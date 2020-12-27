@@ -116,104 +116,104 @@ def handle_leave(event):
 
 # 處理訊息
 
-# @handler.add(MessageEvent, message=TextMessage)
-# def handle_Message(event):
-#     msg = event.message.text
-#     # global Location
-# # ============================選單列表=================================
-#     if "我想吃美食" in msg:
-#         message1 = FoodLo_message()
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "我想拍照" in msg:
-#         message1 = TextSendMessage(text="點擊圖示選擇地點唷~")
-#         message2 = photoLo_message()
-#         line_bot_api.reply_message(event.reply_token, [message1, message2])
-#     elif "想知道歷史" in msg:
-#         message1 = HistoryLo_message()
-#         line_bot_api.reply_message(event.reply_token, message1)
-# # =============================導覽==================================
-#     elif msg == "導覽":
-#         [message1, message2, message3, message4, message5] = MenuIntroduction()
-#         line_bot_api.reply_message(
-#             event.reply_token, [message1, message2, message3, message4, message5])
-#     elif "我自己摸索就好~" in msg:
-#         message1 = TextSendMessage(text="好唷! 如果還有需要直接打『導覽』也可以唷!")
-#         line_bot_api.reply_message(event.reply_token, message1)
-# # =============================美食==================================
-#     elif "我想找美食:公館" in msg:
-#         message1 = Food_message("K")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "我想找美食:水源市場" in msg:
-#         message1 = TextSendMessage(text="這裡還沒有新增，可以選其他地方看看唷!")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#         # message = Food_message("W")
-#         # line_bot_api.reply_message(event.reply_token, message)
-#     # =============================愛心==================================
-#     elif "喜歡這家店:兄弟麵線" in msg:
-#         message1 = Send_Heart("M")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "喜歡這家店:鴉片粉圓" in msg:
-#         message1 = Send_Heart("Y")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "喜歡這家店:劉記蔥蛋餅" in msg:
-#         message1 = Send_Heart("D")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "想知道價目表:兄弟麵線" in msg:
-#         message1 = Price("M")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "想知道價目表:鴉片粉圓" in msg:
-#         message1 = Price("Y")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "想知道價目表:劉記蔥蛋餅" in msg:
-#         message1 = Price("D")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "我想了解更多:兄弟麵線" in msg:
-#         message1 = GetInformation("M")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "我想了解更多:鴉片粉圓" in msg:
-#         [message1, message2, message3] = GetInformation("Y")
-#         line_bot_api.reply_message(
-#             event.reply_token, [message1, message2, message3])
-#     elif "我想了解更多:劉記蔥蛋餅" in msg:
-#         message1 = GetInformation("D")
-#         line_bot_api.reply_message(event.reply_token, message1)
-# # =============================拍照==================================
-#     elif "拍照地點:寶藏巖" in msg:
-#         message1 = photo_message("B")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "拍照地點:自來水博物館" in msg:
-#         message1 = photo_message("W")
-#         line_bot_api.reply_message(event.reply_token, message1)
-#     elif "拍照地點:公館商圈" in msg:
-#         message1 = photo_message("K")
-#         line_bot_api.reply_message(event.reply_token, message1)
-# # =============================歷史==================================
-#     elif "瞭解歷史:寶藏巖" in msg:
-#         [message0, message1] = History_message("B")
-#         message2 = MoreInfo_message("B")
-#         line_bot_api.reply_message(
-#             event.reply_token, [message0, message1, message2])
-#     elif "瞭解更多:寶藏巖" in msg:
-#         [message0, message1] = HistoryIntro("B")
-#         line_bot_api.reply_message(event.reply_token, [message0, message1])
-#     elif "瞭解歷史:自來水博物館" in msg:
-#         [message0, message1] = History_message("W")
-#         message2 = MoreInfo_message("W")
-#         # [message1, message2] = HistoryWIntro()
-#         line_bot_api.reply_message(
-#             event.reply_token, [message0, message1, message2])
-#     elif "瞭解更多:自來水博物館" in msg:
-#         [message0, message1] = HistoryIntro("W")
-#         line_bot_api.reply_message(event.reply_token, [message0, message1])
-#     elif "都不想" in msg:
-#         message = TextSendMessage(text="有需要再找我唷~")
-#         line_bot_api.reply_message(event.reply_token, message)
-# # ====================================================================
-#     else:
-#         message0 = TextSendMessage(
-#             text="不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~")
-#         message1 = Introduction_message()
-#         line_bot_api.reply_message(event.reply_token, [message0, message1])
+@handler.add(MessageEvent, message=TextMessage)
+def handle_Message(event):
+    msg = event.message.text
+    # global Location
+# ============================選單列表=================================
+    if "我想吃美食" in msg:
+        message1 = FoodLo_message()
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "我想拍照" in msg:
+        message1 = TextSendMessage(text="點擊圖示選擇地點唷~")
+        message2 = photoLo_message()
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
+    elif "想知道歷史" in msg:
+        message1 = HistoryLo_message()
+        line_bot_api.reply_message(event.reply_token, message1)
+# =============================導覽==================================
+    elif msg == "導覽":
+        [message1, message2, message3, message4, message5] = MenuIntroduction()
+        line_bot_api.reply_message(
+            event.reply_token, [message1, message2, message3, message4, message5])
+    elif "我自己摸索就好~" in msg:
+        message1 = TextSendMessage(text="好唷! 如果還有需要直接打『導覽』也可以唷!")
+        line_bot_api.reply_message(event.reply_token, message1)
+# =============================美食==================================
+    elif "我想找美食:公館" in msg:
+        message1 = Food_message("K")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "我想找美食:水源市場" in msg:
+        message1 = TextSendMessage(text="這裡還沒有新增，可以選其他地方看看唷!")
+        line_bot_api.reply_message(event.reply_token, message1)
+        # message = Food_message("W")
+        # line_bot_api.reply_message(event.reply_token, message)
+    # =============================愛心==================================
+    elif "喜歡這家店:兄弟麵線" in msg:
+        message1 = Send_Heart("M")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "喜歡這家店:鴉片粉圓" in msg:
+        message1 = Send_Heart("Y")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "喜歡這家店:劉記蔥蛋餅" in msg:
+        message1 = Send_Heart("D")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "想知道價目表:兄弟麵線" in msg:
+        message1 = Price("M")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "想知道價目表:鴉片粉圓" in msg:
+        message1 = Price("Y")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "想知道價目表:劉記蔥蛋餅" in msg:
+        message1 = Price("D")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "我想了解更多:兄弟麵線" in msg:
+        message1 = GetInformation("M")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "我想了解更多:鴉片粉圓" in msg:
+        [message1, message2, message3] = GetInformation("Y")
+        line_bot_api.reply_message(
+            event.reply_token, [message1, message2, message3])
+    elif "我想了解更多:劉記蔥蛋餅" in msg:
+        message1 = GetInformation("D")
+        line_bot_api.reply_message(event.reply_token, message1)
+# =============================拍照==================================
+    elif "拍照地點:寶藏巖" in msg:
+        message1 = photo_message("B")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "拍照地點:自來水博物館" in msg:
+        message1 = photo_message("W")
+        line_bot_api.reply_message(event.reply_token, message1)
+    elif "拍照地點:公館商圈" in msg:
+        message1 = photo_message("K")
+        line_bot_api.reply_message(event.reply_token, message1)
+# =============================歷史==================================
+    elif "瞭解歷史:寶藏巖" in msg:
+        [message0, message1] = History_message("B")
+        message2 = MoreInfo_message("B")
+        line_bot_api.reply_message(
+            event.reply_token, [message0, message1, message2])
+    elif "瞭解更多:寶藏巖" in msg:
+        [message0, message1] = HistoryIntro("B")
+        line_bot_api.reply_message(event.reply_token, [message0, message1])
+    elif "瞭解歷史:自來水博物館" in msg:
+        [message0, message1] = History_message("W")
+        message2 = MoreInfo_message("W")
+        # [message1, message2] = HistoryWIntro()
+        line_bot_api.reply_message(
+            event.reply_token, [message0, message1, message2])
+    elif "瞭解更多:自來水博物館" in msg:
+        [message0, message1] = HistoryIntro("W")
+        line_bot_api.reply_message(event.reply_token, [message0, message1])
+    elif "都不想" in msg:
+        message = TextSendMessage(text="有需要再找我唷~")
+        line_bot_api.reply_message(event.reply_token, message)
+# ====================================================================
+    else:
+        message0 = TextSendMessage(
+            text="不明白你在說什麼耶~ \n 需要幫助的話，可以輸入「導覽」，讓我再向你介紹一次我的各個功能哦~")
+        message1 = Introduction_message()
+        line_bot_api.reply_message(event.reply_token, [message0, message1])
 
 
 @handler.add(MessageEvent, message=LocationMessage)
