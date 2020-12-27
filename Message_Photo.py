@@ -40,13 +40,16 @@ def photo_UserLocation(Latitude, Longitude):
 
     if minDistance == 2:
         Location = "B"
-        photo_message(Location)
+        message1 = photo_message(Location)
+        return message1
     elif minDistance == 1:
         Location = "W"
-        photo_message(Location)
+        message1 = photo_message(Location)
+        return message1
     elif minDistance == 0:
         Location = "K"
-        photo_message(Location)
+        message1 = photo_message(Location)
+        return message1
 
         # message1 = TextSendMessage(text=minDistance)
         # message2 = TextSendMessage(text=min(locationDistance))
