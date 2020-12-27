@@ -517,6 +517,6 @@ FoodK = {
     "contents": [
         noodle,
         opiumIce,
-        LiuEgg,
+        # LiuEgg,
     ]
 }

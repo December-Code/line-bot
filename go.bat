@@ -1,3 +1,3 @@
 git add .
-git commit -am "md  logic"
+git commit -am "add flex food"
 git push heroku master
