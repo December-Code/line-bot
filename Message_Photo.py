@@ -35,7 +35,7 @@ def photo_UserLocation(Latitude, Longitude):
 
     locationDistance = [Distance_B, Distance_W, Distance_K]
 
-    minDistance = index(min(locationDistance))
+    minDistance = locationDistance.index(min(locationDistance))
 
     message1 = TextSendMessage(text=minDistance)
     message2 = TextSendMessage(text=min(locationDistance))
