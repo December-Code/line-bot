@@ -112,7 +112,7 @@ def Camera_message():
             items=[
                 QuickReplyButton(
                     action=CameraAction(
-                        label="立刻啟動Line相機",
+                        label="啟動Line相機",
                         text="啟動相機"
                     )
                 )
