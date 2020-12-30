@@ -145,10 +145,12 @@ def MenuIntroduction():
         text='「拍照打卡熱點」\n 不知道怎麼拍出打卡美照嗎?\n 沒關係!我教你如何在水源里的熱門景點拍出網美照')
     message4 = TextSendMessage(
         text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
-    message5 = VideoSendMessage(
-        original_content_url='https://www.sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4',
-        preview_image_url='https://i.imgur.com/mtn1Tmw.jpg'
-    )
+    message5 = TextSendMessage(
+        text='影片導覽: https://vimeo.com/495748474')
+    # message5 = VideoSendMessage(
+    #     original_content_url='https://www.sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4',
+    #     preview_image_url='https://i.imgur.com/mtn1Tmw.jpg'
+    # )
     return message1, message2, message3, message4, message5
 
 
