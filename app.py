@@ -264,7 +264,9 @@ def handle_Message(Location):
     Latitude = Location.message.latitude
     Longitude = Location.message.longitude
     [message1, message2] = photo_UserLocation(Latitude, Longitude)
-    line_bot_api.reply_message(Location.reply_token, [message1, message2])
+    message3 = Camera_message()
+    line_bot_api.reply_message(Location.reply_token, [
+                               message1, message2, message3])
     # message1 = photo_UserLocation(Latitude, Longitude)
     # line_bot_api.reply_message(Location.reply_token, message1)
 
