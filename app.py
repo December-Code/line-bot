@@ -219,14 +219,14 @@ def handle_Message(event):
         message1 = photo_menu()
         line_bot_api.reply_message(event.reply_token, message1)
     elif "拍照地點:寶藏巖" in msg:
-        message1 = photo_message("B")
-        line_bot_api.reply_message(event.reply_token, message1)
+        [message1, message2] = photo_message("B")
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
     elif "拍照地點:自來水博物館" in msg:
-        message1 = photo_message("W")
-        line_bot_api.reply_message(event.reply_token, message1)
+        [message1, message2] = photo_message("W")
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
     elif "拍照地點:公館商圈" in msg:
-        message1 = photo_message("K")
-        line_bot_api.reply_message(event.reply_token, message1)
+        [message1, message2] = photo_message("K")
+        line_bot_api.reply_message(event.reply_token, [message1, message2])
 # =============================歷史==================================
     elif "瞭解歷史:寶藏巖" in msg:
         [message1, message2] = History_message("B")
