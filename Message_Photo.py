@@ -57,7 +57,7 @@ def photo_UserLocation(Latitude, Longitude):
                 QuickReplyButton(
                     image_url='https://i.imgur.com/2wbSWAD.png',
                     action=MessageTemplateAction(
-                        label='想要其他地點',
+                        label='地點選單',
                         text='地點選單:顯示',
                     ),
                 )
