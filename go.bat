@@ -1,3 +1,3 @@
 git add .
-git commit -am "video"
+git commit -am "md photo"
 git push heroku master

@@ -142,8 +142,7 @@ def photo_message(Location):
                 ]
             )
         )
-        message2 = Camera_message()
-        return message1, message2
+        return message1
 # ================================寶藏巖的照片推薦===================================
     elif (Location == 'B'):
         message1 = TemplateSendMessage(
@@ -174,8 +173,7 @@ def photo_message(Location):
                 ]
             )
         )
-        message2 = Camera_message()
-        return message1, message2
+        return message1
 # ================================自來水廠的照片推薦===================================
     elif (Location == 'W'):
         message1 = TemplateSendMessage(
@@ -206,5 +204,4 @@ def photo_message(Location):
                 ]
             )
         )
-        message2 = Camera_message()
-        return message1, message2
+        return message1
