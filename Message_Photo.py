@@ -51,7 +51,7 @@ def photo_UserLocation(Latitude, Longitude):
         message1 = photo_message(Location)
 
     message2 = TextSendMessage(
-        text="尋找其他地點?\n點選下面按鈕",
+        text="尋找其他地點?→點選下方地點選單按鈕\n想要馬上拍照?→啟動Line相機",
         quick_reply=QuickReply(
             items=[
                 QuickReplyButton(
@@ -59,7 +59,13 @@ def photo_UserLocation(Latitude, Longitude):
                     action=MessageTemplateAction(
                         label='地點選單',
                         text='地點選單:顯示',
-                    ),
+                    )
+                ),
+                QuickReplyButton(
+                    action=CameraAction(
+                        label="啟動Line相機",
+                        text="啟動相機"
+                    )
                 )
             ]
         )
