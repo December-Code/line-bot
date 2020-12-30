@@ -55,18 +55,18 @@ def photo_UserLocation(Latitude, Longitude):
         quick_reply=QuickReply(
             items=[
                 QuickReplyButton(
+                    action=CameraAction(
+                        label="啟動Line相機",
+                        text="啟動相機"
+                    )
+                ),
+                QuickReplyButton(
                     image_url='https://i.imgur.com/2wbSWAD.png',
                     action=MessageTemplateAction(
                         label='地點選單',
                         text='地點選單:顯示',
                     )
                 ),
-                QuickReplyButton(
-                    action=CameraAction(
-                        label="啟動Line相機",
-                        text="啟動相機"
-                    )
-                )
             ]
         )
     )
