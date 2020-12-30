@@ -146,7 +146,7 @@ def MenuIntroduction():
     message4 = TextSendMessage(
         text='「歷史循跡」\n 想知道水源里以前的樣子嗎?\n 我們蒐集了水源里各處的新舊照片，快來比較看看吧!')
     message5 = VideoSendMessage(
-        original_content_url='https://example.com/original.mp4',
+        original_content_url='https://drive.google.com/file/d/1nLL6dHmN-2SuG6-ftqOFasx4lX1YjAkm/preview',
         preview_image_url='https://i.imgur.com/mtn1Tmw.jpg'
     )
     return message1, message2, message3, message4, message5
