@@ -96,8 +96,28 @@ def photo_menu():
     )
     return message1
 
+# =====================================相機開啟=======================================
+
+
+def Camera_message():
+    message1 = TextSendMessage(
+        text="想要馬上嘗試嗎?",
+        quick_reply=QuickReply(
+            items=[
+                QuickReplyButton(
+                    action=CameraAction(
+                        label="立刻啟動Line相機",
+                        text="啟動相機"
+                    )
+                )
+            ]
+        )
+    )
+    return message1
 
 # ===================================照片的姿勢推薦=========================================
+
+
 def photo_message(Location):
     # ================================公館商圈的照片推薦===================================
     if (Location == 'K'):
@@ -188,21 +208,3 @@ def photo_message(Location):
         )
         message2 = Camera_message()
         return message1, message2
-
-
-# =====================================相機開啟=======================================
-def Camera_message():
-    message1 = TextSendMessage(
-        text="想要馬上嘗試嗎?",
-        quick_reply=QuickReply(
-            items=[
-                QuickReplyButton(
-                    action=CameraAction(
-                        label="立刻啟動Line相機",
-                        text="啟動相機"
-                    )
-                )
-            ]
-        )
-    )
-    return message1
